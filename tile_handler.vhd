@@ -39,7 +39,7 @@ architecture behavioral of tile_handler is
     );
 
 
-    type vector_pos is array (natural range <>) of std_logic_vector(7 downto 0);
+    type vector_pos is array (natural range <>) of std_logic_vector(8 downto 0);
     type vector_tex is array (natural range <>) of vector_cc       (0 to     255);
     
     signal s_tiles_x  : vector_pos(0 to 1023);
@@ -76,7 +76,7 @@ begin
     s_cc_id  (7 downto 4) <= i_y(3 downto 0);
     s_cc_id  (3 downto 0) <= i_x(3 downto 0);
 
-    s_tile_cc <= s_tiles_cc(s_tile_id);
-    o_cc      <= s_tile_cc (s_cc_id);
+    s_tile_cc <= s_tiles_cc(to_integer(s_tile_id));
+    o_cc      <= s_tile_cc (to_integer(s_cc_id));
 
 end behavioral;
