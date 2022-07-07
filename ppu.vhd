@@ -14,20 +14,21 @@ use ieee.numeric_std.all;
 
 entity ppu is
 port (
-    i_clk     : in  std_logic;
-    i_rst     : in  std_logic;
+    i_clk      : in  std_logic;
+    i_rst      : in  std_logic;
     
-    i_opcode  : in  std_logic_vector(4 downto 0);
-    i_reg_x   : in  std_logic_vector(8 downto 0);
-    i_reg_y   : in  std_logic_vector(8 downto 0);
-    i_reg_tex : in  std_logic_vector(5 downto 0);
-    i_reg_en  : in  std_logic;
+    i_opcode   : in  std_logic_vector(4 downto 0);
+    i_reg_x    : in  std_logic_vector(8 downto 0);
+    i_reg_y    : in  std_logic_vector(8 downto 0);
+    i_reg_tex  : in  std_logic_vector(5 downto 0);
+    i_reg_sprt : in  std_logic_vector(5 downto 0);
+    i_reg_en   : in  std_logic;
     
-    o_color   : out std_logic_vector(23 downto 0);
-    o_sof     : out std_logic;
-    o_eof     : out std_logic;
-    o_sol     : out std_logic;
-    o_eol     : out std_logic;
+    o_color    : out std_logic_vector(23 downto 0);
+    o_sof      : out std_logic;
+    o_eof      : out std_logic;
+    o_sol      : out std_logic;
+    o_eol      : out std_logic;
 ) end ppu;
 
 
@@ -76,19 +77,20 @@ architecture behavioral of ppu is
 
     component sprite_handler is
     port (
-        i_clk     : in  std_logic;
-        i_rst     : in  std_logic;
-        i_opcode  : in  std_logic_vector(4 downto 0);
-        i_reg_tex : in  std_logic_vector(5 downto 0);
-        i_reg_x   : in  std_logic_vector(8 downto 0);
-        i_reg_y   : in  std_logic_vector(8 downto 0);
-        i_reg_en  : in  std_logic;
+        i_clk      : in  std_logic;
+        i_rst      : in  std_logic;
+        i_opcode   : in  std_logic_vector(4 downto 0);
+        i_reg_tex  : in  std_logic_vector(5 downto 0);
+        i_reg_x    : in  std_logic_vector(8 downto 0);
+        i_reg_y    : in  std_logic_vector(8 downto 0);
+        i_reg_sprt : in  std_logic_vector(5 downto 0);
+        i_reg_en   : in  std_logic;
 
-        i_x       : in  std_logic_vector(8 downto 0);
-        i_y       : in  std_logic_vector(8 downto 0);
+        i_x        : in  std_logic_vector(8 downto 0);
+        i_y        : in  std_logic_vector(8 downto 0);
 
-        o_cc      : out std_logic_vector(5 downto 0);
-        o_active  : out std_logic;
+        o_cc       : out std_logic_vector(5 downto 0);
+        o_active   : out std_logic;
     );
 
     component color_converter is
@@ -157,19 +159,20 @@ begin
 
     inst_sprite_handler: sprite_handler
     port map (
-        i_clk     => i_clk,
-        i_rst     => i_rst,
-        i_opcode  => i_opcode,
-        i_reg_tex => i_reg_tex,
-        i_reg_x   => i_reg_x,
-        i_reg_y   => i_reg_y,
-        i_reg_en  => i_reg_en,
+        i_clk      => i_clk,
+        i_rst      => i_rst,
+        i_opcode   => i_opcode,
+        i_reg_tex  => i_reg_tex,
+        i_reg_x    => i_reg_x,
+        i_reg_y    => i_reg_y,
+        i_reg_en   => i_reg_en,
+        i_reg_sprt => i_reg_sprt,
 
-        i_x       => s_x_off,
-        i_y       => s_y_off,
+        i_x        => s_x_off,
+        i_y        => s_y_off,
 
-        o_cc      => s_sprite_cc,
-        o_active  => s_has_sprite
+        o_cc       => s_sprite_cc,
+        o_active   => s_has_sprite
     );
 
     inst_color_converter: color_converter
