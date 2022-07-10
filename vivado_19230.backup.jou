@@ -1,0 +1,57 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Jul  7 10:20:12 2022
+# Process ID: 19230
+# Current directory: /home/raesangur/github/ppu
+# Command line: vivado
+# Log file: /home/raesangur/github/ppu/vivado.log
+# Journal file: /home/raesangur/github/ppu/vivado.jou
+#-----------------------------------------------------------
+start_gui
+xhub::refresh_catalog [xhub::get_xstores xilinx_board_store]
+xhub::refresh_catalog [xhub::get_xstores Vivado_example_project]
+xhub::install [xhub::get_xitems digilentinc.com:xilinx_board_store:zybo-z7-10:1.0]
+set_param board.repoPaths {/home/raesangur/.Xilinx/Vivado/2020.2/xhub/board_store/xilinx_board_store}
+create_project vivado /home/raesangur/github/ppu/vivado -part xc7z010clg400-1
+set_property board_part digilentinc.com:zybo-z7-10:part0:1.0 [current_project]
+add_files -norecurse {/home/raesangur/github/ppu/ppu.vhd /home/raesangur/github/ppu/tile.vhd /home/raesangur/github/ppu/tile_handler.vhd /home/raesangur/github/ppu/frame_printer.vhd /home/raesangur/github/ppu/ppu_package.vhd /home/raesangur/github/ppu/sprite_handler.vhd /home/raesangur/github/ppu/hit_handler.vhd /home/raesangur/github/ppu/pixelator.vhd /home/raesangur/github/ppu/color_converter.vhd /home/raesangur/github/ppu/hit_detector.vhd /home/raesangur/github/ppu/sprite.vhd}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_simulation
+set_property file_type {VHDL 2008} [get_files  /home/raesangur/github/ppu/sprite_handler.vhd]
+update_compile_order -fileset sources_1
+launch_simulation
+set_property file_type {VHDL 2008} [get_files  /home/raesangur/github/ppu/frame_printer.vhd]
+update_compile_order -fileset sources_1
+set_property file_type {VHDL 2008} [get_files  /home/raesangur/github/ppu/pixelator.vhd]
+update_compile_order -fileset sources_1
+set_property file_type {VHDL 2008} [get_files  /home/raesangur/github/ppu/ppu.vhd]
+set_property file_type {VHDL 2008} [get_files  /home/raesangur/github/ppu/tile_handler.vhd]
+update_compile_order -fileset sources_1
+set_property file_type {VHDL 2008} [get_files  /home/raesangur/github/ppu/color_converter.vhd]
+update_compile_order -fileset sources_1
+set_property file_type {VHDL 2008} [get_files  /home/raesangur/github/ppu/tile.vhd]
+update_compile_order -fileset sources_1
+set_property file_type {VHDL 2008} [get_files  /home/raesangur/github/ppu/sprite.vhd]
+update_compile_order -fileset sources_1
+set_property file_type {VHDL 2008} [get_files  /home/raesangur/github/ppu/hit_handler.vhd]
+set_property file_type {VHDL 2008} [get_files  /home/raesangur/github/ppu/hit_detector.vhd]
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation

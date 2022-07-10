@@ -6,20 +6,25 @@
 --
 ---------------------------------------------------------------------------------------------
 
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use work.ppu_package.all;
+
 entity tile_handler is
 port (
     i_clk     : in  std_logic;
     i_rst     : in  std_logic;
     i_opcode  : in  std_logic_vector(4 downto 0);
-    i_reg_tex : in  std_logic_vector(5 downto 0);
+    i_reg_tex : in  std_logic_vector(7 downto 0);
     i_reg_x   : in  std_logic_vector(8 downto 0);
     i_reg_y   : in  std_logic_vector(8 downto 0);
 
     i_x       : in  std_logic_vector(8 downto 0);
     i_y       : in  std_logic_vector(8 downto 0);
 
-    o_cc      : out std_logic_vector(5 downto 0);
-) end tile_handler;
+    o_cc      : out color_code
+); end tile_handler;
 
 
 architecture behavioral of tile_handler is
@@ -29,23 +34,20 @@ architecture behavioral of tile_handler is
         i_clk     : in  std_logic;
         i_rst     : in  std_logic;
         i_opcode  : in  std_logic_vector(4 downto 0);
-        i_reg_tex : in  std_logic_vector(5 downto 0);
+        i_reg_tex : in  std_logic_vector(7 downto 0);
         i_reg_x   : in  std_logic_vector(8 downto 0);
         i_reg_y   : in  std_logic_vector(8 downto 0);
 
         o_x       : out std_logic_vector(8 downto 0);
         o_y       : out std_logic_vector(8 downto 0);
-        o_cc      : out array(natural range <>) of std_logic_vector(23 downto 0);
+        o_cc      : out color_code
     );
-
-
-    type vector_pos is array (natural range <>) of std_logic_vector(8 downto 0);
-    type vector_tex is array (natural range <>) of vector_cc       (0 to     255);
+    end component;
     
     signal s_tiles_x  : vector_pos(0 to 1023);
     signal s_tiles_y  : vector_pos(0 to 1023);
     signal s_tiles_cc : vector_tex(0 to 1023);
-    signal s_tile_cc  : vector_tex;
+    signal s_tile_cc  : vector_tex(0 to 0);
 
     signal s_tile_id  : std_logic_vector(9 downto 0);
     signal s_cc_id    : std_logic_vector(7 downto 0);
@@ -76,7 +78,7 @@ begin
     s_cc_id  (7 downto 4) <= i_y(3 downto 0);
     s_cc_id  (3 downto 0) <= i_x(3 downto 0);
 
-    s_tile_cc <= s_tiles_cc(to_integer(s_tile_id));
-    o_cc      <= s_tile_cc (to_integer(s_cc_id));
+    s_tile_cc(0) <= s_tiles_cc  (to_integer(unsigned(s_tile_id)));
+    o_cc         <= s_tile_cc(0)(to_integer(unsigned(s_cc_id)));
 
 end behavioral;

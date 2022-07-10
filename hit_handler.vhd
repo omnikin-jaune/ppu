@@ -1,3 +1,8 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use work.ppu_package.all;
+  
 
 entity hit_handler is
 port (
@@ -6,11 +11,11 @@ port (
     i_sprite_x : in vector_pos      (63 downto 0);
     i_sprite_y : in vector_pos      (63 downto 0);
     i_en       : in std_logic_vector(63 downto 0);
-    i_cc       : in vector_cc       (63 downto 0);
+    i_cc       : in color_code      (63 downto 0);
 
     o_sprite   : out std_logic_vector(5 downto 0);
-    o_en       : out std_logic;
-) end hit_handler;
+    o_en       : out std_logic
+); end hit_handler;
 
 
 architecture behavioral of hit_handler is
@@ -21,17 +26,21 @@ architecture behavioral of hit_handler is
         i_y        : std_logic_vector(8 downto 0);
         i_sprite_x : std_logic_vector(8 downto 0); 
         i_sprite_y : std_logic_vector(8 downto 0);
-        i_en       : std_logic;
-        i_cc       : std_logic_vector(5 downto 0);
+        i_en       : std_logic_vector(8 downto 0);
+        i_cc       : abcde;
 
-        o_hit      : std_logic;
+        o_hit      : std_logic
     );
+    end component;
 
 
     signal s_hits : std_logic_vector(63 downto 0);
     
+    signal cc : color_code;
+    
 begin
 
+    cc <= i_cc(0);
 
     -- https://stackoverflow.com/a/13194608
     hit_detector_gen:
@@ -115,6 +124,6 @@ begin
                 "111101" when s_hits(61) = '1' else
                 "111110" when s_hits(62) = '1' else
                 "111111" when s_hits(63) = '1' else
-                "000000"
+                "000000";
 
 end behavioral;

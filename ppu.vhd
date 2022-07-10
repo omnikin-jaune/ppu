@@ -9,6 +9,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
+use work.ppu_package.all;
 
 
 
@@ -17,10 +18,10 @@ port (
     i_clk      : in  std_logic;
     i_rst      : in  std_logic;
     
-    i_opcode   : in  std_logic_vector(4 downto 0);
+    i_opcode   : in  opcode;
     i_reg_x    : in  std_logic_vector(8 downto 0);
     i_reg_y    : in  std_logic_vector(8 downto 0);
-    i_reg_tex  : in  std_logic_vector(5 downto 0);
+    i_reg_tex  : in  std_logic_vector(7 downto 0);
     i_reg_sprt : in  std_logic_vector(5 downto 0);
     i_reg_en   : in  std_logic;
     
@@ -28,59 +29,62 @@ port (
     o_sof      : out std_logic;
     o_eof      : out std_logic;
     o_sol      : out std_logic;
-    o_eol      : out std_logic;
-) end ppu;
+    o_eol      : out std_logic
+); end ppu;
 
-
+  
 architecture behavioral of ppu is
     component pixelator is
     port (
         i_clk    : in  std_logic;
         i_rst    : in  std_logic;
-        i_opcode : in  std_logic_vector(4 downto 0);
+        i_opcode : in  opcode;
         i_reg_x  : in  std_logic_vector(8 downto 0);
         i_reg_y  : in  std_logic_vector(8 downto 0);
 
         o_x      : out std_logic_vector(7 downto 0);
         o_y      : out std_logic_vector(7 downto 0);
         o_x_off  : out std_logic_vector(8 downto 0);    -- x value with added offset
-        o_y_off  : out std_logic_vector(8 downto 0);    -- y value with added offset
+        o_y_off  : out std_logic_vector(8 downto 0)     -- y value with added offset
     );
+    end component;
 
     component frame_printer is
     port (
         i_clk : in  std_logic;
         i_rst : in  std_logic;
-        i_x   : in  std_logic_vector(8 downto 0);
-        i_y   : in  std_logic_vector(8 downto 0);
+        i_x   : in  std_logic_vector(7 downto 0);
+        i_y   : in  std_logic_vector(7 downto 0);
 
         o_sof : out std_logic;
         o_eof : out std_logic;
         o_sol : out std_logic;
-        o_eol : out std_logic;
+        o_eol : out std_logic
     );
+    end component;
 
     component tile_handler is
     port (
         i_clk     : in  std_logic;
         i_rst     : in  std_logic;
-        i_opcode  : in  std_logic_vector(4 downto 0);
-        i_reg_tex : in  std_logic_vector(5 downto 0);
+        i_opcode  : in  opcode;
+        i_reg_tex : in  std_logic_vector(7 downto 0);
         i_reg_x   : in  std_logic_vector(8 downto 0);
         i_reg_y   : in  std_logic_vector(8 downto 0);
 
         i_x       : in  std_logic_vector(8 downto 0);
         i_y       : in  std_logic_vector(8 downto 0);
 
-        o_cc      : out std_logic_vector(5 downto 0);
+        o_cc      : out color_code
     );
+    end component;
 
     component sprite_handler is
     port (
         i_clk      : in  std_logic;
         i_rst      : in  std_logic;
-        i_opcode   : in  std_logic_vector(4 downto 0);
-        i_reg_tex  : in  std_logic_vector(5 downto 0);
+        i_opcode   : in  opcode;
+        i_reg_tex  : in  std_logic_vector(7 downto 0);
         i_reg_x    : in  std_logic_vector(8 downto 0);
         i_reg_y    : in  std_logic_vector(8 downto 0);
         i_reg_sprt : in  std_logic_vector(5 downto 0);
@@ -89,27 +93,29 @@ architecture behavioral of ppu is
         i_x        : in  std_logic_vector(8 downto 0);
         i_y        : in  std_logic_vector(8 downto 0);
 
-        o_cc       : out std_logic_vector(5 downto 0);
-        o_active   : out std_logic;
+        o_cc       : out color_code;
+        o_active   : out std_logic
     );
+    end component;
 
     component color_converter is
     port (
-        i_cc    : in  std_logic_vector(5  downto 0);
-        o_color : out std_logic_vector(23 downto 0);
+        i_cc    : in  color_code;
+        o_color : out std_logic_vector(23 downto 0)
     );
+    end component;
 
 
-    signal s_x_offset   : std_logic_vector(8 downto 0)  := others => '0';
-    signal s_y_offset   : std_logic_vector(8 downto 0)  := others => '0';
-    signal s_x          : std_logic_vector(7 downto 0)  := others => '0';
-    signal s_y          : std_logic_vector(7 downto 0)  := others => '0';
+    signal s_x_offset   : std_logic_vector(8 downto 0)  := (others => '0');
+    signal s_y_offset   : std_logic_vector(8 downto 0)  := (others => '0');
+    signal s_x          : std_logic_vector(7 downto 0)  := (others => '0');
+    signal s_y          : std_logic_vector(7 downto 0)  := (others => '0');
 
     signal s_has_sprite : std_logic := '0';
 
-    signal s_cc         : std_logic_vector(5 downto 0) := others => '0';
-    signal s_tile_cc    : std_logic_vector(5 downto 0) := others => '0';
-    signal s_sprite_cc  : std_logic_vector(5 downto 0) := others => '0';
+    signal s_cc         : color_code                   := (others => '0');
+    signal s_tile_cc    : std_logic_vector(5 downto 0) := (others => '0');
+    signal s_sprite_cc  : std_logic_vector(5 downto 0) := (others => '0');
 
 
     
@@ -125,8 +131,8 @@ begin
 
         o_x      => s_x,
         o_y      => s_y,
-        o_x_off  => s_x_off,
-        o_y_off  => s_y_off
+        o_x_off  => s_x_offset,
+        o_y_off  => s_y_offset
     );
 
     inst_frame_printer: frame_printer
@@ -151,8 +157,8 @@ begin
         i_reg_x   => i_reg_x,
         i_reg_y   => i_reg_y,
 
-        i_x       => s_x_off,
-        i_y       => s_y_off,
+        i_x       => s_x_offset,
+        i_y       => s_y_offset,
 
         o_cc      => s_tile_cc
     );
@@ -168,8 +174,8 @@ begin
         i_reg_en   => i_reg_en,
         i_reg_sprt => i_reg_sprt,
 
-        i_x        => s_x_off,
-        i_y        => s_y_off,
+        i_x        => s_x_offset,
+        i_y        => s_y_offset,
 
         o_cc       => s_sprite_cc,
         o_active   => s_has_sprite
