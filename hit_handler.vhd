@@ -2,18 +2,19 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 use work.ppu_package.all;
-  
+use work.sprite_package.all;
+
 
 entity hit_handler is
 port (
-    i_x        : in vector_pos      (63 downto 0);
-    i_y        : in vector_pos      (63 downto 0);
-    i_sprite_x : in vector_pos      (63 downto 0);
-    i_sprite_y : in vector_pos      (63 downto 0);
-    i_en       : in std_logic_vector(63 downto 0);
-    i_cc       : in color_code      (63 downto 0);
+    i_x        : in std_logic_vector(POS_SIZE downto 0);
+    i_y        : in std_logic_vector(POS_SIZE downto 0);
+    i_sprite_x : in vector_sprt_pos;
+    i_sprite_y : in vector_sprt_pos;
+    i_en       : in std_logic_vector(SPRT_SIZE downto 0);
+    i_cc_0     : in std_logic_vector(SPRT_SIZE downto 0);
 
-    o_sprite   : out std_logic_vector(5 downto 0);
+    o_cc       : out std_logic_vector(5 downto 0);
     o_en       : out std_logic
 ); end hit_handler;
 
@@ -22,12 +23,12 @@ architecture behavioral of hit_handler is
 
     component hit_detector is
     port (
-        i_x        : std_logic_vector(8 downto 0);
-        i_y        : std_logic_vector(8 downto 0);
-        i_sprite_x : std_logic_vector(8 downto 0); 
-        i_sprite_y : std_logic_vector(8 downto 0);
-        i_en       : std_logic_vector(8 downto 0);
-        i_cc       : abcde;
+        i_x        : std_logic_vector(POS_SIZE downto 0);
+        i_y        : std_logic_vector(POS_SIZE downto 0);
+        i_sprite_x : std_logic_vector(POS_SIZE downto 0); 
+        i_sprite_y : std_logic_vector(POS_SIZE downto 0);
+        i_en       : std_logic;
+        i_cc       : std_logic_vector(CC_SIZE downto 0);
 
         o_hit      : std_logic
     );
@@ -35,12 +36,11 @@ architecture behavioral of hit_handler is
 
 
     signal s_hits : std_logic_vector(63 downto 0);
-    
-    signal cc : color_code;
+    signal s_cc   : std_logic_vector(CC_SIZE downto 0);
     
 begin
 
-    cc <= i_cc(0);
+    s_cc <= i_cc(0);
 
     -- https://stackoverflow.com/a/13194608
     hit_detector_gen:

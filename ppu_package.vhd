@@ -12,14 +12,18 @@ use ieee.numeric_std.all;
 
 package ppu_package is 
 
-subtype color_code is std_logic_vector(5 downto 0);
-subtype opcode     is std_logic_vector(4 downto 0);
+constant  CC_SIZE : integer := 5;
+constant  OP_SIZE : integer := 4;
+constant COL_SIZE : integer := 23;
+constant POS_SIZE : integer := 8;
 
-type ram_colors is array (natural range <>) of std_logic_vector(23 downto 0);
-type vector_pos is array (natural range <>) of std_logic_vector(8  downto 0);
-type texture    is array (0 to 1023) of color_code;
-type abcde      is array (0 to 63)   of color_code;
+constant CC_IN_ROW    : integer := 16;
+constant CC_IN_COL    : integer := 16;
+constant TILE_IN_ROW  : integer := 32;
+constant TILE_IN_COL  : integer := 32;
 
+type ram_colors is array (natural range <>) of std_logic_vector(COL_SIZE downto 0);
+type texture    is array (0 to (CC_IN_ROW * CC_IN_COL)) of std_logic_vector(CC_SIZE downto 0);
 
 constant OP_NOP      : std_logic_vector(4 downto 0) := "00000";
 constant OP_TILE_TEX : std_logic_vector(4 downto 0) := "01001";

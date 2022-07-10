@@ -9,6 +9,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 use work.ppu_package.all;
+use work.sprite_package.all;
 
 entity sprite_handler is
 port (
@@ -17,15 +18,16 @@ port (
     
     i_opcode   : in  std_logic_vector(4 downto 0);
     i_reg_tex  : in  std_logic_vector(7 downto 0);
-    i_reg_x    : in  std_logic_vector(8 downto 0);
-    i_reg_y    : in  std_logic_vector(8 downto 0);
+    i_reg_x    : in  std_logic_vector(POS_SIZE downto 0);
+    i_reg_y    : in  std_logic_vector(POS_SIZE downto 0);
     i_reg_sprt : in  std_logic_vector(5 downto 0);
     i_reg_en   : in  std_logic;
 
-    i_x        : in  std_logic_vector(8 downto 0);
-    i_y        : in  std_logic_vector(8 downto 0);
+    i_x        : in  std_logic_vector(POS_SIZE downto 0);
+    i_y        : in  std_logic_vector(POS_SIZE downto 0);
 
-    o_cc       : out std_logic_vector(5 downto 0)
+    o_cc       : out std_logic_vector(5 downto 0);
+    o_sprite   : out std_logic
 ); end sprite_handler;
 
 
@@ -37,23 +39,40 @@ architecture behavioral of sprite_handler is
         i_rst      : in  std_logic;
         i_opcode   : in  std_logic_vector(4 downto 0);
         i_reg_tex  : in  std_logic_vector(7 downto 0);
-        i_reg_x    : in  std_logic_vector(8 downto 0);
-        i_reg_y    : in  std_logic_vector(8 downto 0);
+        i_reg_x    : in  std_logic_vector(POS_SIZE downto 0);
+        i_reg_y    : in  std_logic_vector(POS_SIZE downto 0);
         i_reg_sprt : in  std_logic_vector(5 downto 0);
         i_reg_en   : in  std_logic;
         
         i_id       : in  std_logic_vector(5 downto 0);
 
-        o_x        : out std_logic_vector(8 downto 0);
-        o_y        : out std_logic_vector(8 downto 0);
-        o_cc       : out vector_cc
+        o_x        : out std_logic_vector(POS_SIZE downto 0);
+        o_y        : out std_logic_vector(POS_SIZE downto 0);
+        o_tex      : out texture;
+        o_en       : out std_logic
     );
     end component;
     
-    signal s_sprites_x  : vector_pos(0 to 63);
-    signal s_sprites_y  : vector_pos(0 to 63);
-    signal s_sprites_cc : vector_tex(0 to 63);
-    signal s_sprite_cc  : vector_tex(0 to 0);
+    component hit_handler is
+    port (
+        i_x        : in std_logic_vector(POS_SIZE downto 0);
+        i_y        : in std_logic_vector(POS_SIZE downto 0);
+        i_sprite_x : in vector_sprt_pos;
+        i_sprite_y : in vector_sprt_pos;
+        i_en       : in std_logic_vector(SPRT_SIZE downto 0);
+        i_tex      : in texture;
+    
+        o_sprite   : out std_logic_vector(5 downto 0);
+        o_en       : out std_logic
+    );
+    end component;
+    
+    signal s_sprites_x    : vector_sprt_pos;
+    signal s_sprites_y    : vector_sprt_pos;
+    signal s_sprites_tex  : vector_sprt_tex;
+    signal s_sprites_en   : std_logic_vector(SPRT_SIZE downto 0);
+    signal s_sprites_cc_0 : std_logic_vector(SPRT_SIZE downto 0);
+    signal s_sprite_cc    : std_logic_vector(CC_SIZE downto 0);
 
     signal s_sprite_id  : std_logic_vector(5 downto 0);
     signal s_cc_id      : std_logic_vector(7 downto 0);
@@ -78,17 +97,34 @@ begin
 
             o_x        => s_sprites_x (i),
             o_y        => s_sprites_y (i),
-            o_cc       => s_sprites_cc(i)
+            o_tex      => s_sprites_tex(i),
+            o_en       => s_sprites_en(i)
         );
     end generate;
 
-    s_sprite_id(9 downto 5) <= i_y(8 downto 4);
-    s_sprite_id(4 downto 0) <= i_x(8 downto 4);
-
+    inst_hit_handler: hit_handler
+    port map (
+        i_x        => i_x,
+        i_y        => i_y,
+        i_sprite_x => s_sprites_x,
+        i_sprite_y => s_sprites_y,
+        i_en       => s_sprites_en,
+        i_cc_0     => s_sprites_cc_0,
+        o_sprite   => s_sprite_id,
+        o_en       => o_sprite
+    );
+    
     s_cc_id    (7 downto 4) <= i_y(3 downto 0);
     s_cc_id    (3 downto 0) <= i_x(3 downto 0);
 
-    s_sprite_cc(0) <= s_sprites_cc  (to_integer(unsigned(s_sprite_id)));
-    o_cc           <= s_sprite_cc(0)(to_integer(unsigned(s_cc_id)));
+    s_sprite_cc <=   s_sprites_tex(to_integer(unsigned(s_sprite_id)));
+    --o_cc           <= s_sprite_cc(0)(to_integer(unsigned(s_cc_id)));
+    
+    process(s_sprites_tex)
+    begin
+        for i in s_sprites_tex' range loop
+            s_sprites_cc_0(i) <= '1' when s_sprites_tex(i) = s_sprite_textures(0) else '0';
+        end loop;
+    end process;
 
 end behavioral;

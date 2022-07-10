@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Jul  7 15:30:29 2022
+# Process ID: 59700
+# Current directory: /home/raesangur/github/ppu
+# Command line: vivado
+# Log file: /home/raesangur/github/ppu/vivado.log
+# Journal file: /home/raesangur/github/ppu/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/raesangur/github/ppu/vivado/vivado.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+close_project
+open_project /home/raesangur/github/ppu/vivado/vivado.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+set_property file_type {VHDL 2008} [get_files  /home/raesangur/github/ppu/ppu_package.vhd]

@@ -1,3 +1,6 @@
 INFO: [VRFC 10-163] Analyzing VHDL file "/home/raesangur/github/ppu/ppu_package.vhd" into library xil_defaultlib
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/raesangur/github/ppu/ppu.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'ppu'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/raesangur/github/ppu/sprite.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'sprite'
+ERROR: [VRFC 10-2989] 's_tiles_textures' is not declared [/home/raesangur/github/ppu/sprite.vhd:64]
+ERROR: [VRFC 10-3782] unit 'behavioral' ignored due to previous errors [/home/raesangur/github/ppu/sprite.vhd:33]
+INFO: [VRFC 10-3070] VHDL file '/home/raesangur/github/ppu/sprite.vhd' ignored due to errors

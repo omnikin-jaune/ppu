@@ -25,20 +25,18 @@ port (
 
     o_x        : out std_logic_vector(8 downto 0);
     o_y        : out std_logic_vector(8 downto 0);
-    o_cc       : out vector_cc;
+    o_tex      : out texture;
     o_en       : out std_logic
 ); end sprite;
 
 
 architecture behavioral of sprite is
+    
+
     signal s_texture_id     : std_logic_vector(7 downto 0) := (others => '0');
     signal s_x              : std_logic_vector(8 downto 0) := (others => '0');
     signal s_y              : std_logic_vector(8 downto 0) := (others => '0');
     signal s_en             : std_logic := '0';
-    
-    signal s_tex_pos        : std_logic_vector(7 downto 0);
-    signal s_tiles_textures : vector_tex(7 downto 0) := (others => (others => (others => '0')));
-    signal s_cc             : vector_cc;
 begin
 
     process(i_clk, i_rst, i_opcode, i_reg_x, i_reg_y)
@@ -63,10 +61,7 @@ begin
         end if;
     end process;
 
-    s_cc(0) <= s_tiles_textures(to_integer(unsigned(s_texture_id)))
-                               (to_integer(unsigned(s_tex_pos)));
-    
-    o_cc <= s_cc;
+    o_tex <= s_tiles_textures(to_integer(unsigned(s_texture_id)));
     o_en <= s_en;
     
 end behavioral;

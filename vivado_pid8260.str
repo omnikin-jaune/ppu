@@ -1,0 +1,1410 @@
+/*
+
+Xilinx Vivado v2020.2 (64-bit) [Major: 2020, Minor: 2]
+SW Build: 3064766 on Wed Nov 18 09:12:47 MST 2020
+IP Build: 3064653 on Wed Nov 18 14:17:31 MST 2020
+
+Process ID (PID): 8260
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Sat Jul 09 23:23:05 EDT 2022
+Time zone: 	Eastern Standard Time (America/Toronto)
+
+OS: Ubuntu
+OS Version: 5.15.0-40-generic
+OS Architecture: amd64
+Available processors (cores): 8
+
+Display: 0
+Screen size: 2256x1504
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=18
+Scale size: 27
+
+Java version: 	11.0.2 64-bit
+Java home: 	/usr/share/Xilinx/Vivado/2020.2/tps/lnx64/jre11.0.2
+Java executable location: 	/usr/share/Xilinx/Vivado/2020.2/tps/lnx64/jre11.0.2/bin/java
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	raesangur
+User home directory: /home/raesangur
+User working directory: /home/raesangur/github/ppu
+User country: 	CA
+User language: 	en
+User locale: 	en_CA
+
+RDI_BASEROOT: /usr/share/Xilinx/Vivado
+HDI_APPROOT: /usr/share/Xilinx/Vivado/2020.2
+RDI_DATADIR: /usr/share/Xilinx/Vivado/2020.2/data
+RDI_BINDIR: /usr/share/Xilinx/Vivado/2020.2/bin
+
+Vivado preferences file location: /home/raesangur/.Xilinx/Vivado/2020.2/vivado.xml
+Vivado preferences directory: /home/raesangur/.Xilinx/Vivado/2020.2/
+Vivado layouts directory: /home/raesangur/.Xilinx/Vivado/2020.2/data/layouts
+PlanAhead jar file location: 	/usr/share/Xilinx/Vivado/2020.2/lib/classes/planAhead.jar
+Vivado log file location: 	/home/raesangur/github/ppu/vivado.log
+Vivado journal file location: 	/home/raesangur/github/ppu/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-8260-mini-pascal
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /usr/share/Xilinx/Vivado/2020.2/ids_lite/ISE
+XILINX_DSP: /usr/share/Xilinx/Vivado/2020.2/ids_lite/ISE
+XILINX_HLS: /usr/share/Xilinx/Vitis_HLS/2020.2
+XILINX_PLANAHEAD: /usr/share/Xilinx/Vivado/2020.2
+XILINX_VITIS: 
+XILINX_VIVADO: /usr/share/Xilinx/Vivado/2020.2
+XILINX_VIVADO_HLS: /usr/share/Xilinx/Vivado/2020.2
+
+
+GUI allocated memory:	185 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,493 MB
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// HMemoryUtils.trashcanNow. Engine heap size: 1,494 MB. GUI used memory: 76 MB. Current time: 7/9/22, 11:23:06 PM EDT
+selectList(PAResourceQtoS.SyntheticaGettingStartedView_RECENT_PROJECTS, "/home/raesangur/github/ppu/vivado/vivado.xpr", 0); // r
+// [GUI Memory]: 83 MB (+84208kb) [00:00:12]
+// [Engine Memory]: 1,494 MB (+1415301kb) [00:00:12]
+// bz (cr):  Open Project : addNotify
+// Opening Vivado Project: /home/raesangur/github/ppu/vivado/vivado.xpr. Version: Vivado v2020.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project /home/raesangur/github/ppu/vivado/vivado.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 106 MB (+19939kb) [00:00:14]
+// [Engine Memory]: 1,590 MB (+22535kb) [00:00:14]
+// WARNING: HEventQueue.dispatchEvent() is taking  2928 ms.
+// Tcl Message: open_project /home/raesangur/github/ppu/vivado/vivado.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/usr/share/Xilinx/Vivado/2020.2/data/ip'. 
+// Project name: vivado; location: /home/raesangur/github/ppu/vivado; part: xc7z010clg400-1
+// [GUI Memory]: 124 MB (+13781kb) [00:00:16]
+// Tcl Message: INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'. 
+dismissDialog("Open Project"); // bz
+// [GUI Memory]: 147 MB (+17199kb) [00:00:18]
+// Tcl Message: update_compile_order -fileset sources_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,677 MB. GUI used memory: 84 MB. Current time: 7/9/22, 11:25:11 PM EDT
+// Elapsed time: 122 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u
+// [Engine Memory]: 1,679 MB (+8946kb) [00:02:19]
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Libraries", 1); // i
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL 2008, xil_defaultlib, frame_printer.vhd]", 5, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Utility Sources, utils_1]", 18, false); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL 2008, xil_defaultlib, Unreferenced]", 12); // D
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Hierarchy", 0); // i
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ppu(behavioral) (ppu.vhd)]", 1); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ppu(behavioral) (ppu.vhd), inst_sprite_handler : sprite_handler(behavioral) (sprite_handler.vhd)]", 5, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ppu(behavioral) (ppu.vhd), inst_sprite_handler : sprite_handler(behavioral) (sprite_handler.vhd), sprite_gen[2].sprites : sprite(behavioral) (sprite.vhd)]", 8, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("sprite_handler.vhd", 159, 394); // bP
+selectCodeEditor("sprite_handler.vhd", 159, 394); // bP
+selectCodeEditor("sprite_handler.vhd", 159, 394); // bP
+selectCodeEditor("sprite_handler.vhd", 159, 394); // bP
+selectCodeEditor("sprite_handler.vhd", 159, 394); // bP
+selectCodeEditor("sprite_handler.vhd", 159, 394); // bP
+selectCodeEditor("sprite_handler.vhd", 159, 394); // bP
+selectCodeEditor("sprite_handler.vhd", 159, 394); // bP
+selectCodeEditor("sprite_handler.vhd", 159, 394); // bP
+selectCodeEditor("sprite_handler.vhd", 159, 394); // bP
+selectCodeEditor("sprite_handler.vhd", 159, 394); // bP
+selectCodeEditor("sprite_handler.vhd", 159, 394); // bP
+selectCodeEditor("sprite_handler.vhd", 159, 394); // bP
+selectCodeEditor("sprite_handler.vhd", 159, 394); // bP
+selectCodeEditor("sprite_handler.vhd", 580, 501); // bP
+selectCodeEditor("sprite_handler.vhd", 535, 478); // bP
+selectCodeEditor("sprite_handler.vhd", 597, 472); // bP
+// HMemoryUtils.trashcanNow. Engine heap size: 1,698 MB. GUI used memory: 88 MB. Current time: 7/9/22, 11:26:21 PM EDT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 40 seconds
+selectCodeEditor("sprite_handler.vhd", 390, 546); // bP
+selectCodeEditor("sprite_handler.vhd", 390, 546); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectCodeEditor("sprite_handler.vhd", 390, 546); // bP
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, hit_handler(behavioral) (hit_handler.vhd)]", 9, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, hit_handler(behavioral) (hit_handler.vhd), hit_detector_gen[2].hit_detectors : hit_detector(behavioral) (hit_detector.vhd)]", 12, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("hit_handler.vhd", 234, 464); // bP
+typeControlKey((HResource) null, "hit_handler.vhd", 'c'); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite_handler.vhd", 1); // m
+// Elapsed time: 15 seconds
+selectCodeEditor("sprite_handler.vhd", 389, 464); // bP
+typeControlKey((HResource) null, "sprite_handler.vhd", 'v'); // bP
+selectCodeEditor("sprite_handler.vhd", 92, 226); // bP
+selectCodeEditor("sprite_handler.vhd", 92, 226, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("sprite_handler.vhd", 130, 514); // bP
+selectCodeEditor("sprite_handler.vhd", 130, 514, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("sprite_handler.vhd", 167, 523); // bP
+selectCodeEditor("sprite_handler.vhd", 221, 341); // bP
+selectCodeEditor("sprite_handler.vhd", 398, 36); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("sprite_handler.vhd", 440, 290); // bP
+selectCodeEditor("sprite_handler.vhd", 440, 290); // bP
+selectCodeEditor("sprite_handler.vhd", 440, 290); // bP
+selectCodeEditor("sprite_handler.vhd", 440, 290); // bP
+selectCodeEditor("sprite_handler.vhd", 440, 290); // bP
+selectCodeEditor("sprite_handler.vhd", 440, 290); // bP
+selectCodeEditor("sprite_handler.vhd", 440, 290); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectCodeEditor("sprite_handler.vhd", 440, 290); // bP
+// HMemoryUtils.trashcanNow. Engine heap size: 1,778 MB. GUI used memory: 89 MB. Current time: 7/9/22, 11:27:31 PM EDT
+// [Engine Memory]: 1,778 MB (+16448kb) [00:04:36]
+// Elapsed time: 10 seconds
+selectCodeEditor("sprite_handler.vhd", 440, 290); // bP
+// Elapsed time: 14 seconds
+selectCodeEditor("sprite_handler.vhd", 461, 217); // bP
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, hit_handler(behavioral) (hit_handler.vhd)]", 7); // D
+selectCodeEditor("sprite_handler.vhd", 414, 423); // bP
+selectCodeEditor("sprite_handler.vhd", 175, 289, false, true, false, false, false); // bP - Control Key
+selectCodeEditor("sprite_handler.vhd", 190, 278, false, true, false, false, false); // bP - Control Key
+selectCodeEditor("sprite_handler.vhd", 190, 278, false, true, false, false, true); // bP - Control Key - Double Click
+selectCodeEditor("sprite_handler.vhd", 190, 278, false, true, false, false, false); // bP - Control Key
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Libraries", 1); // i
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL 2008, xil_defaultlib, Unreferenced]", 12); // D
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Hierarchy", 0); // i
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ppu(behavioral) (ppu.vhd), inst_color_converter : color_converter(behavioral) (color_converter.vhd)]", 6, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ppu(behavioral) (ppu.vhd), inst_color_converter : color_converter(behavioral) (color_converter.vhd)]", 6, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ppu(behavioral) (ppu.vhd), inst_color_converter : color_converter(behavioral) (color_converter.vhd)]", 6, false); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Utility Sources]", 10); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Utility Sources, utils_1]", 11, false); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Utility Sources]", 10); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ppu(behavioral) (ppu.vhd)]", 1, true); // D - Node
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Libraries", 1); // i
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL 2008, xil_defaultlib]", 2); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL 2008, xil_defaultlib]", 2); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL 2008, xil_defaultlib, sprite.vhd]", 7, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL 2008, xil_defaultlib, ppu_package.vhd]", 3, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL 2008, xil_defaultlib, ppu_package.vhd]", 3, false, false, false, false, false, true); // D - Double Click
+// Elapsed time: 36 seconds
+selectCodeEditor("ppu_package.vhd", 350, 173); // bP
+// Elapsed time: 22 seconds
+selectCodeEditor("ppu_package.vhd", 273, 400); // bP
+selectCodeEditor("ppu_package.vhd", 163, 193); // bP
+// Elapsed time: 15 seconds
+selectCodeEditor("ppu_package.vhd", 177, 213); // bP
+selectCodeEditor("ppu_package.vhd", 344, 217); // bP
+selectCodeEditor("ppu_package.vhd", 450, 277); // bP
+selectCodeEditor("ppu_package.vhd", 444, 300); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,798 MB. GUI used memory: 90 MB. Current time: 7/9/22, 11:30:06 PM EDT
+selectCodeEditor("ppu_package.vhd", 608, 278); // bP
+selectCodeEditor("ppu_package.vhd", 617, 275); // bP
+typeControlKey((HResource) null, "ppu_package.vhd", 'c'); // bP
+selectCodeEditor("ppu_package.vhd", 476, 409); // bP
+selectCodeEditor("ppu_package.vhd", 476, 409, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "ppu_package.vhd", 'v'); // bP
+selectCodeEditor("ppu_package.vhd", 495, 435); // bP
+selectCodeEditor("ppu_package.vhd", 495, 435, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "ppu_package.vhd", 'v'); // bP
+selectCodeEditor("ppu_package.vhd", 660, 305); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 27 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("ppu_package.vhd", 196, 222); // bP
+selectCodeEditor("ppu_package.vhd", 101, 227); // bP
+selectCodeEditor("ppu_package.vhd", 725, 300); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("ppu_package.vhd", 672, 231); // bP
+selectCodeEditor("ppu_package.vhd", 672, 231); // bP
+// HMemoryUtils.trashcanNow. Engine heap size: 1,830 MB. GUI used memory: 90 MB. Current time: 7/9/22, 11:31:01 PM EDT
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hit_handler.vhd", 1); // m
+selectCodeEditor("hit_handler.vhd", 413, 162); // bP
+selectCodeEditor("hit_handler.vhd", 284, 350); // bP
+selectCodeEditor("hit_handler.vhd", 284, 350, false, false, false, false, true); // bP - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ppu_package.vhd", 2); // m
+selectCodeEditor("ppu_package.vhd", 153, 212); // bP
+selectCodeEditor("ppu_package.vhd", 153, 212, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("ppu_package.vhd", 164, 162); // bP
+selectCodeEditor("ppu_package.vhd", 164, 162, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "ppu_package.vhd", 'c'); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hit_handler.vhd", 1); // m
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ppu_package.vhd", 2); // m
+selectCodeEditor("ppu_package.vhd", 416, 208); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 15 seconds
+selectCodeEditor("ppu_package.vhd", 364, 411); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,863 MB. GUI used memory: 90 MB. Current time: 7/9/22, 11:31:46 PM EDT
+// Elapsed time: 13 seconds
+selectCodeEditor("ppu_package.vhd", 377, 381); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("ppu_package.vhd", 439, 283); // bP
+// [Engine Memory]: 1,880 MB (+13281kb) [00:08:58]
+// Elapsed time: 22 seconds
+selectCodeEditor("ppu_package.vhd", 405, 293); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,896 MB. GUI used memory: 90 MB. Current time: 7/9/22, 11:43:36 PM EDT
+// Elapsed time: 775 seconds
+selectCodeEditor("ppu_package.vhd", 406, 302); // bP
+selectCodeEditor("ppu_package.vhd", 100, 333); // bP
+// Elapsed time: 21 seconds
+selectCodeEditor("ppu_package.vhd", 226, 392); // bP
+selectCodeEditor("ppu_package.vhd", 219, 377); // bP
+selectCodeEditor("ppu_package.vhd", 445, 383); // bP
+selectCodeEditor("ppu_package.vhd", 376, 487); // bP
+selectCodeEditor("ppu_package.vhd", 376, 487); // bP
+selectCodeEditor("ppu_package.vhd", 376, 487, false, false, false, false, true); // bP - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 11 seconds
+selectCodeEditor("ppu_package.vhd", 614, 496); // bP
+selectCodeEditor("ppu_package.vhd", 614, 488); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 15 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hit_handler.vhd", 1); // m
+// HMemoryUtils.trashcanNow. Engine heap size: 1,928 MB. GUI used memory: 90 MB. Current time: 7/9/22, 11:46:11 PM EDT
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ppu_package.vhd", 2); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hit_handler.vhd", 1); // m
+// Elapsed time: 11 seconds
+selectCodeEditor("hit_handler.vhd", 95, 346); // bP
+selectCodeEditor("hit_handler.vhd", 455, 356); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite_handler.vhd", 0); // m
+selectCodeEditor("sprite_handler.vhd", 243, 311); // bP
+selectCodeEditor("sprite_handler.vhd", 243, 311); // bP
+selectCodeEditor("sprite_handler.vhd", 243, 311); // bP
+selectCodeEditor("sprite_handler.vhd", 402, 365); // bP
+selectCodeEditor("sprite_handler.vhd", 444, 353); // bP
+selectCodeEditor("sprite_handler.vhd", 324, 279); // bP
+selectCodeEditor("sprite_handler.vhd", 324, 279, false, false, false, false, true); // bP - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,961 MB. GUI used memory: 91 MB. Current time: 7/9/22, 11:46:56 PM EDT
+// Elapsed time: 99 seconds
+selectCodeEditor("sprite_handler.vhd", 299, 493); // bP
+selectCodeEditor("sprite_handler.vhd", 299, 493, false, false, false, false, true); // bP - Double Click
+// Elapsed time: 10 seconds
+selectCodeEditor("sprite_handler.vhd", 404, 349); // bP
+selectCodeEditor("sprite_handler.vhd", 404, 349); // bP
+selectCodeEditor("sprite_handler.vhd", 404, 349); // bP
+selectCodeEditor("sprite_handler.vhd", 404, 349); // bP
+selectCodeEditor("sprite_handler.vhd", 404, 349); // bP
+selectCodeEditor("sprite_handler.vhd", 299, 484); // bP
+selectCodeEditor("sprite_handler.vhd", 299, 484, false, false, false, false, true); // bP - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("sprite_handler.vhd", 122, 482); // bP
+// [Engine Memory]: 1,977 MB (+3469kb) [00:25:48]
+selectCodeEditor("sprite_handler.vhd", 790, 213); // bP
+selectCodeEditor("sprite_handler.vhd", 770, 208); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,993 MB. GUI used memory: 91 MB. Current time: 7/9/22, 11:48:56 PM EDT
+selectCodeEditor("sprite_handler.vhd", 770, 208); // bP
+selectCodeEditor("sprite_handler.vhd", 770, 208); // bP
+selectCodeEditor("sprite_handler.vhd", 770, 208); // bP
+selectCodeEditor("sprite_handler.vhd", 770, 208); // bP
+selectCodeEditor("sprite_handler.vhd", 770, 208); // bP
+selectCodeEditor("sprite_handler.vhd", 770, 208); // bP
+selectCodeEditor("sprite_handler.vhd", 770, 208); // bP
+selectCodeEditor("sprite_handler.vhd", 770, 208); // bP
+// Elapsed time: 261 seconds
+selectCodeEditor("sprite_handler.vhd", 345, 278); // bP
+selectCodeEditor("sprite_handler.vhd", 345, 278, false, false, false, false, true); // bP - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ppu_package.vhd", 2); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite_handler.vhd", 0); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ppu_package.vhd", 2); // m
+selectCodeEditor("ppu_package.vhd", 460, 277); // bP
+selectCodeEditor("ppu_package.vhd", 460, 391); // bP
+selectCodeEditor("ppu_package.vhd", 496, 375); // bP
+selectCodeEditor("ppu_package.vhd", 304, 492); // bP
+selectCodeEditor("ppu_package.vhd", 328, 513); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 28 seconds
+selectCodeEditor("ppu_package.vhd", 103, 535); // bP
+selectCodeEditor("ppu_package.vhd", 103, 535, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "ppu_package.vhd", 'c'); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite_handler.vhd", 0); // m
+selectCodeEditor("sprite_handler.vhd", 594, 278); // bP
+selectCodeEditor("sprite_handler.vhd", 485, 274); // bP
+// Elapsed time: 22 seconds
+selectCodeEditor("sprite_handler.vhd", 487, 487); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,026 MB. GUI used memory: 91 MB. Current time: 7/9/22, 11:54:46 PM EDT
+selectCodeEditor("sprite_handler.vhd", 564, 497); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("sprite_handler.vhd", 564, 497); // bP
+selectCodeEditor("sprite_handler.vhd", 564, 497); // bP
+selectCodeEditor("sprite_handler.vhd", 564, 497); // bP
+// Elapsed time: 14 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL 2008, xil_defaultlib, sprite.vhd]", 7, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL 2008, xil_defaultlib, sprite.vhd]", 7, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("sprite.vhd", 271, 572); // bP
+selectCodeEditor("sprite.vhd", 271, 572); // bP
+selectCodeEditor("sprite.vhd", 271, 572); // bP
+selectCodeEditor("sprite.vhd", 271, 572); // bP
+selectCodeEditor("sprite.vhd", 271, 572); // bP
+selectCodeEditor("sprite.vhd", 396, 278); // bP
+selectCodeEditor("sprite.vhd", 396, 278, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("sprite.vhd", 331, 251); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,058 MB. GUI used memory: 92 MB. Current time: 7/9/22, 11:55:21 PM EDT
+selectCodeEditor("sprite.vhd", 435, 196); // bP
+// Elapsed time: 14 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hit_handler.vhd", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite_handler.vhd", 0); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ppu_package.vhd", 2); // m
+selectCodeEditor("ppu_package.vhd", 683, 527); // bP
+selectCodeEditor("ppu_package.vhd", 136, 533); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("ppu_package.vhd", 815, 540); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite.vhd", 3); // m
+selectCodeEditor("sprite.vhd", 303, 245); // bP
+selectCodeEditor("sprite.vhd", 303, 245, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("sprite.vhd", 303, 245); // bP
+selectCodeEditor("sprite.vhd", 313, 249); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 2,091 MB (+15275kb) [00:33:10]
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ppu_package.vhd", 0); // m
+// HMemoryUtils.trashcanNow. Engine heap size: 2,091 MB. GUI used memory: 92 MB. Current time: 7/9/22, 11:56:11 PM EDT
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite.vhd", 3); // m
+selectCodeEditor("sprite.vhd", 470, 252); // bP
+selectCodeEditor("sprite.vhd", 402, 240); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ppu_package.vhd", 0); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite.vhd", 3); // m
+selectCodeEditor("sprite.vhd", 528, 224); // bP
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ppu_package.vhd", 0); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite.vhd", 3); // m
+// Elapsed time: 14 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ppu_package.vhd", 0); // m
+selectCodeEditor("ppu_package.vhd", 523, 375); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 18 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite.vhd", 3); // m
+selectCodeEditor("sprite.vhd", 443, 257); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 12 seconds
+selectCodeEditor("sprite.vhd", 425, 455); // bP
+selectCodeEditor("sprite.vhd", 425, 455, false, false, false, false, true); // bP - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 2,123 MB. GUI used memory: 92 MB. Current time: 7/9/22, 11:57:46 PM EDT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("sprite.vhd", 628, 459); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("sprite.vhd", 550, 497); // bP
+selectCodeEditor("sprite.vhd", 361, 480); // bP
+selectCodeEditor("sprite.vhd", 361, 480, false, false, false, false, true); // bP - Double Click
+// Elapsed time: 10 seconds
+selectCodeEditor("sprite.vhd", 267, 151); // bP
+selectCodeEditor("sprite.vhd", 267, 151); // bP
+selectCodeEditor("sprite.vhd", 267, 151); // bP
+selectCodeEditor("sprite.vhd", 118, 489); // bP
+selectCodeEditor("sprite.vhd", 192, 561); // bP
+selectCodeEditor("sprite.vhd", 134, 485); // bP
+selectCodeEditor("sprite.vhd", 243, 510); // bP
+typeControlKey((HResource) null, "sprite.vhd", 'v'); // bP
+selectCodeEditor("sprite.vhd", 175, 490); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("sprite.vhd", 234, 378); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("sprite.vhd", 331, 474); // bP
+selectCodeEditor("sprite.vhd", 349, 463); // bP
+selectCodeEditor("sprite.vhd", 349, 463, false, false, false, false, true); // bP - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite_handler.vhd", 1); // m
+// HMemoryUtils.trashcanNow. Engine heap size: 2,188 MB. GUI used memory: 92 MB. Current time: 7/9/22, 11:58:31 PM EDT
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ppu_package.vhd", 0); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hit_handler.vhd", 2); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ppu_package.vhd", 0); // m
+selectCodeEditor("ppu_package.vhd", 157, 545); // bP
+selectCodeEditor("ppu_package.vhd", 157, 545, false, false, false, false, true); // bP - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite.vhd", 3); // m
+selectCodeEditor("sprite.vhd", 83, 468); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 2,204 MB (+9655kb) [00:35:54]
+// Elapsed time: 99 seconds
+selectCodeEditor("sprite.vhd", 917, 434); // bP
+// Elapsed time: 11 seconds
+selectCodeEditor("sprite.vhd", 90, 509); // bP
+selectCodeEditor("sprite.vhd", 90, 509, false, false, false, false, true); // bP - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("sprite.vhd", 348, 535); // bP
+// HMemoryUtils.trashcanNow. Engine heap size: 2,220 MB. GUI used memory: 92 MB. Current time: 7/10/22, 12:00:41 AM EDT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 12 seconds
+selectCodeEditor("sprite.vhd", 396, 443); // bP
+selectCodeEditor("sprite.vhd", 396, 443); // bP
+selectCodeEditor("sprite.vhd", 322, 513); // bP
+selectCodeEditor("sprite.vhd", 608, 533); // bP
+selectCodeEditor("sprite.vhd", 608, 533, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("sprite.vhd", 676, 235); // bP
+selectCodeEditor("sprite.vhd", 679, 232); // bP
+selectCodeEditor("sprite.vhd", 685, 533); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("sprite.vhd", 632, 410); // bP
+// HMemoryUtils.trashcanNow. Engine heap size: 2,252 MB. GUI used memory: 92 MB. Current time: 7/10/22, 12:01:21 AM EDT
+selectCodeEditor("sprite.vhd", 418, 604); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite_handler.vhd", 1); // m
+selectCodeEditor("sprite_handler.vhd", 161, 438); // bP
+selectCodeEditor("sprite_handler.vhd", 137, 525); // bP
+selectCodeEditor("sprite_handler.vhd", 134, 509); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("sprite_handler.vhd", 275, 508); // bP
+// HMemoryUtils.trashcanNow. Engine heap size: 2,285 MB. GUI used memory: 92 MB. Current time: 7/10/22, 12:01:41 AM EDT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 12 seconds
+selectCodeEditor("sprite_handler.vhd", 347, 473); // bP
+selectCodeEditor("sprite_handler.vhd", 347, 473, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("sprite_handler.vhd", 251, 489); // bP
+selectCodeEditor("sprite_handler.vhd", 271, 461); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 2,317 MB (+2437kb) [00:39:06]
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ppu_package.vhd", 0); // m
+// HMemoryUtils.trashcanNow. Engine heap size: 2,317 MB. GUI used memory: 92 MB. Current time: 7/10/22, 12:02:06 AM EDT
+typeControlKey((HResource) null, "ppu_package.vhd", 'c'); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite_handler.vhd", 1); // m
+selectCodeEditor("sprite_handler.vhd", 333, 485); // bP
+selectCodeEditor("sprite_handler.vhd", 333, 485, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "sprite_handler.vhd", 'v'); // bP
+selectCodeEditor("sprite_handler.vhd", 595, 476); // bP
+selectCodeEditor("sprite_handler.vhd", 521, 560); // bP
+selectCodeEditor("sprite_handler.vhd", 521, 560); // bP
+selectCodeEditor("sprite_handler.vhd", 521, 560); // bP
+selectCodeEditor("sprite_handler.vhd", 521, 560); // bP
+selectCodeEditor("sprite_handler.vhd", 521, 560); // bP
+selectCodeEditor("sprite_handler.vhd", 521, 560); // bP
+selectCodeEditor("sprite_handler.vhd", 521, 560); // bP
+selectCodeEditor("sprite_handler.vhd", 521, 560); // bP
+selectCodeEditor("sprite_handler.vhd", 521, 560); // bP
+selectCodeEditor("sprite_handler.vhd", 630, 468); // bP
+selectCodeEditor("sprite_handler.vhd", 630, 468); // bP
+selectCodeEditor("sprite_handler.vhd", 332, 305); // bP
+selectCodeEditor("sprite_handler.vhd", 332, 305, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("sprite_handler.vhd", 380, 308); // bP
+selectCodeEditor("sprite_handler.vhd", 421, 380); // bP
+selectCodeEditor("sprite_handler.vhd", 421, 380); // bP
+selectCodeEditor("sprite_handler.vhd", 421, 380); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("sprite_handler.vhd", 531, 362); // bP
+selectCodeEditor("sprite_handler.vhd", 172, 381); // bP
+selectCodeEditor("sprite_handler.vhd", 368, 442); // bP
+selectCodeEditor("sprite_handler.vhd", 368, 442); // bP
+selectCodeEditor("sprite_handler.vhd", 81, 569); // bP
+selectCodeEditor("sprite_handler.vhd", 81, 569, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("sprite_handler.vhd", 609, 451); // bP
+selectCodeEditor("sprite_handler.vhd", 609, 451); // bP
+selectCodeEditor("sprite_handler.vhd", 609, 451); // bP
+selectCodeEditor("sprite_handler.vhd", 609, 451); // bP
+selectCodeEditor("sprite_handler.vhd", 609, 451); // bP
+selectCodeEditor("sprite_handler.vhd", 609, 451); // bP
+selectCodeEditor("sprite_handler.vhd", 647, 436); // bP
+selectCodeEditor("sprite_handler.vhd", 542, 427); // bP
+selectCodeEditor("sprite_handler.vhd", 308, 377); // bP
+selectCodeEditor("sprite_handler.vhd", 324, 368); // bP
+// Elapsed time: 36 seconds
+selectCodeEditor("sprite_handler.vhd", 262, 582); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,349 MB. GUI used memory: 93 MB. Current time: 7/10/22, 12:03:51 AM EDT
+selectCodeEditor("sprite_handler.vhd", 408, 483); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+typeControlKey((HResource) null, "sprite_handler.vhd", 'c'); // bP
+selectCodeEditor("sprite_handler.vhd", 126, 610); // bP
+typeControlKey((HResource) null, "sprite_handler.vhd", 'v'); // bP
+selectCodeEditor("sprite_handler.vhd", 394, 426); // bP
+selectCodeEditor("sprite_handler.vhd", 272, 372); // bP
+selectCodeEditor("sprite_handler.vhd", 384, 407); // bP
+selectCodeEditor("sprite_handler.vhd", 210, 408); // bP
+selectCodeEditor("sprite_handler.vhd", 210, 408, true, false, true, false, true); // bP - Shift Key - Alt Key - Double Click
+selectCodeEditor("sprite_handler.vhd", 343, 357); // bP
+selectCodeEditor("sprite_handler.vhd", 212, 406); // bP
+selectCodeEditor("sprite_handler.vhd", 212, 406, false, true, true, false, false); // bP - Control Key - Alt Key
+// Elapsed time: 10 seconds
+selectCodeEditor("sprite_handler.vhd", 379, 220); // bP
+selectCodeEditor("sprite_handler.vhd", 379, 220); // bP
+typeControlKey(null, null, 'z');
+selectCodeEditor("sprite_handler.vhd", 305, 424); // bP
+typeControlKey(null, null, 'z');
+selectCodeEditor("sprite_handler.vhd", 338, 486); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,381 MB. GUI used memory: 93 MB. Current time: 7/10/22, 12:04:46 AM EDT
+// Elapsed time: 172 seconds
+selectCodeEditor("sprite_handler.vhd", 709, 352); // bP
+selectCodeEditor("sprite_handler.vhd", 709, 352); // bP
+selectCodeEditor("sprite_handler.vhd", 244, 514); // bP
+// Elapsed time: 40 seconds
+selectCodeEditor("sprite_handler.vhd", 456, 303); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 23 seconds
+selectCodeEditor("sprite_handler.vhd", 405, 443); // bP
+// Elapsed time: 596 seconds
+selectCodeEditor("sprite_handler.vhd", 260, 393); // bP
+selectCodeEditor("sprite_handler.vhd", 260, 393); // bP
+selectCodeEditor("sprite_handler.vhd", 260, 393); // bP
+selectCodeEditor("sprite_handler.vhd", 352, 306); // bP
+selectCodeEditor("sprite_handler.vhd", 352, 306); // bP
+selectCodeEditor("sprite_handler.vhd", 352, 306); // bP
+selectCodeEditor("sprite_handler.vhd", 352, 306); // bP
+selectCodeEditor("sprite_handler.vhd", 352, 306); // bP
+selectCodeEditor("sprite_handler.vhd", 352, 306); // bP
+selectCodeEditor("sprite_handler.vhd", 352, 306); // bP
+selectCodeEditor("sprite_handler.vhd", 352, 306); // bP
+selectCodeEditor("sprite_handler.vhd", 352, 306); // bP
+selectCodeEditor("sprite_handler.vhd", 352, 306); // bP
+selectCodeEditor("sprite_handler.vhd", 330, 410); // bP
+selectCodeEditor("sprite_handler.vhd", 343, 426); // bP
+// Elapsed time: 44 seconds
+selectCodeEditor("sprite_handler.vhd", 556, 433); // bP
+selectCodeEditor("sprite_handler.vhd", 556, 437); // bP
+// Elapsed time: 11 seconds
+typeControlKey(null, null, 'z');
+selectCodeEditor("sprite_handler.vhd", 166, 487); // bP
+selectCodeEditor("sprite_handler.vhd", 190, 484); // bP
+selectCodeEditor("sprite_handler.vhd", 529, 114); // bP
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("sprite_handler.vhd", 691, 241); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,414 MB. GUI used memory: 85 MB. Current time: 7/10/22, 12:20:56 AM EDT
+// Elapsed time: 383 seconds
+selectCodeEditor("sprite_handler.vhd", 583, 548); // bP
+selectCodeEditor("sprite_handler.vhd", 583, 548); // bP
+selectCodeEditor("sprite_handler.vhd", 583, 548); // bP
+selectCodeEditor("sprite_handler.vhd", 495, 425); // bP
+selectCodeEditor("sprite_handler.vhd", 381, 426); // bP
+// Elapsed time: 97 seconds
+selectCodeEditor("sprite_handler.vhd", 281, 467); // bP
+selectCodeEditor("sprite_handler.vhd", 803, 539); // bP
+// Elapsed time: 255 seconds
+selectCodeEditor("sprite_handler.vhd", 190, 222); // bP
+selectCodeEditor("sprite_handler.vhd", 440, 527); // bP
+// Elapsed time: 14 seconds
+typeControlKey((HResource) null, "sprite_handler.vhd", 'v'); // bP
+// Elapsed time: 34 seconds
+selectCodeEditor("sprite_handler.vhd", 238, 328); // bP
+selectCodeEditor("sprite_handler.vhd", 771, 568); // bP
+selectCodeEditor("sprite_handler.vhd", 378, 562); // bP
+// Elapsed time: 12 seconds
+selectCodeEditor("sprite_handler.vhd", 190, 482); // bP
+selectCodeEditor("sprite_handler.vhd", 190, 482, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "sprite_handler.vhd", 'c'); // bP
+selectCodeEditor("sprite_handler.vhd", 228, 525); // bP
+selectCodeEditor("sprite_handler.vhd", 228, 525, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "sprite_handler.vhd", 'v'); // bP
+typeControlKey(null, null, 'z');
+selectCodeEditor("sprite_handler.vhd", 277, 508); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("sprite_handler.vhd", 277, 508); // bP
+selectCodeEditor("sprite_handler.vhd", 277, 508); // bP
+selectCodeEditor("sprite_handler.vhd", 277, 508); // bP
+selectCodeEditor("sprite_handler.vhd", 277, 508); // bP
+selectCodeEditor("sprite_handler.vhd", 277, 508); // bP
+selectCodeEditor("sprite_handler.vhd", 277, 508); // bP
+selectCodeEditor("sprite_handler.vhd", 277, 508); // bP
+selectCodeEditor("sprite_handler.vhd", 277, 508); // bP
+selectCodeEditor("sprite_handler.vhd", 430, 540); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 2,446 MB (+14107kb) [01:11:49]
+selectCodeEditor("sprite_handler.vhd", 589, 501); // bP
+// HMemoryUtils.trashcanNow. Engine heap size: 2,446 MB. GUI used memory: 86 MB. Current time: 7/10/22, 12:34:46 AM EDT
+selectCodeEditor("sprite_handler.vhd", 743, 540); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ppu_package.vhd", 0); // m
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite_handler.vhd", 1); // m
+// Elapsed time: 42 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ppu_package.vhd", 0); // m
+selectCodeEditor("ppu_package.vhd", 568, 371); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 22 seconds
+typeControlKey((HResource) null, "ppu_package.vhd", 'c'); // bP
+// Elapsed time: 60 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite.vhd", 3); // m
+selectCodeEditor("sprite.vhd", 45, 245); // bP
+// Elapsed time: 308 seconds
+selectCodeEditor("sprite.vhd", 120, 407); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,478 MB. GUI used memory: 86 MB. Current time: 7/10/22, 12:42:46 AM EDT
+// Elapsed time: 116 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ppu_package.vhd", 0); // m
+selectCodeEditor("ppu_package.vhd", 268, 248); // bP
+selectCodeEditor("ppu_package.vhd", 386, 345); // bP
+selectCodeEditor("ppu_package.vhd", 398, 307); // bP
+selectCodeEditor("ppu_package.vhd", 398, 307, false, false, false, false, true); // bP - Double Click
+// Elapsed time: 291 seconds
+selectCodeEditor("ppu_package.vhd", 354, 257); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite_handler.vhd", 1); // m
+selectCodeEditor("sprite_handler.vhd", 313, 266); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 91 seconds
+selectCodeEditor("sprite_handler.vhd", 422, 329); // bP
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // E
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cr): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a
+setFileChooser("/home/raesangur/github/ppu/sprite_package.vhd");
+selectButton("FINISH", "Finish"); // JButton
+// 'g' command handler elapsed time: 14 seconds
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Add Sources"); // c
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse /home/raesangur/github/ppu/sprite_package.vhd 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,513 MB. GUI used memory: 89 MB. Current time: 7/10/22, 12:51:26 AM EDT
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 11 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL 2008, xil_defaultlib, color_converter.vhd]", 5, false); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL]", 1); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, sprite_package.vhd]", 3, false); // D
+selectButton(PAResourceQtoS.SrcFilePropPanels_TYPE, (String) null); // t
+// aa (cr): Set Type: addNotify
+selectComboBox(PAResourceQtoS.SrcFileTypeComboBox_SOURCE_FILE_TYPE, "VHDL 2008", 4); // cj
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: set_property file_type {VHDL 2008} [get_files  /home/raesangur/github/ppu/sprite_package.vhd] 
+dismissDialog("Set Type"); // aa
+selectCodeEditor("sprite_handler.vhd", 234, 323); // bP
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectCodeEditor("sprite_handler.vhd", 229, 315); // bP
+selectCodeEditor("sprite_handler.vhd", 274, 309); // bP
+selectCodeEditor("sprite_handler.vhd", 274, 309); // bP
+selectCodeEditor("sprite_handler.vhd", 274, 309); // bP
+selectCodeEditor("sprite_handler.vhd", 274, 309); // bP
+selectCodeEditor("sprite_handler.vhd", 274, 309); // bP
+selectCodeEditor("sprite_handler.vhd", 274, 309); // bP
+selectCodeEditor("sprite_handler.vhd", 274, 309); // bP
+selectCodeEditor("sprite_handler.vhd", 274, 309); // bP
+selectCodeEditor("sprite_handler.vhd", 274, 309); // bP
+selectCodeEditor("sprite_handler.vhd", 274, 309); // bP
+selectCodeEditor("sprite_handler.vhd", 274, 309); // bP
+selectCodeEditor("sprite_handler.vhd", 274, 309); // bP
+selectCodeEditor("sprite_handler.vhd", 274, 309); // bP
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL 2008, xil_defaultlib, sprite_package.vhd]", 10, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL 2008, xil_defaultlib, sprite_package.vhd]", 10, false, false, false, false, false, true); // D - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite_package.vhd", 4); // m
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite_handler.vhd", 2); // m
+selectCodeEditor("sprite_handler.vhd", 414, 265); // bP
+selectCodeEditor("sprite_handler.vhd", 414, 265); // bP
+selectCodeEditor("sprite_handler.vhd", 414, 265); // bP
+selectCodeEditor("sprite_handler.vhd", 414, 265); // bP
+selectCodeEditor("sprite_handler.vhd", 414, 265); // bP
+selectCodeEditor("sprite_handler.vhd", 414, 265); // bP
+selectCodeEditor("sprite_handler.vhd", 414, 265); // bP
+selectCodeEditor("sprite_handler.vhd", 359, 334); // bP
+selectCodeEditor("sprite_handler.vhd", 368, 493); // bP
+selectCodeEditor("sprite_handler.vhd", 368, 493); // bP
+selectCodeEditor("sprite_handler.vhd", 368, 493); // bP
+selectCodeEditor("sprite_handler.vhd", 368, 493); // bP
+selectCodeEditor("sprite_handler.vhd", 707, 529); // bP
+selectCodeEditor("sprite_handler.vhd", 707, 529, false, false, false, false, true); // bP - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite_package.vhd", 1); // m
+selectCodeEditor("sprite_package.vhd", 317, 356); // bP
+selectCodeEditor("sprite_package.vhd", 317, 356); // bP
+selectCodeEditor("sprite_package.vhd", 227, 296); // bP
+selectCodeEditor("sprite_package.vhd", 227, 296, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "sprite_package.vhd", 'c'); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite_handler.vhd", 2); // m
+selectCodeEditor("sprite_handler.vhd", 353, 408); // bP
+selectCodeEditor("sprite_handler.vhd", 353, 408); // bP
+selectCodeEditor("sprite_handler.vhd", 353, 408); // bP
+selectCodeEditor("sprite_handler.vhd", 353, 408); // bP
+selectCodeEditor("sprite_handler.vhd", 353, 408); // bP
+selectCodeEditor("sprite_handler.vhd", 353, 408); // bP
+selectCodeEditor("sprite_handler.vhd", 353, 408); // bP
+selectCodeEditor("sprite_handler.vhd", 353, 408); // bP
+selectCodeEditor("sprite_handler.vhd", 353, 408); // bP
+selectCodeEditor("sprite_handler.vhd", 353, 408); // bP
+selectCodeEditor("sprite_handler.vhd", 353, 408); // bP
+selectCodeEditor("sprite_handler.vhd", 353, 408); // bP
+selectCodeEditor("sprite_handler.vhd", 353, 408); // bP
+selectCodeEditor("sprite_handler.vhd", 353, 408); // bP
+selectCodeEditor("sprite_handler.vhd", 353, 408); // bP
+selectCodeEditor("sprite_handler.vhd", 353, 408); // bP
+selectCodeEditor("sprite_handler.vhd", 353, 408); // bP
+selectCodeEditor("sprite_handler.vhd", 705, 540); // bP
+selectCodeEditor("sprite_handler.vhd", 705, 540, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "sprite_handler.vhd", 'v'); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("sprite_handler.vhd", 614, 405); // bP
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u
+// HMemoryUtils.trashcanNow. Engine heap size: 2,546 MB. GUI used memory: 89 MB. Current time: 7/10/22, 12:52:41 AM EDT
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ak
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e (cr):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/raesangur/github/ppu/vivado/vivado.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-54] Inspecting design source files for 'ppu' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/raesangur/github/ppu/vivado/vivado.sim/sim_1/behav/xsim' 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '1' seconds INFO: [USF-XSim-99] Step results log file:'/home/raesangur/github/ppu/vivado/vivado.sim/sim_1/behav/xsim/xvhdl.log' 
+// Tcl Message: ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '/home/raesangur/github/ppu/vivado/vivado.sim/sim_1/behav/xsim/xvhdl.log' file for more information. ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation. 
+// Tcl Message: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  
+// HOptionPane Error: 'ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  (Run Simulation)'
+selectButton("OptionPane.button", "OK"); // JButton
+// a (cr): Critical Messages: addNotify
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f
+dismissDialog("Critical Messages"); // a
+selectTab((HResource) null, (HResource) null, "Tcl Console", 0); // aK
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aK
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sources_1, [HDL 9-806] Syntax error near =>. [/home/raesangur/github/ppu/sprite_handler.vhd:110]. ]", 20, true); // ah - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/home/raesangur/github/ppu/sprite_handler.vhd;-;;-;16;-;line;-;110;-;;-;16;-;"); // ah
+// Elapsed time: 110 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite_package.vhd", 1); // m
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// f (cr): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Launch Runs"); // f
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL 2008, xil_defaultlib, sprite_handler.vhd]", 11, false, false, false, false, true, false); // D - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_PROPERTIES, "Source File Properties..."); // ak
+// Run Command: RDIResourceCommand.RDICommands_PROPERTIES
+selectTab(RDIResource.PropertiesView_TABBED_PANE, (HResource) null, "Properties", 1); // i
+selectTreeTable(PAResourceTtoZ.TclObjectTreeTable_TREETABLE, "IS_NGC_WRAPPER ; false", 7, "IS_NGC_WRAPPER", 0, false); // l
+selectTreeTable(PAResourceTtoZ.TclObjectTreeTable_TREETABLE, "USED_IN_SIMULATION ; true", 13, "USED_IN_SIMULATION", 0, false); // l
+selectTreeTable(PAResourceTtoZ.TclObjectTreeTable_TREETABLE, "USED_IN_SIMULATION ; true", 13, "USED_IN_SIMULATION", 0, false); // l
+selectTab(RDIResource.PropertiesView_TABBED_PANE, (HResource) null, "General", 0); // i
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL 2008, xil_defaultlib, sprite_handler.vhd]", 11, false, false, false, false, true, false); // D - Popup Trigger
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ppu_package.vhd", 0); // m
+selectCodeEditor("ppu_package.vhd", 271, 254); // bP
+selectCodeEditor("ppu_package.vhd", 271, 254); // bP
+selectCodeEditor("ppu_package.vhd", 271, 254); // bP
+selectCodeEditor("ppu_package.vhd", 271, 254); // bP
+selectCodeEditor("ppu_package.vhd", 271, 254); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite_handler.vhd", 2); // m
+// Elapsed time: 68 seconds
+selectCodeEditor("sprite_handler.vhd", 91, 163); // bP
+selectCodeEditor("sprite_handler.vhd", 321, 172); // bP
+selectCodeEditor("sprite_handler.vhd", 342, 189); // bP
+// Elapsed time: 23 seconds
+selectCodeEditor("sprite_handler.vhd", 412, 431); // bP
+selectCodeEditor("sprite_handler.vhd", 413, 448); // bP
+// Elapsed time: 10 seconds
+selectCodeEditor("sprite_handler.vhd", 307, 234); // bP
+selectCodeEditor("sprite_handler.vhd", 339, 216); // bP
+// Elapsed time: 29 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ppu_package.vhd", 0); // m
+// Elapsed time: 13 seconds
+selectCodeEditor("ppu_package.vhd", 848, 429); // bP
+selectCodeEditor("ppu_package.vhd", 484, 154); // bP
+// Elapsed time: 16 seconds
+selectCodeEditor("ppu_package.vhd", 939, 461); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite_handler.vhd", 2); // m
+selectCodeEditor("sprite_handler.vhd", 431, 220); // bP
+// HMemoryUtils.trashcanNow. Engine heap size: 2,566 MB. GUI used memory: 91 MB. Current time: 7/10/22, 12:58:31 AM EDT
+selectCodeEditor("sprite_handler.vhd", 424, 244); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 2,582 MB (+13844kb) [01:35:45]
+selectCodeEditor("sprite_handler.vhd", 432, 276); // bP
+selectCodeEditor("sprite_handler.vhd", 426, 295); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("sprite_handler.vhd", 482, 378); // bP
+// HMemoryUtils.trashcanNow. Engine heap size: 2,598 MB. GUI used memory: 91 MB. Current time: 7/10/22, 12:58:51 AM EDT
+selectCodeEditor("sprite_handler.vhd", 477, 404); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("sprite_handler.vhd", 478, 485); // bP
+selectCodeEditor("sprite_handler.vhd", 475, 500); // bP
+// Elapsed time: 10 seconds
+selectCodeEditor("sprite_handler.vhd", 306, 220); // bP
+selectCodeEditor("sprite_handler.vhd", 306, 220, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("sprite_handler.vhd", 272, 234); // bP
+selectCodeEditor("sprite_handler.vhd", 269, 227); // bP
+selectCodeEditor("sprite_handler.vhd", 269, 227, false, true, true, false, false); // bP - Control Key - Alt Key
+typeControlKey(null, null, 'z');
+selectCodeEditor("sprite_handler.vhd", 441, 299); // bP
+selectCodeEditor("sprite_handler.vhd", 441, 299, false, true, true, false, false); // bP - Control Key - Alt Key
+selectCodeEditor("sprite_handler.vhd", 456, 198); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite_package.vhd", 1); // m
+// HMemoryUtils.trashcanNow. Engine heap size: 2,630 MB. GUI used memory: 91 MB. Current time: 7/10/22, 12:59:41 AM EDT
+selectCodeEditor("sprite_package.vhd", 808, 105); // bP
+selectCodeEditor("sprite_package.vhd", 851, 86); // bP
+selectCodeEditor("sprite_package.vhd", 856, 80); // bP
+selectCodeEditor("sprite_package.vhd", 822, 62); // bP
+selectCodeEditor("sprite_package.vhd", 790, 52); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 426 seconds
+selectCodeEditor("sprite_package.vhd", 40, 65); // bP
+selectCodeEditor("sprite_package.vhd", 40, 65, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "sprite_package.vhd", 'c'); // bP
+selectButton(PAResourceCommand.PACommandNames_TOGGLE_VIEW_NAV, (String) null); // E
+// Run Command: PAResourceCommand.PACommandNames_TOGGLE_VIEW_NAV
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite_handler.vhd", 2); // m
+selectCodeEditor("sprite_handler.vhd", 312, 373); // bP
+selectCodeEditor("sprite_handler.vhd", 312, 373, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "sprite_handler.vhd", 'c'); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite_package.vhd", 1); // m
+typeControlKey((HResource) null, "sprite_package.vhd", 'c'); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite_handler.vhd", 2); // m
+typeControlKey((HResource) null, "sprite_handler.vhd", 'v'); // bP
+selectCodeEditor("sprite_handler.vhd", 274, 403); // bP
+selectCodeEditor("sprite_handler.vhd", 271, 403); // bP
+selectCodeEditor("sprite_handler.vhd", 269, 402); // bP
+selectCodeEditor("sprite_handler.vhd", 269, 402, false, true, true, false, false); // bP - Control Key - Alt Key
+// Elapsed time: 17 seconds
+selectCodeEditor("sprite_handler.vhd", 413, 0); // bP
+selectCodeEditor("sprite_handler.vhd", 268, 397); // bP
+selectCodeEditor("sprite_handler.vhd", 268, 397, false, true, true, false, false); // bP - Control Key - Alt Key
+selectCodeEditor("sprite_handler.vhd", 516, 458); // bP
+selectCodeEditor("sprite_handler.vhd", 516, 458, false, true, true, false, false); // bP - Control Key - Alt Key
+// Elapsed time: 10 seconds
+selectCodeEditor("sprite_handler.vhd", 395, 412); // bP
+selectCodeEditor("sprite_handler.vhd", 533, 402); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,662 MB. GUI used memory: 91 MB. Current time: 7/10/22, 1:08:01 AM EDT
+// Elapsed time: 15 seconds
+selectCodeEditor("sprite_handler.vhd", 356, 102); // bP
+selectCodeEditor("sprite_handler.vhd", 356, 102, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "sprite_handler.vhd", 'c'); // bP
+selectCodeEditor("sprite_handler.vhd", 563, 381); // bP
+typeControlKey((HResource) null, "sprite_handler.vhd", 'v'); // bP
+selectCodeEditor("sprite_handler.vhd", 309, 397); // bP
+typeControlKey((HResource) null, "sprite_handler.vhd", 'v'); // bP
+selectCodeEditor("sprite_handler.vhd", 563, 407); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("sprite_handler.vhd", 495, 474); // bP
+selectCodeEditor("sprite_handler.vhd", 46, 245); // bP
+selectCodeEditor("sprite_handler.vhd", 46, 245); // bP
+selectCodeEditor("sprite_handler.vhd", 167, 455, false, false, false, true, false); // bP - Popup Trigger
+selectMenuItem(RDIResource.HInputHandler_TOGGLE_LINE_COMMENTS, "Toggle Line Comments"); // ak
+selectCodeEditor("sprite_handler.vhd", 387, 514); // bP
+selectCodeEditor("sprite_handler.vhd", 108, 483); // bP
+selectCodeEditor("sprite_handler.vhd", 115, 268, false, false, false, true, false); // bP - Popup Trigger
+selectMenuItem(RDIResource.HInputHandler_TOGGLE_LINE_COMMENTS, "Toggle Line Comments"); // ak
+// Elapsed time: 626 seconds
+selectCodeEditor("sprite_handler.vhd", 222, 501); // bP
+selectCodeEditor("sprite_handler.vhd", 43, 452); // bP
+selectCodeEditor("sprite_handler.vhd", 39, 613); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,694 MB. GUI used memory: 91 MB. Current time: 7/10/22, 1:19:16 AM EDT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectButton(PAResourceOtoP.PlanAheadTab_SHOW_FLOW_NAVIGATOR, "Flow Navigator"); // C
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ak
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e (cr):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/raesangur/github/ppu/vivado/vivado.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-54] Inspecting design source files for 'ppu' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/raesangur/github/ppu/vivado/vivado.sim/sim_1/behav/xsim' 
+// Tcl Message: xvhdl --incr --relax -prj ppu_vhdl.prj INFO: [VRFC 10-163] Analyzing VHDL file "/home/raesangur/github/ppu/ppu_package.vhd" into library xil_defaultlib INFO: [VRFC 10-163] Analyzing VHDL file "/home/raesangur/github/ppu/sprite.vhd" into library xil_defaultlib INFO: [VRFC 10-3107] analyzing entity 'sprite' ERROR: [VRFC 10-2989] 's_tiles_textures' is not declared [/home/raesangur/github/ppu/sprite.vhd:64] ERROR: [VRFC 10-3782] unit 'behavioral' ignored due to previous errors [/home/raesangur/github/ppu/sprite.vhd:33] INFO: [VRFC 10-3070] VHDL file '/home/raesangur/github/ppu/sprite.vhd' ignored due to errors 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '1' seconds INFO: [USF-XSim-99] Step results log file:'/home/raesangur/github/ppu/vivado/vivado.sim/sim_1/behav/xsim/xvhdl.log' 
+// Tcl Message: ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '/home/raesangur/github/ppu/vivado/vivado.sim/sim_1/behav/xsim/xvhdl.log' file for more information. ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation. 
+// Tcl Message: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  
+// HOptionPane Error: 'ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  (Run Simulation)'
+selectButton("OptionPane.button", "OK"); // JButton
+// a (cr): Critical Messages: addNotify
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f
+dismissDialog("Critical Messages"); // a
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sources_1, [HDL 9-806] Syntax error near others. [/home/raesangur/github/ppu/sprite_package.vhd:39]. ]", 31, true); // ah - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/home/raesangur/github/ppu/sprite_package.vhd;-;;-;16;-;line;-;39;-;;-;16;-;"); // ah
+selectCodeEditor("sprite_package.vhd", 305, 609); // bP
+selectCodeEditor("sprite_package.vhd", 257, 599); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 2,726 MB (+15876kb) [01:56:49]
+// HMemoryUtils.trashcanNow. Engine heap size: 2,726 MB. GUI used memory: 92 MB. Current time: 7/10/22, 1:19:46 AM EDT
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ak
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e (cr):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/raesangur/github/ppu/vivado/vivado.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-54] Inspecting design source files for 'ppu' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/raesangur/github/ppu/vivado/vivado.sim/sim_1/behav/xsim' 
+// Tcl Message: xvhdl --incr --relax -prj ppu_vhdl.prj INFO: [VRFC 10-163] Analyzing VHDL file "/home/raesangur/github/ppu/ppu_package.vhd" into library xil_defaultlib INFO: [VRFC 10-163] Analyzing VHDL file "/home/raesangur/github/ppu/sprite.vhd" into library xil_defaultlib INFO: [VRFC 10-3107] analyzing entity 'sprite' ERROR: [VRFC 10-2989] 's_tiles_textures' is not declared [/home/raesangur/github/ppu/sprite.vhd:64] ERROR: [VRFC 10-3782] unit 'behavioral' ignored due to previous errors [/home/raesangur/github/ppu/sprite.vhd:33] INFO: [VRFC 10-3070] VHDL file '/home/raesangur/github/ppu/sprite.vhd' ignored due to errors 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '1' seconds INFO: [USF-XSim-99] Step results log file:'/home/raesangur/github/ppu/vivado/vivado.sim/sim_1/behav/xsim/xvhdl.log' 
+// Tcl Message: ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '/home/raesangur/github/ppu/vivado/vivado.sim/sim_1/behav/xsim/xvhdl.log' file for more information. ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation. 
+// Tcl Message: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  
+// HOptionPane Error: 'ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  (Run Simulation)'
+// 'd' command handler elapsed time: 3 seconds
+selectButton("OptionPane.button", "OK"); // JButton
+// a (cr): Critical Messages: addNotify
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f
+dismissDialog("Critical Messages"); // a
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.. ]", 29, true); // ah - Node
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '/home/raesangur/github/ppu/vivado/vivado.sim/sim_1/behav/xsim/xvhdl.log' file for more information.. ]", 28, true); // ah - Node
+selectTab((HResource) null, (HResource) null, "Tcl Console", 0); // aK
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 981, 48); // dS
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 981, 48, false, false, false, false, true); // dS - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite.vhd", 3); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite_handler.vhd", 2); // m
+selectCodeEditor("sprite_handler.vhd", 187, 293); // bP
+selectCodeEditor("sprite_handler.vhd", 187, 293, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("sprite_handler.vhd", 292, 417); // bP
+selectCodeEditor("sprite_handler.vhd", 239, 400); // bP
+selectCodeEditor("sprite_handler.vhd", 66, 160, false, false, false, true, false); // bP - Popup Trigger
+selectMenuItem(RDIResource.HInputHandler_TOGGLE_LINE_COMMENTS, "Toggle Line Comments"); // ak
+selectCodeEditor("sprite_handler.vhd", 434, 527); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ppu_package.vhd", 0); // m
+selectCodeEditor("ppu_package.vhd", 847, 519); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite_handler.vhd", 2); // m
+selectCodeEditor("sprite_handler.vhd", 99, 404); // bP
+selectCodeEditor("sprite_handler.vhd", 96, 233, false, false, false, true, false); // bP - Popup Trigger
+selectMenuItem(RDIResource.HInputHandler_TOGGLE_LINE_COMMENTS, "Toggle Line Comments"); // ak
+selectCodeEditor("sprite_handler.vhd", 69, 529); // bP
+selectCodeEditor("sprite_handler.vhd", 306, 452); // bP
+selectCodeEditor("sprite_handler.vhd", 454, 213); // bP
+// Elapsed time: 26 seconds
+selectCodeEditor("sprite_handler.vhd", 345, 322); // bP
+selectCodeEditor("sprite_handler.vhd", 345, 322, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("sprite_handler.vhd", 377, 304); // bP
+selectCodeEditor("sprite_handler.vhd", 377, 304, false, false, false, false, true); // bP - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 23 seconds
+selectCodeEditor("sprite_handler.vhd", 442, 430); // bP
+selectCodeEditor("sprite_handler.vhd", 442, 430); // bP
+selectCodeEditor("sprite_handler.vhd", 442, 430); // bP
+selectCodeEditor("sprite_handler.vhd", 442, 430); // bP
+selectCodeEditor("sprite_handler.vhd", 442, 430); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,758 MB. GUI used memory: 92 MB. Current time: 7/10/22, 1:21:41 AM EDT
+selectCodeEditor("sprite_handler.vhd", 282, 536); // bP
+selectCodeEditor("sprite_handler.vhd", 282, 536, false, false, false, false, true); // bP - Double Click
+// Elapsed time: 13 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite.vhd", 3); // m
+selectCodeEditor("sprite.vhd", 444, 352); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite_handler.vhd", 2); // m
+selectCodeEditor("sprite_handler.vhd", 460, 586); // bP
+// HMemoryUtils.trashcanNow. Engine heap size: 2,790 MB. GUI used memory: 92 MB. Current time: 7/10/22, 1:22:11 AM EDT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 10 seconds
+selectCodeEditor("sprite_handler.vhd", 666, 505); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,822 MB. GUI used memory: 92 MB. Current time: 7/10/22, 1:22:46 AM EDT
+// Elapsed time: 32 seconds
+selectCodeEditor("sprite_handler.vhd", 666, 505); // bP
+selectCodeEditor("sprite_handler.vhd", 666, 505); // bP
+selectCodeEditor("sprite_handler.vhd", 666, 505); // bP
+selectCodeEditor("sprite_handler.vhd", 666, 505); // bP
+selectCodeEditor("sprite_handler.vhd", 666, 505); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite_package.vhd", 1); // m
+selectCodeEditor("sprite_package.vhd", 485, 356, true, false, false, false, false); // bP - Shift Key
+selectCodeEditor("sprite_package.vhd", 485, 356, true, false, false, false, false); // bP - Shift Key
+selectCodeEditor("sprite_package.vhd", 485, 356, true, false, false, false, false); // bP - Shift Key
+selectCodeEditor("sprite_package.vhd", 485, 356, true, false, false, false, false); // bP - Shift Key
+selectCodeEditor("sprite_package.vhd", 485, 356, true, false, false, false, false); // bP - Shift Key
+selectCodeEditor("sprite_package.vhd", 485, 356, true, false, false, false, false); // bP - Shift Key
+selectCodeEditor("sprite_package.vhd", 522, 404); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ppu_package.vhd", 0); // m
+selectCodeEditor("ppu_package.vhd", 156, 196); // bP
+selectCodeEditor("ppu_package.vhd", 156, 196, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "ppu_package.vhd", 'c'); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite_handler.vhd", 2); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ppu_package.vhd", 0); // m
+selectCodeEditor("ppu_package.vhd", 298, 192); // bP
+selectCodeEditor("ppu_package.vhd", 494, 355); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite_package.vhd", 1); // m
+selectCodeEditor("sprite_package.vhd", 291, 414); // bP
+selectCodeEditor("sprite_package.vhd", 348, 376); // bP
+typeControlKey((HResource) null, "sprite_package.vhd", 'v'); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("sprite_package.vhd", 255, 430); // bP
+selectCodeEditor("sprite_package.vhd", 246, 412); // bP
+// HMemoryUtils.trashcanNow. Engine heap size: 2,854 MB. GUI used memory: 92 MB. Current time: 7/10/22, 1:23:26 AM EDT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("sprite_package.vhd", 529, 431); // bP
+// [Engine Memory]: 2,870 MB (+8444kb) [02:00:33]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,886 MB. GUI used memory: 92 MB. Current time: 7/10/22, 1:23:41 AM EDT
+// Elapsed time: 13 seconds
+selectCodeEditor("sprite_package.vhd", 595, 538); // bP
+selectCodeEditor("sprite_package.vhd", 402, 562); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("sprite_package.vhd", 457, 178); // bP
+selectCodeEditor("sprite_package.vhd", 457, 178, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "sprite_package.vhd", 'c'); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite_handler.vhd", 2); // m
+selectCodeEditor("sprite_handler.vhd", 473, 330); // bP
+typeControlKey((HResource) null, "sprite_handler.vhd", 'v'); // bP
+typeControlKey((HResource) null, "sprite_handler.vhd", 'v'); // bP
+selectCodeEditor("sprite_handler.vhd", 518, 619); // bP
+typeControlKey((HResource) null, "sprite_handler.vhd", 'v'); // bP
+typeControlKey((HResource) null, "sprite_handler.vhd", 'v'); // bP
+selectCodeEditor("sprite_handler.vhd", 518, 619); // bP
+selectCodeEditor("sprite_handler.vhd", 518, 619); // bP
+selectCodeEditor("sprite_handler.vhd", 518, 619); // bP
+selectCodeEditor("sprite_handler.vhd", 518, 619); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,918 MB. GUI used memory: 92 MB. Current time: 7/10/22, 1:24:16 AM EDT
+selectCodeEditor("sprite_handler.vhd", 376, 409); // bP
+selectCodeEditor("sprite_handler.vhd", 532, 336); // bP
+selectCodeEditor("sprite_handler.vhd", 380, 457); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 12 seconds
+selectCodeEditor("sprite_handler.vhd", 440, 394); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 13 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite.vhd", 3); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite_handler.vhd", 2); // m
+selectCodeEditor("sprite_handler.vhd", 537, 414); // bP
+// HMemoryUtils.trashcanNow. Engine heap size: 2,950 MB. GUI used memory: 92 MB. Current time: 7/10/22, 1:24:51 AM EDT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("sprite_handler.vhd", 525, 417); // bP
+// TclEventType: DG_GRAPH_STALE
+selectCodeEditor("sprite_handler.vhd", 719, 393); // bP
+selectCodeEditor("sprite_handler.vhd", 719, 393); // bP
+selectCodeEditor("sprite_handler.vhd", 719, 393); // bP
+selectCodeEditor("sprite_handler.vhd", 719, 393); // bP
+selectCodeEditor("sprite_handler.vhd", 719, 393); // bP
+selectCodeEditor("sprite_handler.vhd", 719, 393); // bP
+selectCodeEditor("sprite_handler.vhd", 719, 393); // bP
+selectCodeEditor("sprite_handler.vhd", 719, 393); // bP
+selectCodeEditor("sprite_handler.vhd", 719, 393); // bP
+selectCodeEditor("sprite_handler.vhd", 719, 393); // bP
+selectCodeEditor("sprite_handler.vhd", 719, 393); // bP
+selectCodeEditor("sprite_handler.vhd", 719, 393); // bP
+selectCodeEditor("sprite_handler.vhd", 719, 393); // bP
+selectCodeEditor("sprite_handler.vhd", 202, 191); // bP
+selectCodeEditor("sprite_handler.vhd", 202, 191, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "sprite_handler.vhd", 'c'); // bP
+selectCodeEditor("sprite_handler.vhd", 309, 221); // bP
+selectCodeEditor("sprite_handler.vhd", 309, 221, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "sprite_handler.vhd", 'v'); // bP
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 10 seconds
+selectCodeEditor("sprite_handler.vhd", 91, 537); // bP
+selectCodeEditor("sprite_handler.vhd", 91, 537, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "sprite_handler.vhd", 'c'); // bP
+selectCodeEditor("sprite_handler.vhd", 247, 220); // bP
+selectCodeEditor("sprite_handler.vhd", 247, 220, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "sprite_handler.vhd", 'v'); // bP
+typeControlKey(null, null, 'z');
+selectCodeEditor("sprite_handler.vhd", 258, 225); // bP
+selectCodeEditor("sprite_handler.vhd", 258, 225, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "sprite_handler.vhd", 'v'); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("sprite_handler.vhd", 525, 239); // bP
+// HMemoryUtils.trashcanNow. Engine heap size: 3,014 MB. GUI used memory: 92 MB. Current time: 7/10/22, 1:25:26 AM EDT
+// [Engine Memory]: 3,014 MB (+584kb) [02:02:31]
+selectCodeEditor("sprite_handler.vhd", 64, 384); // bP
+selectCodeEditor("sprite_handler.vhd", 178, 375); // bP
+// Elapsed time: 18 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("sprite_handler.vhd", 335, 383); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("sprite_handler.vhd", 206, 383); // bP
+selectCodeEditor("sprite_handler.vhd", 178, 380); // bP
+selectCodeEditor("sprite_handler.vhd", 752, 378); // bP
+// Elapsed time: 48 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL 2008, xil_defaultlib, hit_detector.vhd]", 6, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL 2008, xil_defaultlib, hit_detector.vhd]", 6, false, false, false, false, false, true); // D - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL 2008, xil_defaultlib, hit_handler.vhd]", 7, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL 2008, xil_defaultlib, hit_handler.vhd]", 7, false, false, false, false, false, true); // D - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 3,036 MB. GUI used memory: 93 MB. Current time: 7/10/22, 1:27:06 AM EDT
+selectCodeEditor("hit_handler.vhd", 315, 98); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite_handler.vhd", 2); // m
+selectCodeEditor("sprite_handler.vhd", 265, 248); // bP
+typeControlKey((HResource) null, "sprite_handler.vhd", 'c'); // bP
+typeControlKey((HResource) null, "sprite_handler.vhd", 'c'); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hit_handler.vhd", 5); // m
+selectCodeEditor("hit_handler.vhd", 541, 225); // bP
+typeControlKey((HResource) null, "hit_handler.vhd", 'v'); // bP
+selectCodeEditor("hit_handler.vhd", 541, 253); // bP
+typeControlKey((HResource) null, "hit_handler.vhd", 'v'); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite_package.vhd", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite_handler.vhd", 2); // m
+selectCodeEditor("sprite_handler.vhd", 323, 328); // bP
+selectCodeEditor("sprite_handler.vhd", 323, 328, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "sprite_handler.vhd", 'c'); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hit_handler.vhd", 5); // m
+// HMemoryUtils.trashcanNow. Engine heap size: 3,068 MB. GUI used memory: 93 MB. Current time: 7/10/22, 1:27:36 AM EDT
+selectCodeEditor("hit_handler.vhd", 540, 281); // bP
+typeControlKey((HResource) null, "hit_handler.vhd", 'v'); // bP
+selectCodeEditor("hit_handler.vhd", 223, 292); // bP
+typeControlKey((HResource) null, "hit_handler.vhd", 'v'); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("hit_handler.vhd", 362, 112); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// Tcl Message: update_compile_order -fileset sources_1 
+selectCodeEditor("hit_handler.vhd", 429, 349); // bP
+// HMemoryUtils.trashcanNow. Engine heap size: 3,100 MB. GUI used memory: 94 MB. Current time: 7/10/22, 1:27:56 AM EDT
+selectCodeEditor("hit_handler.vhd", 426, 385); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("hit_handler.vhd", 584, 443); // bP
+selectCodeEditor("hit_handler.vhd", 132, 190); // bP
+selectCodeEditor("hit_handler.vhd", 120, 196); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 3,132 MB. GUI used memory: 94 MB. Current time: 7/10/22, 1:28:16 AM EDT
+selectCodeEditor("hit_handler.vhd", 267, 553); // bP
+selectCodeEditor("hit_handler.vhd", 267, 553, false, false, false, false, true); // bP - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hit_detector.vhd", 4); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hit_handler.vhd", 5); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hit_detector.vhd", 4); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hit_handler.vhd", 5); // m
+// Elapsed time: 27 seconds
+selectCodeEditor("hit_handler.vhd", 427, 537); // bP
+selectCodeEditor("hit_handler.vhd", 571, 549); // bP
+selectCodeEditor("hit_handler.vhd", 571, 549); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hit_detector.vhd", 4); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hit_handler.vhd", 5); // m
+selectCodeEditor("hit_handler.vhd", 538, 298); // bP
+selectCodeEditor("hit_handler.vhd", 432, 266); // bP
+selectCodeEditor("hit_handler.vhd", 434, 205); // bP
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("hit_handler.vhd", 433, 269); // bP
+selectCodeEditor("hit_handler.vhd", 433, 269, false, true, true, false, false); // bP - Control Key - Alt Key
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("hit_handler.vhd", 735, 270); // bP
+selectCodeEditor("hit_handler.vhd", 251, 485); // bP
+selectCodeEditor("hit_handler.vhd", 270, 492); // bP
+selectCodeEditor("hit_handler.vhd", 270, 492, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("hit_handler.vhd", 121, 486); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("hit_handler.vhd", 208, 449); // bP
+// HMemoryUtils.trashcanNow. Engine heap size: 3,164 MB. GUI used memory: 94 MB. Current time: 7/10/22, 1:29:46 AM EDT
+selectCodeEditor("hit_handler.vhd", 180, 454); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("hit_handler.vhd", 45, 564); // bP
+// [Engine Memory]: 3,180 MB (+15787kb) [02:06:53]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Elapsed time: 15 seconds
+selectCodeEditor("hit_handler.vhd", 302, 500); // bP
+selectCodeEditor("hit_handler.vhd", 302, 500); // bP
+selectCodeEditor("hit_handler.vhd", 302, 500); // bP
+selectCodeEditor("hit_handler.vhd", 252, 186); // bP
+selectCodeEditor("hit_handler.vhd", 635, 72); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite_handler.vhd", 2); // m
+selectCodeEditor("sprite_handler.vhd", 158, 377); // bP
+selectCodeEditor("sprite_handler.vhd", 662, 378); // bP
+selectCodeEditor("sprite_handler.vhd", 536, 389); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite_package.vhd", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ppu_package.vhd", 0); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite_handler.vhd", 2); // m
+selectCodeEditor("sprite_handler.vhd", 128, 375); // bP
+selectCodeEditor("sprite_handler.vhd", 265, 384); // bP
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hit_detector.vhd", 4); // m
+selectCodeEditor("hit_detector.vhd", 74, 309); // bP
+selectCodeEditor("hit_detector.vhd", 74, 309, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("hit_detector.vhd", 241, 307); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("hit_detector.vhd", 335, 459); // bP
+selectCodeEditor("hit_detector.vhd", 335, 459); // bP
+selectCodeEditor("hit_detector.vhd", 335, 459); // bP
+selectCodeEditor("hit_detector.vhd", 335, 459); // bP
+selectCodeEditor("hit_detector.vhd", 335, 459); // bP
+selectCodeEditor("hit_detector.vhd", 404, 248); // bP
+// HMemoryUtils.trashcanNow. Engine heap size: 3,228 MB. GUI used memory: 94 MB. Current time: 7/10/22, 1:31:06 AM EDT
+selectCodeEditor("hit_detector.vhd", 95, 248); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("hit_detector.vhd", 436, 115); // bP
+selectCodeEditor("hit_detector.vhd", 436, 115, false, true, true, false, false); // bP - Control Key - Alt Key
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("hit_detector.vhd", 509, 239); // bP
+// HMemoryUtils.trashcanNow. Engine heap size: 3,260 MB. GUI used memory: 94 MB. Current time: 7/10/22, 1:31:26 AM EDT
+// Elapsed time: 20 seconds
+selectCodeEditor("hit_detector.vhd", 590, 440); // bP
+selectCodeEditor("hit_detector.vhd", 568, 466); // bP
+// Elapsed time: 12 seconds
+selectCodeEditor("hit_detector.vhd", 66, 252); // bP
+selectCodeEditor("hit_detector.vhd", 66, 252, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("hit_detector.vhd", 513, 428); // bP
+selectCodeEditor("hit_detector.vhd", 563, 405); // bP
+selectCodeEditor("hit_detector.vhd", 416, 304); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 11 seconds
+selectCodeEditor("hit_detector.vhd", 139, 471); // bP
+selectCodeEditor("hit_detector.vhd", 181, 464); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 3,292 MB. GUI used memory: 94 MB. Current time: 7/10/22, 1:32:26 AM EDT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 13 seconds
+selectCodeEditor("hit_detector.vhd", 733, 513); // bP
+selectCodeEditor("hit_detector.vhd", 272, 616); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("hit_detector.vhd", 438, 493); // bP
+// Elapsed time: 39 seconds
+selectCodeEditor("hit_detector.vhd", 631, 470); // bP
+selectCodeEditor("hit_detector.vhd", 657, 448); // bP
+// Elapsed time: 11 seconds
+selectCodeEditor("hit_detector.vhd", 177, 457); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("hit_detector.vhd", 471, 494); // bP
+selectCodeEditor("hit_detector.vhd", 504, 479); // bP
+// [Engine Memory]: 3,340 MB (+1175kb) [02:10:38]
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ppu_package.vhd", 0); // m
+// Elapsed time: 82 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hit_handler.vhd", 5); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hit_detector.vhd", 4); // m
+selectCodeEditor("hit_detector.vhd", 415, 287); // bP
+selectCodeEditor("hit_detector.vhd", 519, 500); // bP
+selectCodeEditor("hit_detector.vhd", 581, 465); // bP
+selectCodeEditor("hit_detector.vhd", 550, 477); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 3,356 MB. GUI used memory: 95 MB. Current time: 7/10/22, 1:35:26 AM EDT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 22 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite_package.vhd", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ppu_package.vhd", 0); // m
+selectCodeEditor("ppu_package.vhd", 513, 283); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hit_handler.vhd", 5); // m
+// Elapsed time: 41 seconds
+selectCodeEditor("hit_handler.vhd", 475, 349); // bP
