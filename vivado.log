@@ -19,3 +19,12 @@ INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/usr/share/Xilinx/Vivado/2020.2/data/ip'.
 INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
 update_compile_order -fileset sources_1
+add_files -norecurse /home/raesangur/github/ppu/tile_package.vhd
+update_compile_order -fileset sources_1
+set_property file_type {VHDL 2008} [get_files  /home/raesangur/github/ppu/tile_package.vhd]
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1

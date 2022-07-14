@@ -12,3 +12,12 @@
 start_gui
 open_project /home/raesangur/github/ppu/vivado/vivado.xpr
 update_compile_order -fileset sources_1
+add_files -norecurse /home/raesangur/github/ppu/tile_package.vhd
+update_compile_order -fileset sources_1
+set_property file_type {VHDL 2008} [get_files  /home/raesangur/github/ppu/tile_package.vhd]
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1

@@ -315,3 +315,365 @@ selectCodeEditor("sprite_handler.vhd", 162, 308); // bP
 // TclEventType: DG_GRAPH_STALE
 // TclEventType: FILE_SET_CHANGE
 // HMemoryUtils.trashcanNow. Engine heap size: 1,811 MB. GUI used memory: 90 MB. Current time: 7/14/22, 2:33:51 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,811 MB. GUI used memory: 116 MB. Current time: 7/14/22, 3:07:30 PM EDT
+// Elapsed time: 2550 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite_package.vhd", 1); // m
+selectCodeEditor("sprite_package.vhd", 521, 306); // bP
+selectCodeEditor("sprite_package.vhd", 521, 306, false, false, false, true, false); // bP - Popup Trigger
+selectCodeEditor("sprite_package.vhd", 377, 340); // bP
+selectCodeEditor("sprite_package.vhd", 576, 409); // bP
+selectCodeEditor("sprite_package.vhd", 514, 224); // bP
+selectCodeEditor("sprite_package.vhd", 514, 224, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("sprite_package.vhd", 500, 283); // bP
+typeControlKey((HResource) null, "sprite_package.vhd", 'c'); // bP
+selectCodeEditor("sprite_package.vhd", 458, 165); // bP
+// Elapsed time: 99 seconds
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // E
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cr): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a
+dismissFileChooser();
+// Elapsed time: 14 seconds
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a
+setFileChooser("/home/raesangur/github/ppu/tiles_package.vhd");
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a
+dismissFileChooser();
+selectTable(PAResourceQtoS.SrcChooserTable_SRC_CHOOSER_TABLE, "VSourceFile ; 1 ; tiles_package.vhd ; xil_defaultlib ; /home/raesangur/github/ppu", 0, "xil_defaultlib", 3); // bQ
+editTable(PAResourceQtoS.SrcChooserTable_SRC_CHOOSER_TABLE, "xil_defaultlib", 0, "Library", 3); // bQ
+selectButton(RDIResource.AbstractCombinedPanel_REMOVE_SELECTED_ELEMENTS, "Remove"); // E
+selectTable(PAResourceQtoS.SrcChooserTable_SRC_CHOOSER_TABLE, "VSourceFile ; 1 ; tiles_package.vhd ; xil_defaultlib ; /home/raesangur/github/ppu", 0, "VSourceFile", 0); // bQ
+selectButton(RDIResource.AbstractCombinedPanel_REMOVE_SELECTED_ELEMENTS, "Remove"); // E
+selectButton(RDIResource.AbstractCombinedPanel_REMOVE_SELECTED_ELEMENTS, "Remove"); // E
+// Elapsed time: 50 seconds
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a
+setFileChooser("/home/raesangur/github/ppu/tile_package.vhd");
+selectButton("FINISH", "Finish"); // JButton
+// 'g' command handler elapsed time: 89 seconds
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // E
+dismissDialog("Add Sources"); // c
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse /home/raesangur/github/ppu/tile_package.vhd 
+// [GUI Memory]: 160 MB (+4248kb) [01:22:40]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL]", 1); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, Unreferenced, tile_package.vhd]", 4, false); // D
+selectButton(PAResourceQtoS.SrcFilePropPanels_TYPE, (String) null); // t
+selectButton(PAResourceQtoS.SrcFilePropPanels_TYPE, (String) null); // t
+// aa (cr): Set Type: addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 1,847 MB. GUI used memory: 86 MB. Current time: 7/14/22, 3:19:05 PM EDT
+selectComboBox(PAResourceQtoS.SrcFileTypeComboBox_SOURCE_FILE_TYPE, "VHDL 2008", 4); // cj
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: set_property file_type {VHDL 2008} [get_files  /home/raesangur/github/ppu/tile_package.vhd] 
+dismissDialog("Set Type"); // aa
+selectCodeEditor("sprite_package.vhd", 389, 336); // bP
+// [Engine Memory]: 1,863 MB (+14616kb) [01:22:53]
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL 2008, xil_defaultlib, sprite_handler.vhd]", 11, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL 2008, xil_defaultlib, sprite_handler.vhd]", 11, false, false, false, false, false, true); // D - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL 2008, xil_defaultlib, tile_handler.vhd]", 13, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL 2008, xil_defaultlib, tile_handler.vhd]", 13, false, false, false, false, false, true); // D - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite_handler.vhd", 1); // m
+selectCodeEditor("sprite_handler.vhd", 348, 314); // bP
+typeControlKey((HResource) null, "sprite_handler.vhd", 'c'); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tile_handler.vhd", 2); // m
+selectCodeEditor("tile_handler.vhd", 315, 307); // bP
+typeControlKey((HResource) null, "tile_handler.vhd", 'v'); // bP
+selectCodeEditor("tile_handler.vhd", 171, 327); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("tile_handler.vhd", 350, 331); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,880 MB. GUI used memory: 87 MB. Current time: 7/14/22, 3:19:35 PM EDT
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite_handler.vhd", 1); // m
+selectCodeEditor("sprite_handler.vhd", 239, 512); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ppu_package.vhd", 0); // m
+selectCodeEditor("ppu_package.vhd", 161, 137); // bP
+selectCodeEditor("ppu_package.vhd", 161, 137, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "ppu_package.vhd", 'c'); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite_handler.vhd", 1); // m
+selectCodeEditor("sprite_handler.vhd", 434, 511); // bP
+typeControlKey((HResource) null, "sprite_handler.vhd", 'v'); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,912 MB. GUI used memory: 87 MB. Current time: 7/14/22, 3:19:50 PM EDT
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ppu_package.vhd", 0); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tile_handler.vhd", 2); // m
+selectCodeEditor("tile_handler.vhd", 324, 459); // bP
+selectCodeEditor("tile_handler.vhd", 324, 459, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tile_handler.vhd", 324, 459); // bP
+selectCodeEditor("tile_handler.vhd", 324, 459); // bP
+selectCodeEditor("tile_handler.vhd", 324, 459); // bP
+selectCodeEditor("tile_handler.vhd", 273, 467); // bP
+selectCodeEditor("tile_handler.vhd", 273, 467, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "tile_handler.vhd", 'v'); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 86 MB. Current time: 7/14/22, 3:20:10 PM EDT
+// TclEventType: DG_GRAPH_STALE
+selectCodeEditor("tile_handler.vhd", 276, 530); // bP
+// [Engine Memory]: 1,962 MB (+5560kb) [01:23:55]
+selectCodeEditor("tile_handler.vhd", 276, 530); // bP
+selectCodeEditor("tile_handler.vhd", 322, 509); // bP
+selectCodeEditor("tile_handler.vhd", 322, 509, false, false, false, false, true); // bP - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+typeControlKey((HResource) null, "tile_handler.vhd", 'v'); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite_handler.vhd", 1); // m
+selectCodeEditor("sprite_handler.vhd", 295, 288); // bP
+selectCodeEditor("sprite_handler.vhd", 295, 288); // bP
+selectCodeEditor("sprite_handler.vhd", 295, 288); // bP
+selectCodeEditor("sprite_handler.vhd", 295, 288); // bP
+selectCodeEditor("sprite_handler.vhd", 295, 288); // bP
+selectCodeEditor("sprite_handler.vhd", 407, 325); // bP
+selectCodeEditor("sprite_handler.vhd", 407, 325, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "sprite_handler.vhd", 'c'); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tile_handler.vhd", 2); // m
+selectCodeEditor("tile_handler.vhd", 270, 381); // bP
+typeControlKey((HResource) null, "tile_handler.vhd", 'v'); // bP
+selectCodeEditor("tile_handler.vhd", 388, 385); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("tile_handler.vhd", 292, 380); // bP
+selectCodeEditor("tile_handler.vhd", 292, 380, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "tile_handler.vhd", 'c'); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectCodeEditor("tile_handler.vhd", 268, 403); // bP
+typeControlKey((HResource) null, "tile_handler.vhd", 'v'); // bP
+// HMemoryUtils.trashcanNow. Engine heap size: 2,044 MB. GUI used memory: 87 MB. Current time: 7/14/22, 3:20:45 PM EDT
+// Elapsed time: 225 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite_handler.vhd", 1); // m
+selectCodeEditor("sprite_handler.vhd", 395, 476); // bP
+selectCodeEditor("sprite_handler.vhd", 395, 476, false, false, false, false, true); // bP - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tile_handler.vhd", 2); // m
+// Elapsed time: 38 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite_handler.vhd", 1); // m
+selectCodeEditor("sprite_handler.vhd", 387, 389); // bP
+selectCodeEditor("sprite_handler.vhd", 387, 389, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "sprite_handler.vhd", 'c'); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tile_handler.vhd", 2); // m
+selectCodeEditor("tile_handler.vhd", 227, 432); // bP
+selectCodeEditor("tile_handler.vhd", 316, 427); // bP
+selectCodeEditor("tile_handler.vhd", 316, 427, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "tile_handler.vhd", 'v'); // bP
+// Elapsed time: 12 seconds
+selectCodeEditor("tile_handler.vhd", 272, 340); // bP
+selectCodeEditor("tile_handler.vhd", 272, 340); // bP
+selectCodeEditor("tile_handler.vhd", 272, 340); // bP
+selectCodeEditor("tile_handler.vhd", 272, 340); // bP
+selectCodeEditor("tile_handler.vhd", 272, 340); // bP
+selectCodeEditor("tile_handler.vhd", 272, 340); // bP
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL 2008, xil_defaultlib, tile_package.vhd]", 13, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL 2008, xil_defaultlib, tile_package.vhd]", 13, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("tile_package.vhd", 176, 301); // bP
+selectCodeEditor("tile_package.vhd", 176, 301); // bP
+selectCodeEditor("tile_package.vhd", 176, 301); // bP
+selectCodeEditor("tile_package.vhd", 153, 266); // bP
+selectCodeEditor("tile_package.vhd", 153, 266, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tile_package.vhd", 168, 249); // bP
+selectCodeEditor("tile_package.vhd", 168, 249, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tile_package.vhd", 722, 256); // bP
+selectCodeEditor("tile_package.vhd", 722, 256, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tile_package.vhd", 226, 250); // bP
+selectCodeEditor("tile_package.vhd", 711, 258); // bP
+selectCodeEditor("tile_package.vhd", 711, 258, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tile_package.vhd", 878, 244); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 2,060 MB (+224kb) [01:30:03]
+selectCodeEditor("tile_package.vhd", 555, 273); // bP
+selectCodeEditor("tile_package.vhd", 638, 254); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,076 MB. GUI used memory: 88 MB. Current time: 7/14/22, 3:26:30 PM EDT
+// Elapsed time: 117 seconds
+selectCodeEditor("tile_package.vhd", 156, 240); // bP
+selectCodeEditor("tile_package.vhd", 156, 240); // bP
+selectCodeEditor("tile_package.vhd", 156, 240, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "tile_package.vhd", 'c'); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tile_handler.vhd", 2); // m
+selectCodeEditor("tile_handler.vhd", 157, 202); // bP
+selectCodeEditor("tile_handler.vhd", 164, 113); // bP
+selectCodeEditor("tile_handler.vhd", 164, 113, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "tile_handler.vhd", 'v'); // bP
+typeControlKey(null, null, 'z');
+selectCodeEditor("tile_handler.vhd", 316, 131); // bP
+selectCodeEditor("tile_handler.vhd", 316, 131, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tile_handler.vhd", 357, 112); // bP
+selectCodeEditor("tile_handler.vhd", 357, 112, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "tile_handler.vhd", 'v'); // bP
+selectCodeEditor("tile_handler.vhd", 545, 118); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 18 seconds
+selectCodeEditor("tile_handler.vhd", 429, 246); // bP
+selectCodeEditor("tile_handler.vhd", 171, 565); // bP
+selectCodeEditor("tile_handler.vhd", 308, 588); // bP
+selectCodeEditor("tile_handler.vhd", 288, 588); // bP
+selectCodeEditor("tile_handler.vhd", 358, 586); // bP
+selectCodeEditor("tile_handler.vhd", 632, 555); // bP
+selectCodeEditor("tile_handler.vhd", 632, 555, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "tile_handler.vhd", 'c'); // bP
+selectCodeEditor("tile_handler.vhd", 598, 582); // bP
+selectCodeEditor("tile_handler.vhd", 598, 582, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "tile_handler.vhd", 'v'); // bP
+selectCodeEditor("tile_handler.vhd", 703, 540); // bP
+selectCodeEditor("tile_handler.vhd", 740, 557); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,108 MB. GUI used memory: 88 MB. Current time: 7/14/22, 3:29:20 PM EDT
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL 2008, xil_defaultlib, tile.vhd]", 12, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL 2008, xil_defaultlib, tile.vhd]", 12, false, false, false, false, false, true); // D - Double Click
+// Elapsed time: 21 seconds
+selectCodeEditor("tile.vhd", 280, 519); // bP
+selectCodeEditor("tile.vhd", 267, 531); // bP
+selectCodeEditor("tile.vhd", 267, 531, false, false, false, false, true); // bP - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 12 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL 2008, xil_defaultlib, sprite.vhd]", 10, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL 2008, xil_defaultlib, sprite.vhd]", 10, false, false, false, false, false, true); // D - Double Click
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F
+selectCodeEditor("tile.vhd", 84, 535); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,141 MB. GUI used memory: 89 MB. Current time: 7/14/22, 3:30:10 PM EDT
+selectCodeEditor("tile.vhd", 309, 322); // bP
+selectCodeEditor("tile.vhd", 343, 189); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 1396 seconds
+selectCodeEditor("tile.vhd", 637, 253); // bP
+selectCodeEditor("tile.vhd", 384, 435); // bP
+selectCodeEditor("tile.vhd", 384, 435, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tile.vhd", 543, 408); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("tile.vhd", 457, 487); // bP
+// [Engine Memory]: 2,173 MB (+10597kb) [01:57:38]
+selectCodeEditor("tile.vhd", 457, 487); // bP
+selectCodeEditor("tile.vhd", 457, 487); // bP
+selectCodeEditor("tile.vhd", 457, 487); // bP
+// HMemoryUtils.trashcanNow. Engine heap size: 2,173 MB. GUI used memory: 89 MB. Current time: 7/14/22, 3:53:56 PM EDT
+selectCodeEditor("tile.vhd", 758, 511); // bP
+selectCodeEditor("tile.vhd", 758, 511); // bP
+// Elapsed time: 85 seconds
+selectCodeEditor("tile.vhd", 801, 531); // bP
+// Elapsed time: 458 seconds
+selectCodeEditor("tile.vhd", 717, 402); // bP
+selectCodeEditor("tile.vhd", 717, 402); // bP
+selectCodeEditor("tile.vhd", 717, 402); // bP
+selectCodeEditor("tile.vhd", 717, 402); // bP
+selectCodeEditor("tile.vhd", 717, 402); // bP
+selectCodeEditor("tile.vhd", 245, 316); // bP
+selectCodeEditor("tile.vhd", 245, 316, false, false, false, false, true); // bP - Double Click
+// Elapsed time: 217 seconds
+selectCodeEditor("tile.vhd", 103, 325); // bP
+selectCodeEditor("tile.vhd", 438, 331); // bP
+selectCodeEditor("tile.vhd", 464, 460); // bP
+selectCodeEditor("tile.vhd", 464, 460); // bP
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("tile.vhd", 801, 534); // bP
+selectCodeEditor("tile.vhd", 606, 306); // bP
+selectCodeEditor("tile.vhd", 172, 535); // bP
+selectCodeEditor("tile.vhd", 172, 535, false, false, false, false, true); // bP - Double Click
+// Elapsed time: 15 seconds
+selectCodeEditor("tile.vhd", 753, 499); // bP
+selectCodeEditor("tile.vhd", 91, 426); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tile_handler.vhd", 2); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tile_package.vhd", 3); // m
+selectCodeEditor("tile_package.vhd", 223, 319); // bP
+selectCodeEditor("tile_package.vhd", 223, 319, false, false, false, false, true); // bP - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tile.vhd", 4); // m
+selectCodeEditor("tile.vhd", 213, 430); // bP
+selectCodeEditor("tile.vhd", 381, 343); // bP
+// Elapsed time: 607 seconds
+selectCodeEditor("tile.vhd", 330, 395); // bP
+selectCodeEditor("tile.vhd", 330, 395); // bP
+selectCodeEditor("tile.vhd", 330, 395); // bP
+selectCodeEditor("tile.vhd", 330, 395); // bP
+selectCodeEditor("tile.vhd", 330, 395); // bP
+selectCodeEditor("tile.vhd", 330, 395); // bP
+selectCodeEditor("tile.vhd", 330, 395); // bP
+selectCodeEditor("tile.vhd", 330, 395); // bP
+selectCodeEditor("tile.vhd", 330, 395); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE

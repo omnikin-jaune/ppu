@@ -26,7 +26,7 @@ port (
     i_x        : in  std_logic_vector(POS_SIZE downto 0);
     i_y        : in  std_logic_vector(POS_SIZE downto 0);
 
-    o_cc       : out std_logic_vector(5 downto 0);
+    o_cc       : out std_logic_vector(CC_SIZE downto 0);
     o_sprite   : out std_logic
 ); end sprite_handler;
 

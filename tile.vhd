@@ -9,6 +9,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 use work.ppu_package.all;
+use work.tile_package.all;
 
 entity tile is
 port (
@@ -21,7 +22,7 @@ port (
 
     o_x       : out std_logic_vector(8 downto 0);
     o_y       : out std_logic_vector(8 downto 0);
-    o_cc      : out vector_cc
+    o_tex     : out texture
 ); end tile;
 
 
@@ -29,14 +30,7 @@ architecture behavioral of tile is
     signal s_texture_id     : std_logic_vector(7 downto 0) := (others => '0');
     signal s_x              : std_logic_vector(8 downto 0) := (others => '0');
     signal s_y              : std_logic_vector(8 downto 0) := (others => '0');
-    
-    signal s_tex_pos        : std_logic_vector(7 downto 0);
-    signal s_tiles_textures : vector_tex(7 downto 0) := (others => (others => (others => '0')));
-    signal s_cc             : vector_cc;
 begin
-
-    s_tex_pos <= s_y(3 downto 0) & s_x(3 downto 0);
-
     process(i_clk, i_rst, i_opcode, i_reg_x, i_reg_y)
     begin
         if (rising_edge(i_clk)) then
@@ -50,12 +44,8 @@ begin
         end if;
     end process;
 
-
-    s_cc(0) <= s_tiles_textures(to_integer(unsigned(s_texture_id)))
-                               (to_integer(unsigned(s_tex_pos)));
-    
-    o_cc <= s_cc;
-    o_x  <= s_x;
-    o_y  <= s_y;
+    o_tex <= s_tile_textures(to_integer(unsigned(s_texture_id)));
+    o_x   <= s_x;
+    o_y   <= s_y;
     
 end behavioral;
