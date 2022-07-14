@@ -1,0 +1,109 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sat Jul  9 23:22:48 2022
+# Process ID: 8260
+# Current directory: /home/raesangur/github/ppu
+# Command line: vivado
+# Log file: /home/raesangur/github/ppu/vivado.log
+# Journal file: /home/raesangur/github/ppu/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/raesangur/github/ppu/vivado/vivado.xpr
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/raesangur/github/ppu/vivado/vivado.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/usr/share/Xilinx/Vivado/2020.2/data/ip'.
+INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+add_files -norecurse /home/raesangur/github/ppu/sprite_package.vhd
+update_compile_order -fileset sources_1
+set_property file_type {VHDL 2008} [get_files  /home/raesangur/github/ppu/sprite_package.vhd]
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/raesangur/github/ppu/vivado/vivado.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'ppu' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/raesangur/github/ppu/vivado/vivado.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj ppu_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/raesangur/github/ppu/ppu_package.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/raesangur/github/ppu/hit_detector.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'hit_detector'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/raesangur/github/ppu/hit_handler.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'hit_handler'
+ERROR: [VRFC 10-2989] 'abcde' is not declared [/home/raesangur/github/ppu/hit_handler.vhd:30]
+ERROR: [VRFC 10-2989] 'color_code' is not declared [/home/raesangur/github/ppu/hit_handler.vhd:39]
+ERROR: [VRFC 10-2989] 'cc' is not declared [/home/raesangur/github/ppu/hit_handler.vhd:43]
+ERROR: [VRFC 10-724] found '0' definitions of operator "<=", cannot determine exact overloaded matching definition for "<=" [/home/raesangur/github/ppu/hit_handler.vhd:50]
+ERROR: [VRFC 10-724] found '0' definitions of operator "<=", cannot determine exact overloaded matching definition for "<=" [/home/raesangur/github/ppu/hit_handler.vhd:51]
+ERROR: [VRFC 10-724] found '0' definitions of operator "<=", cannot determine exact overloaded matching definition for "<=" [/home/raesangur/github/ppu/hit_handler.vhd:52]
+ERROR: [VRFC 10-724] found '0' definitions of operator "<=", cannot determine exact overloaded matching definition for "<=" [/home/raesangur/github/ppu/hit_handler.vhd:53]
+ERROR: [VRFC 10-724] found '0' definitions of operator "<=", cannot determine exact overloaded matching definition for "<=" [/home/raesangur/github/ppu/hit_handler.vhd:54]
+ERROR: [VRFC 10-2989] 'i_cc' is not declared [/home/raesangur/github/ppu/hit_handler.vhd:55]
+ERROR: [VRFC 10-2989] 'o_hit' is not declared [/home/raesangur/github/ppu/hit_handler.vhd:57]
+ERROR: [VRFC 10-3782] unit 'behavioral' ignored due to previous errors [/home/raesangur/github/ppu/hit_handler.vhd:21]
+INFO: [VRFC 10-3070] VHDL file '/home/raesangur/github/ppu/hit_handler.vhd' ignored due to errors
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/raesangur/github/ppu/vivado/vivado.sim/sim_1/behav/xsim/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '/home/raesangur/github/ppu/vivado/vivado.sim/sim_1/behav/xsim/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/raesangur/github/ppu/vivado/vivado.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'ppu' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/raesangur/github/ppu/vivado/vivado.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj ppu_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/raesangur/github/ppu/ppu_package.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/raesangur/github/ppu/sprite.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'sprite'
+ERROR: [VRFC 10-2989] 's_tiles_textures' is not declared [/home/raesangur/github/ppu/sprite.vhd:64]
+ERROR: [VRFC 10-3782] unit 'behavioral' ignored due to previous errors [/home/raesangur/github/ppu/sprite.vhd:33]
+INFO: [VRFC 10-3070] VHDL file '/home/raesangur/github/ppu/sprite.vhd' ignored due to errors
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/raesangur/github/ppu/vivado/vivado.sim/sim_1/behav/xsim/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '/home/raesangur/github/ppu/vivado/vivado.sim/sim_1/behav/xsim/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/raesangur/github/ppu/vivado/vivado.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'ppu' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/raesangur/github/ppu/vivado/vivado.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj ppu_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/raesangur/github/ppu/ppu_package.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/raesangur/github/ppu/sprite.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'sprite'
+ERROR: [VRFC 10-2989] 's_tiles_textures' is not declared [/home/raesangur/github/ppu/sprite.vhd:64]
+ERROR: [VRFC 10-3782] unit 'behavioral' ignored due to previous errors [/home/raesangur/github/ppu/sprite.vhd:33]
+INFO: [VRFC 10-3070] VHDL file '/home/raesangur/github/ppu/sprite.vhd' ignored due to errors
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/raesangur/github/ppu/vivado/vivado.sim/sim_1/behav/xsim/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '/home/raesangur/github/ppu/vivado/vivado.sim/sim_1/behav/xsim/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1

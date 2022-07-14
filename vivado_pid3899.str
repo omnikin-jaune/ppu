@@ -1,0 +1,317 @@
+/*
+
+Xilinx Vivado v2020.2 (64-bit) [Major: 2020, Minor: 2]
+SW Build: 3064766 on Wed Nov 18 09:12:47 MST 2020
+IP Build: 3064653 on Wed Nov 18 14:17:31 MST 2020
+
+Process ID (PID): 3899
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Thu Jul 14 13:56:25 EDT 2022
+Time zone: 	Eastern Standard Time (America/Toronto)
+
+OS: Ubuntu
+OS Version: 5.15.0-41-generic
+OS Architecture: amd64
+Available processors (cores): 8
+
+Display: 0
+Screen size: 2256x1504
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=18
+Scale size: 27
+
+Java version: 	11.0.2 64-bit
+Java home: 	/usr/share/Xilinx/Vivado/2020.2/tps/lnx64/jre11.0.2
+Java executable location: 	/usr/share/Xilinx/Vivado/2020.2/tps/lnx64/jre11.0.2/bin/java
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	raesangur
+User home directory: /home/raesangur
+User working directory: /home/raesangur/github/ppu
+User country: 	CA
+User language: 	en
+User locale: 	en_CA
+
+RDI_BASEROOT: /usr/share/Xilinx/Vivado
+HDI_APPROOT: /usr/share/Xilinx/Vivado/2020.2
+RDI_DATADIR: /usr/share/Xilinx/Vivado/2020.2/data
+RDI_BINDIR: /usr/share/Xilinx/Vivado/2020.2/bin
+
+Vivado preferences file location: /home/raesangur/.Xilinx/Vivado/2020.2/vivado.xml
+Vivado preferences directory: /home/raesangur/.Xilinx/Vivado/2020.2/
+Vivado layouts directory: /home/raesangur/.Xilinx/Vivado/2020.2/data/layouts
+PlanAhead jar file location: 	/usr/share/Xilinx/Vivado/2020.2/lib/classes/planAhead.jar
+Vivado log file location: 	/home/raesangur/github/ppu/vivado.log
+Vivado journal file location: 	/home/raesangur/github/ppu/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-3899-mini-pascal
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /usr/share/Xilinx/Vivado/2020.2/ids_lite/ISE
+XILINX_DSP: /usr/share/Xilinx/Vivado/2020.2/ids_lite/ISE
+XILINX_HLS: /usr/share/Xilinx/Vitis_HLS/2020.2
+XILINX_PLANAHEAD: /usr/share/Xilinx/Vivado/2020.2
+XILINX_VITIS: 
+XILINX_VIVADO: /usr/share/Xilinx/Vivado/2020.2
+XILINX_VIVADO_HLS: /usr/share/Xilinx/Vivado/2020.2
+
+
+GUI allocated memory:	185 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,500 MB
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+selectList(PAResourceQtoS.SyntheticaGettingStartedView_RECENT_PROJECTS, "/home/raesangur/github/ppu/vivado/vivado.xpr", 0); // r
+// bz (cr):  Open Project : addNotify
+// Opening Vivado Project: /home/raesangur/github/ppu/vivado/vivado.xpr. Version: Vivado v2020.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// [GUI Memory]: 124 MB (+127236kb) [00:00:09]
+// [Engine Memory]: 1,497 MB (+1418353kb) [00:00:09]
+// Tcl Message: open_project /home/raesangur/github/ppu/vivado/vivado.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 148 MB (+19312kb) [00:00:11]
+// [Engine Memory]: 1,578 MB (+6810kb) [00:00:11]
+// WARNING: HEventQueue.dispatchEvent() is taking  2545 ms.
+// Tcl Message: open_project /home/raesangur/github/ppu/vivado/vivado.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/usr/share/Xilinx/Vivado/2020.2/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,595 MB. GUI used memory: 84 MB. Current time: 7/14/22, 1:56:28 PM EDT
+// Tcl Message: INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'. 
+// Project name: vivado; location: /home/raesangur/github/ppu/vivado; part: xc7z010clg400-1
+dismissDialog("Open Project"); // bz
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 160 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ppu(behavioral) (ppu.vhd)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ppu(behavioral) (ppu.vhd)]", 1, true, false, false, false, false, true); // D - Double Click - Node
+selectCodeEditor("ppu.vhd", 52, 303); // bP
+selectCodeEditor("ppu.vhd", 358, 287); // bP
+// Elapsed time: 523 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ppu(behavioral) (ppu.vhd), inst_tile_handler : tile_handler(behavioral) (tile_handler.vhd)]", 4, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ppu(behavioral) (ppu.vhd), inst_tile_handler : tile_handler(behavioral) (tile_handler.vhd), tile_gen[3].tiles : tile(behavioral) (tile.vhd)]", 8, false, false, false, false, false, true); // D - Double Click
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// Elapsed time: 517 seconds
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ppu(behavioral) (ppu.vhd), inst_tile_handler : tile_handler(behavioral) (tile_handler.vhd)]", 4); // D
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Libraries", 1); // i
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL 2008, xil_defaultlib, sprite_package.vhd]", 7, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL 2008, xil_defaultlib, sprite_package.vhd]", 7, false, false, false, false, false, true); // D - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL 2008, xil_defaultlib, sprite_package.vhd]", 7, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL 2008, xil_defaultlib, sprite_package.vhd]", 7, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL 2008, xil_defaultlib, frame_printer.vhd]", 5, false); // D
+selectCodeEditor("sprite_package.vhd", 291, 399); // bP
+// HMemoryUtils.trashcanNow. Engine heap size: 1,642 MB. GUI used memory: 88 MB. Current time: 7/14/22, 2:16:56 PM EDT
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tile_handler.vhd", 0); // m
+selectCodeEditor("tile_handler.vhd", 533, 243); // bP
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Hierarchy", 0); // i
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ppu(behavioral) (ppu.vhd), inst_sprite_handler : sprite_handler(behavioral) (sprite_handler.vhd)]", 5, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ppu(behavioral) (ppu.vhd), inst_sprite_handler : sprite_handler(behavioral) (sprite_handler.vhd), sprite_gen[3].sprites : sprite(behavioral) (sprite.vhd)]", 10, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("sprite_handler.vhd", 350, 332); // bP
+selectCodeEditor("sprite_handler.vhd", 350, 332); // bP
+selectCodeEditor("sprite_handler.vhd", 350, 332); // bP
+selectCodeEditor("sprite_handler.vhd", 350, 332); // bP
+selectCodeEditor("sprite_handler.vhd", 350, 332); // bP
+selectCodeEditor("sprite_handler.vhd", 350, 332); // bP
+selectCodeEditor("sprite_handler.vhd", 350, 332); // bP
+selectCodeEditor("sprite_handler.vhd", 350, 332); // bP
+selectCodeEditor("sprite_handler.vhd", 350, 332); // bP
+selectCodeEditor("sprite_handler.vhd", 350, 332); // bP
+selectCodeEditor("sprite_handler.vhd", 350, 332); // bP
+selectCodeEditor("sprite_handler.vhd", 350, 332); // bP
+selectCodeEditor("sprite_handler.vhd", 350, 332); // bP
+selectCodeEditor("sprite_handler.vhd", 431, 354); // bP
+selectCodeEditor("sprite_handler.vhd", 431, 354); // bP
+selectCodeEditor("sprite_handler.vhd", 370, 238); // bP
+selectCodeEditor("sprite_handler.vhd", 370, 238); // bP
+selectCodeEditor("sprite_handler.vhd", 370, 238); // bP
+selectCodeEditor("sprite_handler.vhd", 370, 238); // bP
+selectCodeEditor("sprite_handler.vhd", 370, 238); // bP
+selectCodeEditor("sprite_handler.vhd", 370, 238); // bP
+selectCodeEditor("sprite_handler.vhd", 370, 238); // bP
+selectCodeEditor("sprite_handler.vhd", 370, 238); // bP
+selectCodeEditor("sprite_handler.vhd", 370, 238); // bP
+selectCodeEditor("sprite_handler.vhd", 434, 212); // bP
+selectCodeEditor("sprite_handler.vhd", 434, 212); // bP
+selectCodeEditor("sprite_handler.vhd", 434, 212); // bP
+selectCodeEditor("sprite_handler.vhd", 434, 212); // bP
+selectCodeEditor("sprite_handler.vhd", 434, 212); // bP
+selectCodeEditor("sprite_handler.vhd", 434, 212); // bP
+selectCodeEditor("sprite_handler.vhd", 434, 212); // bP
+selectCodeEditor("sprite_handler.vhd", 434, 212); // bP
+selectCodeEditor("sprite_handler.vhd", 434, 212); // bP
+selectCodeEditor("sprite_handler.vhd", 434, 212); // bP
+selectCodeEditor("sprite_handler.vhd", 434, 212); // bP
+selectCodeEditor("sprite_handler.vhd", 434, 212); // bP
+selectCodeEditor("sprite_handler.vhd", 471, 475); // bP
+selectCodeEditor("sprite_handler.vhd", 544, 343); // bP
+selectCodeEditor("sprite_handler.vhd", 544, 343); // bP
+selectCodeEditor("sprite_handler.vhd", 544, 343); // bP
+selectCodeEditor("sprite_handler.vhd", 124, 175); // bP
+selectCodeEditor("sprite_handler.vhd", 124, 175, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("sprite_handler.vhd", 388, 191); // bP
+selectCodeEditor("sprite_handler.vhd", 388, 191); // bP
+selectCodeEditor("sprite_handler.vhd", 388, 191); // bP
+// Elapsed time: 16 seconds
+selectCodeEditor("sprite_handler.vhd", 107, 166); // bP
+selectCodeEditor("sprite_handler.vhd", 107, 166, false, false, false, false, true); // bP - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ppu(behavioral) (ppu.vhd), inst_sprite_handler : sprite_handler(behavioral) (sprite_handler.vhd), inst_hit_handler : hit_handler(behavioral) (hit_handler.vhd)]", 6, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ppu(behavioral) (ppu.vhd), inst_sprite_handler : sprite_handler(behavioral) (sprite_handler.vhd), inst_hit_handler : hit_handler(behavioral) (hit_handler.vhd), hit_detector_gen[0].hit_detectors : hit_detector(behavioral) (hit_detector.vhd)]", 7, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("hit_handler.vhd", 77, 382); // bP
+selectCodeEditor("hit_handler.vhd", 77, 382, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "hit_handler.vhd", 'c'); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite_handler.vhd", 1); // m
+selectCodeEditor("sprite_handler.vhd", 113, 462); // bP
+selectCodeEditor("sprite_handler.vhd", 113, 462, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "sprite_handler.vhd", 'v'); // bP
+selectCodeEditor("sprite_handler.vhd", 306, 453); // bP
+selectCodeEditor("sprite_handler.vhd", 306, 453, false, false, false, false, true); // bP - Double Click
+// Elapsed time: 10 seconds
+selectCodeEditor("sprite_handler.vhd", 217, 462); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 1,673 MB (+16519kb) [00:22:06]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,673 MB. GUI used memory: 90 MB. Current time: 7/14/22, 2:18:21 PM EDT
+selectCodeEditor("sprite_handler.vhd", 471, 189); // bP
+// Elapsed time: 73 seconds
+selectCodeEditor("sprite_handler.vhd", 107, 384); // bP
+selectCodeEditor("sprite_handler.vhd", 107, 384, false, false, false, false, true); // bP - Double Click
+// Elapsed time: 115 seconds
+selectCodeEditor("sprite_handler.vhd", 123, 202); // bP
+selectCodeEditor("sprite_handler.vhd", 123, 202, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("sprite_handler.vhd", 66, 403); // bP
+selectCodeEditor("sprite_handler.vhd", 121, 382); // bP
+selectCodeEditor("sprite_handler.vhd", 121, 382, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("sprite_handler.vhd", 224, 381); // bP
+selectCodeEditor("sprite_handler.vhd", 300, 379); // bP
+selectCodeEditor("sprite_handler.vhd", 300, 379, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("sprite_handler.vhd", 391, 224); // bP
+selectCodeEditor("sprite_handler.vhd", 391, 224, false, false, false, false, true); // bP - Double Click
+// Elapsed time: 130 seconds
+selectCodeEditor("sprite_handler.vhd", 205, 296); // bP
+selectCodeEditor("sprite_handler.vhd", 205, 296, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("sprite_handler.vhd", 346, 305); // bP
+selectCodeEditor("sprite_handler.vhd", 346, 305, false, false, false, false, true); // bP - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite_package.vhd", 0); // m
+selectCodeEditor("sprite_package.vhd", 196, 434); // bP
+selectCodeEditor("sprite_package.vhd", 196, 434, false, false, false, false, true); // bP - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite_handler.vhd", 1); // m
+selectCodeEditor("sprite_handler.vhd", 513, 311); // bP
+selectCodeEditor("sprite_handler.vhd", 508, 352); // bP
+// Elapsed time: 16 seconds
+selectCodeEditor("sprite_handler.vhd", 119, 464); // bP
+selectCodeEditor("sprite_handler.vhd", 119, 464, false, false, false, false, true); // bP - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hit_handler.vhd", 2); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite_handler.vhd", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite_package.vhd", 0); // m
+selectCodeEditor("sprite_package.vhd", 434, 400); // bP
+selectCodeEditor("sprite_package.vhd", 434, 400, false, false, false, false, true); // bP - Double Click
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ppu(behavioral) (ppu.vhd), inst_sprite_handler : sprite_handler(behavioral) (sprite_handler.vhd), inst_hit_handler : hit_handler(behavioral) (hit_handler.vhd)]", 6); // D
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Libraries", 1); // i
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL 2008, xil_defaultlib, ppu_package.vhd]", 3, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL 2008, xil_defaultlib, ppu_package.vhd]", 3, false, false, false, false, false, true); // D - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ppu_package.vhd", 3); // m
+// Elapsed time: 29 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite_handler.vhd", 2); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite_package.vhd", 1); // m
+selectCodeEditor("sprite_package.vhd", 197, 406); // bP
+selectCodeEditor("sprite_package.vhd", 197, 406, false, false, false, false, true); // bP - Double Click
+// Elapsed time: 16 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sprite_handler.vhd", 2); // m
+selectCodeEditor("sprite_handler.vhd", 570, 346); // bP
+selectCodeEditor("sprite_handler.vhd", 203, 456); // bP
+selectCodeEditor("sprite_handler.vhd", 203, 456, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("sprite_handler.vhd", 515, 471); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("sprite_handler.vhd", 450, 524); // bP
+selectCodeEditor("sprite_handler.vhd", 152, 378); // bP
+selectCodeEditor("sprite_handler.vhd", 152, 378, false, false, false, false, true); // bP - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("sprite_handler.vhd", 242, 381); // bP
+// HMemoryUtils.trashcanNow. Engine heap size: 1,712 MB. GUI used memory: 90 MB. Current time: 7/14/22, 2:26:16 PM EDT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("sprite_handler.vhd", 67, 406); // bP
+selectCodeEditor("sprite_handler.vhd", 209, 403); // bP
+selectCodeEditor("sprite_handler.vhd", 339, 408); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,745 MB. GUI used memory: 90 MB. Current time: 7/14/22, 2:26:36 PM EDT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 1,761 MB (+4525kb) [00:30:52]
+// Elapsed time: 44 seconds
+selectCodeEditor("sprite_handler.vhd", 406, 443); // bP
+// Elapsed time: 252 seconds
+selectCodeEditor("sprite_handler.vhd", 269, 332); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,778 MB. GUI used memory: 90 MB. Current time: 7/14/22, 2:32:41 PM EDT
+// Elapsed time: 80 seconds
+selectCodeEditor("sprite_handler.vhd", 707, 292); // bP
+selectCodeEditor("sprite_handler.vhd", 584, 278); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("sprite_handler.vhd", 575, 389); // bP
+selectCodeEditor("sprite_handler.vhd", 575, 389); // bP
+selectCodeEditor("sprite_handler.vhd", 575, 389); // bP
+selectCodeEditor("sprite_handler.vhd", 575, 389); // bP
+selectCodeEditor("sprite_handler.vhd", 575, 389); // bP
+selectCodeEditor("sprite_handler.vhd", 575, 389); // bP
+selectCodeEditor("sprite_handler.vhd", 575, 389); // bP
+selectCodeEditor("sprite_handler.vhd", 575, 389); // bP
+selectCodeEditor("sprite_handler.vhd", 575, 389); // bP
+selectCodeEditor("sprite_handler.vhd", 575, 389); // bP
+selectCodeEditor("sprite_handler.vhd", 575, 389); // bP
+selectCodeEditor("sprite_handler.vhd", 575, 389); // bP
+selectCodeEditor("sprite_handler.vhd", 794, 449); // bP
+selectCodeEditor("sprite_handler.vhd", 794, 449); // bP
+selectCodeEditor("sprite_handler.vhd", 794, 449); // bP
+selectCodeEditor("sprite_handler.vhd", 794, 449); // bP
+selectCodeEditor("sprite_handler.vhd", 794, 449); // bP
+selectCodeEditor("sprite_handler.vhd", 794, 449); // bP
+selectCodeEditor("sprite_handler.vhd", 794, 449); // bP
+selectCodeEditor("sprite_handler.vhd", 794, 449); // bP
+selectCodeEditor("sprite_handler.vhd", 794, 449); // bP
+selectCodeEditor("sprite_handler.vhd", 794, 449); // bP
+selectCodeEditor("sprite_handler.vhd", 794, 449); // bP
+selectCodeEditor("sprite_handler.vhd", 794, 449); // bP
+selectCodeEditor("sprite_handler.vhd", 794, 449); // bP
+selectCodeEditor("sprite_handler.vhd", 794, 449); // bP
+selectCodeEditor("sprite_handler.vhd", 162, 308); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,811 MB. GUI used memory: 90 MB. Current time: 7/14/22, 2:33:51 PM EDT

@@ -60,7 +60,7 @@ architecture behavioral of sprite_handler is
         i_sprite_x : in vector_sprt_pos;
         i_sprite_y : in vector_sprt_pos;
         i_en       : in std_logic_vector(SPRT_SIZE downto 0);
-        i_tex      : in texture;
+        i_cc_0     : in std_logic_vector(SPRT_SIZE downto 0);
     
         o_sprite   : out std_logic_vector(5 downto 0);
         o_en       : out std_logic
@@ -70,12 +70,13 @@ architecture behavioral of sprite_handler is
     signal s_sprites_x    : vector_sprt_pos;
     signal s_sprites_y    : vector_sprt_pos;
     signal s_sprites_tex  : vector_sprt_tex;
+    signal s_sprite_tex   : texture;
     signal s_sprites_en   : std_logic_vector(SPRT_SIZE downto 0);
     signal s_sprites_cc_0 : std_logic_vector(SPRT_SIZE downto 0);
-    signal s_sprite_cc    : std_logic_vector(CC_SIZE downto 0);
+    signal s_sprite_cc    : std_logic_vector(CC_SIZE   downto 0);
 
-    signal s_sprite_id  : std_logic_vector(5 downto 0);
-    signal s_cc_id      : std_logic_vector(7 downto 0);
+    signal s_sprite_id    : std_logic_vector(5 downto 0);
+    signal s_cc_id        : std_logic_vector(7 downto 0);
     
 begin
 
@@ -114,11 +115,12 @@ begin
         o_en       => o_sprite
     );
     
-    s_cc_id    (7 downto 4) <= i_y(3 downto 0);
-    s_cc_id    (3 downto 0) <= i_x(3 downto 0);
+    s_cc_id (7 downto 4) <= i_y(3 downto 0);
+    s_cc_id (3 downto 0) <= i_x(3 downto 0);
 
-    s_sprite_cc <=   s_sprites_tex(to_integer(unsigned(s_sprite_id)));
-    --o_cc           <= s_sprite_cc(0)(to_integer(unsigned(s_cc_id)));
+    
+    s_sprite_tex <= s_sprites_tex(to_integer(unsigned(s_sprite_id)));
+    o_cc         <= s_sprite_tex (to_integer(unsigned(s_cc_id)));
     
     process(s_sprites_tex)
     begin
