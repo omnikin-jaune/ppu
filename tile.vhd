@@ -8,6 +8,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
+use ieee.std_logic_unsigned.all;
 use work.ppu_package.all;
 use work.tile_package.all;
 
@@ -15,21 +16,26 @@ entity tile is
 port (
     i_clk     : in  std_logic;
     i_rst     : in  std_logic;
-    i_opcode  : in  std_logic_vector(4 downto 0);
+    i_opcode  : in  std_logic_vector(OP_SIZE downto 0);
     i_reg_tex : in  std_logic_vector(7 downto 0);
-    i_reg_x   : in  std_logic_vector(8 downto 0);
-    i_reg_y   : in  std_logic_vector(8 downto 0);
+    i_reg_x   : in  std_logic_vector(POS_SIZE downto 0);
+    i_reg_y   : in  std_logic_vector(POS_SIZE downto 0);
 
-    o_x       : out std_logic_vector(8 downto 0);
-    o_y       : out std_logic_vector(8 downto 0);
-    o_tex     : out texture
+    i_x       : in  std_logic_vector(POS_SIZE downto 0);
+    i_y       : in  std_logic_vector(POS_SIZE downto 0);
+
+    o_cc      : out std_logic_vector(CC_SIZE downto 0)
 ); end tile;
 
 
 architecture behavioral of tile is
-    signal s_texture_id     : std_logic_vector(7 downto 0) := (others => '0');
-    signal s_x              : std_logic_vector(8 downto 0) := (others => '0');
-    signal s_y              : std_logic_vector(8 downto 0) := (others => '0');
+    constant T_INDX_SIZE : integer := POS_SIZE * 2 + 1;
+
+    signal s_texture_id : std_logic_vector(7 downto 0)           := (others => '0');
+    signal s_x          : std_logic_vector(POS_SIZE downto 0)    := (others => '0');
+    signal s_y          : std_logic_vector(POS_SIZE downto 0)    := (others => '0');
+    signal s_indx       : std_logic_vector(T_INDX_SIZE downto 0) := (others => '0');
+    signal textur       : texture;
 begin
     process(i_clk, i_rst, i_opcode, i_reg_x, i_reg_y)
     begin
@@ -44,8 +50,12 @@ begin
         end if;
     end process;
 
-    o_tex <= s_tile_textures(to_integer(unsigned(s_texture_id)));
-    o_x   <= s_x;
-    o_y   <= s_y;
+
+    s_indx <= (i_y - s_y) & (i_x - s_x);
+    o_cc   <= s_tile_textures(to_integer(unsigned(s_texture_id)))
+                             (to_integer(unsigned(s_indx)))
+              when (i_x < (s_x + 16) and i_x > (s_x - 1) and
+                    i_y < (s_y + 16) and i_y > (s_y - 1))
+              else "000000";
     
 end behavioral;

@@ -39,14 +39,10 @@ architecture behavioral of tile_handler is
         i_reg_x   : in  std_logic_vector(8 downto 0);
         i_reg_y   : in  std_logic_vector(8 downto 0);
 
-        o_x       : out std_logic_vector(8 downto 0);
-        o_y       : out std_logic_vector(8 downto 0);
         o_cc      : out std_logic_vector(CC_SIZE downto 0)
     );
     end component;
     
-    signal s_tiles_x  : vector_tile_pos;
-    signal s_tiles_y  : vector_tile_pos;
     signal s_tiles_cc : vector_tile_cc;
     signal s_tile_cc  : std_logic_vector(CC_SIZE downto 0);
 
@@ -67,17 +63,9 @@ begin
             i_reg_x   => i_reg_x,
             i_reg_y   => i_reg_y,
 
-            o_x       => s_tiles_x (i),
-            o_y       => s_tiles_y (i),
             o_cc      => s_tiles_cc(i)
         );
     end generate;
-
-    s_tile_id(9 downto 5) <= i_y(8 downto 4);
-    s_tile_id(4 downto 0) <= i_x(8 downto 4);
-
-    s_cc_id  (7 downto 4) <= i_y(3 downto 0);
-    s_cc_id  (3 downto 0) <= i_x(3 downto 0);
     
     o_cc         <= s_tiles_cc(to_integer(unsigned(s_tile_id)));
 

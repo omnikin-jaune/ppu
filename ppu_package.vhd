@@ -23,7 +23,7 @@ constant TILE_IN_ROW  : integer := 32;
 constant TILE_IN_COL  : integer := 32;
 
 type ram_colors is array (natural range <>) of std_logic_vector(COL_SIZE downto 0);
-type texture    is array (0 to (CC_IN_ROW * CC_IN_COL)) of std_logic_vector(CC_SIZE downto 0);
+type texture    is array (0 to (CC_IN_ROW * CC_IN_COL) - 1) of std_logic_vector(CC_SIZE downto 0);
 
 constant OP_NOP      : std_logic_vector(4 downto 0) := "00000";
 constant OP_TILE_TEX : std_logic_vector(4 downto 0) := "01001";

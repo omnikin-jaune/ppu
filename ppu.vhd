@@ -18,7 +18,7 @@ port (
     i_clk      : in  std_logic;
     i_rst      : in  std_logic;
     
-    i_opcode   : in  opcode;
+    i_opcode   : in  std_logic_vector(OP_SIZE downto 0);
     i_reg_x    : in  std_logic_vector(8 downto 0);
     i_reg_y    : in  std_logic_vector(8 downto 0);
     i_reg_tex  : in  std_logic_vector(7 downto 0);
@@ -38,7 +38,7 @@ architecture behavioral of ppu is
     port (
         i_clk    : in  std_logic;
         i_rst    : in  std_logic;
-        i_opcode : in  opcode;
+        i_opcode : in  std_logic_vector(OP_SIZE downto 0);
         i_reg_x  : in  std_logic_vector(8 downto 0);
         i_reg_y  : in  std_logic_vector(8 downto 0);
 
@@ -67,7 +67,7 @@ architecture behavioral of ppu is
     port (
         i_clk     : in  std_logic;
         i_rst     : in  std_logic;
-        i_opcode  : in  opcode;
+        i_opcode  : in  std_logic_vector(OP_SIZE downto 0);
         i_reg_tex : in  std_logic_vector(7 downto 0);
         i_reg_x   : in  std_logic_vector(8 downto 0);
         i_reg_y   : in  std_logic_vector(8 downto 0);
@@ -75,7 +75,7 @@ architecture behavioral of ppu is
         i_x       : in  std_logic_vector(8 downto 0);
         i_y       : in  std_logic_vector(8 downto 0);
 
-        o_cc      : out color_code
+        o_cc      : out std_logic_vector(CC_SIZE downto 0)
     );
     end component;
 
@@ -83,7 +83,7 @@ architecture behavioral of ppu is
     port (
         i_clk      : in  std_logic;
         i_rst      : in  std_logic;
-        i_opcode   : in  opcode;
+        i_opcode   : in  std_logic_vector(OP_SIZE downto 0);
         i_reg_tex  : in  std_logic_vector(7 downto 0);
         i_reg_x    : in  std_logic_vector(8 downto 0);
         i_reg_y    : in  std_logic_vector(8 downto 0);
@@ -93,14 +93,14 @@ architecture behavioral of ppu is
         i_x        : in  std_logic_vector(8 downto 0);
         i_y        : in  std_logic_vector(8 downto 0);
 
-        o_cc       : out color_code;
-        o_active   : out std_logic
+        o_cc       : out std_logic_vector(CC_SIZE downto 0);
+        o_sprite   : out std_logic
     );
     end component;
 
     component color_converter is
     port (
-        i_cc    : in  color_code;
+        i_cc    : in  std_logic_vector(CC_SIZE downto 0);
         o_color : out std_logic_vector(23 downto 0)
     );
     end component;
@@ -113,9 +113,9 @@ architecture behavioral of ppu is
 
     signal s_has_sprite : std_logic := '0';
 
-    signal s_cc         : color_code                   := (others => '0');
-    signal s_tile_cc    : std_logic_vector(5 downto 0) := (others => '0');
-    signal s_sprite_cc  : std_logic_vector(5 downto 0) := (others => '0');
+    signal s_cc         : std_logic_vector(CC_SIZE downto 0) := (others => '0');
+    signal s_tile_cc    : std_logic_vector(5 downto 0)       := (others => '0');
+    signal s_sprite_cc  : std_logic_vector(5 downto 0)       := (others => '0');
 
 
     
@@ -178,7 +178,7 @@ begin
         i_y        => s_y_offset,
 
         o_cc       => s_sprite_cc,
-        o_active   => s_has_sprite
+        o_sprite   => s_has_sprite
     );
 
     inst_color_converter: color_converter

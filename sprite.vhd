@@ -9,6 +9,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 use work.ppu_package.all;
+use work.sprite_package.all;
 
 entity sprite is
 port (
@@ -61,7 +62,7 @@ begin
         end if;
     end process;
 
-    o_tex <= s_tiles_textures(to_integer(unsigned(s_texture_id)));
+    o_tex <= s_sprite_textures(to_integer(unsigned(s_texture_id)));
     o_en <= s_en;
     
 end behavioral;
