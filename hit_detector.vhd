@@ -18,7 +18,6 @@ port (
     i_sprite_x : in  std_logic_vector(POS_SIZE downto 0); 
     i_sprite_y : in  std_logic_vector(POS_SIZE downto 0);
     i_en       : in  std_logic;
-    i_tex      : in  texture;
 
     o_hit      : out std_logic
 ); end hit_detector;
@@ -27,8 +26,8 @@ port (
 architecture behavioral of hit_detector is
 begin
 
-    o_hit <= '1' when ((i_x < (i_sprite_x + 16) and i_x > (i_sprite_x - 1)) and
-                       (i_y < (i_sprite_y + 16) and i_y > (i_sprite_y - 1)) and
+    o_hit <= '1' when ((i_sprite_x < (i_x + 16) and i_sprite_x > (i_x - 1)) and
+                       (i_sprite_y < (i_y + 16) and i_sprite_y > (i_y - 1)) and
                         i_en = '1')
                         else '0';
               

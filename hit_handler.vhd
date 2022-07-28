@@ -39,7 +39,7 @@ begin
 
     -- https://stackoverflow.com/a/13194608
     hit_detector_gen:
-    for i in 0 to 63 generate
+    for i in 0 to SPRT_SIZE generate
         hit_detectors: hit_detector
         port map (
             i_x        => i_x,

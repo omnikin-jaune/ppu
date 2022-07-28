@@ -1,0 +1,4 @@
+Running: xsim.dir/tb_hit_detector_behav/xsimk -simmode gui -wdb tb_hit_detector_behav.wdb -simrunnum 0 -socket 46605
+Design successfully loaded
+Design Loading Memory Usage: 33500 KB (Peak: 33956 KB)
+Design Loading CPU Usage: 20 ms

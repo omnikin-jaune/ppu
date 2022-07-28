@@ -38,6 +38,9 @@ architecture behavioral of tile_handler is
         i_reg_tex : in  std_logic_vector(7 downto 0);
         i_reg_x   : in  std_logic_vector(8 downto 0);
         i_reg_y   : in  std_logic_vector(8 downto 0);
+        
+        i_x       : in  std_logic_vector(POS_SIZE downto 0);
+        i_y       : in  std_logic_vector(POS_SIZE downto 0);
 
         o_cc      : out std_logic_vector(CC_SIZE downto 0)
     );
@@ -62,6 +65,9 @@ begin
             i_reg_tex => i_reg_tex,
             i_reg_x   => i_reg_x,
             i_reg_y   => i_reg_y,
+            
+            i_x       => i_x,
+            i_y       => i_y,
 
             o_cc      => s_tiles_cc(i)
         );

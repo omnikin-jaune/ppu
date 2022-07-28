@@ -1,0 +1,22 @@
+# compile vhdl design source files
+vhdl2008 xil_defaultlib  \
+"../../../../../ppu_package.vhd" \
+"../../../../../sprite_package.vhd" \
+
+vhdl xil_defaultlib  \
+"../../../../../tile_package.vhd" \
+
+vhdl2008 xil_defaultlib  \
+"../../../../../color_converter.vhd" \
+"../../../../../frame_printer.vhd" \
+"../../../../../hit_detector.vhd" \
+"../../../../../hit_handler.vhd" \
+"../../../../../pixelator.vhd" \
+"../../../../../sprite.vhd" \
+"../../../../../sprite_handler.vhd" \
+"../../../../../tile.vhd" \
+"../../../../../tile_handler.vhd" \
+"../../../../../ppu.vhd" \
+
+# Do not sort compile order
+nosort
