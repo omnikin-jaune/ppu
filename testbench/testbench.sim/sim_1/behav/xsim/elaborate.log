@@ -1,6 +1,6 @@
 Vivado Simulator 2020.2
 Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: /usr/share/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 71c579dce8264473ab56479b1c98a235 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_hit_detector_behav xil_defaultlib.tb_hit_detector -log elaborate.log 
+Running: /usr/share/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 71c579dce8264473ab56479b1c98a235 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_hit_handler_behav xil_defaultlib.tb_hit_handler -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -16,5 +16,6 @@ Compiling package xil_defaultlib.sprite_package
 Compiling package ieee.std_logic_arith
 Compiling package ieee.std_logic_unsigned
 Compiling architecture behavioral of entity xil_defaultlib.hit_detector [hit_detector_default]
-Compiling architecture behavioral of entity xil_defaultlib.tb_hit_detector
-Built simulation snapshot tb_hit_detector_behav
+Compiling architecture behavioral of entity xil_defaultlib.hit_handler [hit_handler_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_hit_handler
+Built simulation snapshot tb_hit_handler_behav

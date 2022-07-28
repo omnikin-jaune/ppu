@@ -61,8 +61,8 @@ architecture behavioral of sprite_handler is
         i_sprite_y : in vector_sprt_pos;
         i_en       : in std_logic_vector(SPRT_SIZE downto 0);
         i_cc_0     : in std_logic_vector(SPRT_SIZE downto 0);
-    
-        o_sprite   : out std_logic_vector(5 downto 0);
+        
+        o_sprite   : out std_logic_vector(SPRT_INDX downto 0);
         o_en       : out std_logic
     );
     end component;
@@ -74,8 +74,7 @@ architecture behavioral of sprite_handler is
     signal s_sprites_en   : std_logic_vector(SPRT_SIZE downto 0);
     signal s_sprites_cc_0 : std_logic_vector(SPRT_SIZE downto 0);
     signal s_sprite_cc    : std_logic_vector(CC_SIZE   downto 0);
-
-    signal s_sprite_id    : std_logic_vector(5 downto 0);
+    signal s_sprite_id    : std_logic_vector(SPRT_INDX downto 0);
     signal s_cc_id        : std_logic_vector(7 downto 0);
     
 begin
