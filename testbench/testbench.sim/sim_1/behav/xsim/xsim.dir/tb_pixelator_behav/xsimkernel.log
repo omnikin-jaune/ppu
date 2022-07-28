@@ -1,0 +1,4 @@
+Running: xsim.dir/tb_pixelator_behav/xsimk -simmode gui -wdb tb_pixelator_behav.wdb -simrunnum 0 -socket 59637
+Design successfully loaded
+Design Loading Memory Usage: 33296 KB (Peak: 33956 KB)
+Design Loading CPU Usage: 30 ms

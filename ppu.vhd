@@ -11,6 +11,7 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 use work.ppu_package.all;
 
+-- || <opcode : 5> - <x : 9> - <y : 9> - <tex : 8> - <sprite : 6> - <en : 1> - <0> ||
 
 
 entity ppu is

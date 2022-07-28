@@ -54,10 +54,12 @@ begin
         else
             if (rising_edge(i_clk)) then
                 r_x <= r_x + 1;         -- will wrap around automatically with overflow
-                if (r_y < 239) then     -- might want to use 240
-                    r_y <= r_y + 1;
-                else
-                    r_y <= (others => '0');
+                if (r_x = 255) then
+                    if (r_y < 239) then     -- might want to use 240
+                        r_y <= r_y + 1;
+                    else
+                        r_y <= (others => '0');
+                    end if;
                 end if;
                 if (i_opcode = OP_PIX_OFF) then
                     r_x_off <= i_reg_x;
