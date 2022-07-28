@@ -1,7 +1,6 @@
 # compile vhdl design source files
 vhdl2008 xil_defaultlib  \
 "../../../../../ppu_package.vhd" \
-"../../../../../sprite_package.vhd" \
 
 vhdl xil_defaultlib  \
 "../../../../../color_converter.vhd" \

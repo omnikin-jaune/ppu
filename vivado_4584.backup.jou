@@ -1,0 +1,110 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Jul 28 09:38:30 2022
+# Process ID: 4584
+# Current directory: /home/raesangur/github/ppu
+# Command line: vivado
+# Log file: /home/raesangur/github/ppu/vivado.log
+# Journal file: /home/raesangur/github/ppu/vivado.jou
+#-----------------------------------------------------------
+start_gui
+create_project testbench /home/raesangur/github/ppu/testbench -part xc7z010clg400-1
+set_property board_part digilentinc.com:zybo-z7-10:part0:1.0 [current_project]
+set_property target_language VHDL [current_project]
+set_property simulator_language VHDL [current_project]
+add_files -norecurse {/home/raesangur/github/ppu/ppu.vhd /home/raesangur/github/ppu/tile.vhd /home/raesangur/github/ppu/frame_printer.vhd /home/raesangur/github/ppu/sprite_handler.vhd /home/raesangur/github/ppu/sprite_package.vhd /home/raesangur/github/ppu/color_converter.vhd /home/raesangur/github/ppu/tile_package.vhd /home/raesangur/github/ppu/tile_handler.vhd /home/raesangur/github/ppu/ppu_package.vhd /home/raesangur/github/ppu/pp.vhd /home/raesangur/github/ppu/hit_handler.vhd /home/raesangur/github/ppu/pixelator.vhd /home/raesangur/github/ppu/hit_detector.vhd /home/raesangur/github/ppu/sprite.vhd}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+set_property file_type {VHDL 2008} [get_files  /home/raesangur/github/ppu/ppu.vhd]
+set_property file_type {VHDL 2008} [get_files  /home/raesangur/github/ppu/pixelator.vhd]
+update_compile_order -fileset sources_1
+set_property file_type {VHDL 2008} [get_files  /home/raesangur/github/ppu/frame_printer.vhd]
+update_compile_order -fileset sources_1
+set_property file_type {VHDL 2008} [get_files  /home/raesangur/github/ppu/tile_handler.vhd]
+update_compile_order -fileset sources_1
+set_property file_type {VHDL 2008} [get_files  /home/raesangur/github/ppu/sprite_handler.vhd]
+update_compile_order -fileset sources_1
+set_property file_type {VHDL 2008} [get_files  /home/raesangur/github/ppu/color_converter.vhd]
+update_compile_order -fileset sources_1
+set_property file_type {VHDL 2008} [get_files  /home/raesangur/github/ppu/hit_handler.vhd]
+update_compile_order -fileset sources_1
+set_property file_type {VHDL 2008} [get_files  /home/raesangur/github/ppu/hit_detector.vhd]
+update_compile_order -fileset sources_1
+set_property file_type {VHDL 2008} [get_files  /home/raesangur/github/ppu/sprite.vhd]
+update_compile_order -fileset sources_1
+set_property file_type {VHDL 2008} [get_files  /home/raesangur/github/ppu/tile.vhd]
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files /home/raesangur/github/ppu/pp.vhd] -no_script -reset -force -quiet
+remove_files  /home/raesangur/github/ppu/pp.vhd
+file mkdir /home/raesangur/github/ppu/testbench/testbench.srcs/sources_1/new
+close [ open /home/raesangur/github/ppu/testbench/testbench.srcs/sources_1/new/tb_hit_detector.vhd w ]
+add_files /home/raesangur/github/ppu/testbench/testbench.srcs/sources_1/new/tb_hit_detector.vhd
+update_compile_order -fileset sources_1
+set_property file_type {VHDL 2008} [get_files  /home/raesangur/github/ppu/ppu_package.vhd]
+set_property file_type {VHDL 2008} [get_files  /home/raesangur/github/ppu/sprite_package.vhd]
+launch_simulation
+launch_simulation
+source ppu.tcl
+close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_hit_detector [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+launch_simulation
+source ppu.tcl
+export_ip_user_files -of_objects  [get_files /home/raesangur/github/ppu/ppu.vhd] -no_script -reset -force -quiet
+remove_files  /home/raesangur/github/ppu/ppu.vhd
+close_sim
+export_ip_user_files -of_objects  [get_files /home/raesangur/github/ppu/pixelator.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/raesangur/github/ppu/frame_printer.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/raesangur/github/ppu/color_converter.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/raesangur/github/ppu/sprite_handler.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/raesangur/github/ppu/tile_handler.vhd] -no_script -reset -force -quiet
+remove_files  {/home/raesangur/github/ppu/pixelator.vhd /home/raesangur/github/ppu/frame_printer.vhd /home/raesangur/github/ppu/color_converter.vhd /home/raesangur/github/ppu/sprite_handler.vhd /home/raesangur/github/ppu/tile_handler.vhd}
+export_ip_user_files -of_objects  [get_files /home/raesangur/github/ppu/sprite.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/raesangur/github/ppu/hit_handler.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/raesangur/github/ppu/tile.vhd] -no_script -reset -force -quiet
+remove_files  {/home/raesangur/github/ppu/sprite.vhd /home/raesangur/github/ppu/hit_handler.vhd /home/raesangur/github/ppu/tile.vhd}
+launch_simulation
+source tb_hit_detector.tcl
+relaunch_sim
+relaunch_sim
+add_files -norecurse /home/raesangur/github/ppu/hit_handler.vhd
+close [ open /home/raesangur/github/ppu/testbench/testbench.srcs/sources_1/new/tb_hit_handler.vhd w ]
+add_files /home/raesangur/github/ppu/testbench/testbench.srcs/sources_1/new/tb_hit_handler.vhd
+update_compile_order -fileset sources_1
+close_sim
+set_property file_type {VHDL 2008} [get_files  /home/raesangur/github/ppu/hit_handler.vhd]
+set_property file_type {VHDL 2008} [get_files  /home/raesangur/github/ppu/testbench/testbench.srcs/sources_1/new/tb_hit_handler.vhd]
+set_property file_type {VHDL 2008} [get_files  /home/raesangur/github/ppu/tile_package.vhd]
+set_property file_type {VHDL 2008} [get_files  /home/raesangur/github/ppu/testbench/testbench.srcs/sources_1/new/tb_hit_detector.vhd]
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files /home/raesangur/github/ppu/tile_package.vhd] -no_script -reset -force -quiet
+remove_files  /home/raesangur/github/ppu/tile_package.vhd
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_hit_handler [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+launch_simulation
+source tb_hit_detector.tcl
+close_sim
+reset_simulation -simset sim_1 -mode behavioral
+launch_simulation
+source tb_hit_detector.tcl
+set_property top tb_hit_handler [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+relaunch_sim
+export_ip_user_files -of_objects  [get_files /home/raesangur/github/ppu/testbench/testbench.srcs/sources_1/new/tb_hit_detector.vhd] -no_script -reset -force -quiet
+remove_files  /home/raesangur/github/ppu/testbench/testbench.srcs/sources_1/new/tb_hit_detector.vhd
+relaunch_sim
+close_sim
+launch_simulation
+source tb_hit_handler.tcl
+relaunch_sim
+close_sim
