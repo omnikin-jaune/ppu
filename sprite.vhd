@@ -63,6 +63,9 @@ begin
     end process;
 
     o_tex <= s_sprite_textures(to_integer(unsigned(s_texture_id)));
-    o_en <= s_en;
+    o_en  <= s_en;
+    o_x   <= s_x;
+    o_y   <= s_y;
+    
     
 end behavioral;

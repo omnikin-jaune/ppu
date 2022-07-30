@@ -55,12 +55,12 @@ architecture behavioral of sprite_handler is
     
     component hit_handler is
     port (
-        i_x        : in std_logic_vector(POS_SIZE downto 0);
-        i_y        : in std_logic_vector(POS_SIZE downto 0);
-        i_sprite_x : in vector_sprt_pos;
-        i_sprite_y : in vector_sprt_pos;
-        i_en       : in std_logic_vector(SPRT_SIZE downto 0);
-        i_cc_0     : in std_logic_vector(SPRT_SIZE downto 0);
+        i_x        : in  std_logic_vector(POS_SIZE downto 0);
+        i_y        : in  std_logic_vector(POS_SIZE downto 0);
+        i_sprite_x : in  vector_sprt_pos;
+        i_sprite_y : in  vector_sprt_pos;
+        i_en       : in  std_logic_vector(SPRT_SIZE downto 0);
+        i_cc_0     : in  std_logic_vector(SPRT_SIZE downto 0);
         
         o_sprite   : out std_logic_vector(SPRT_INDX downto 0);
         o_en       : out std_logic

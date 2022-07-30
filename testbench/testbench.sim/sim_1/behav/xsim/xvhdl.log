@@ -1,2 +1,4 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/raesangur/github/ppu/testbench/testbench.srcs/sources_1/new/tb_pixelator.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'tb_pixelator'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/raesangur/github/ppu/sprite.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'sprite'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/raesangur/github/ppu/testbench/testbench.srcs/sources_1/new/tb_sprite.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_sprite'
