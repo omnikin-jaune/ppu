@@ -42,6 +42,7 @@ architecture behavioral of ppu is
         i_opcode : in  std_logic_vector(OP_SIZE downto 0);
         i_reg_x  : in  std_logic_vector(8 downto 0);
         i_reg_y  : in  std_logic_vector(8 downto 0);
+        i_reg_en : in  std_logic;
 
         o_x      : out std_logic_vector(7 downto 0);
         o_y      : out std_logic_vector(7 downto 0);
@@ -129,6 +130,7 @@ begin
         i_opcode => i_opcode,
         i_reg_x  => i_reg_x,
         i_reg_y  => i_reg_y,
+        i_reg_en => i_reg_en,
 
         o_x      => s_x,
         o_y      => s_y,

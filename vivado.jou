@@ -2,8 +2,8 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Sun Jul 31 18:00:58 2022
-# Process ID: 38430
+# Start of session at: Mon Aug  1 15:46:03 2022
+# Process ID: 29864
 # Current directory: /home/raesangur/github/ppu
 # Command line: vivado
 # Log file: /home/raesangur/github/ppu/vivado.log
@@ -11,39 +11,8 @@
 #-----------------------------------------------------------
 start_gui
 open_project /home/raesangur/github/ppu/testbench/testbench.xpr
-launch_simulation
-open_wave_config /home/raesangur/github/ppu/testbench/tb_sprite_handler_behav.wcfg
-source tb_sprite_handler.tcl
-set_property top tb_sprite_handler [current_fileset]
-add_files -norecurse {/home/raesangur/github/ppu/hit_handler.vhd /home/raesangur/github/ppu/hit_detector.vhd}
-set_property file_type {VHDL 2008} [get_files  /home/raesangur/github/ppu/hit_handler.vhd]
-set_property file_type {VHDL 2008} [get_files  /home/raesangur/github/ppu/hit_detector.vhd]
-close_sim
-launch_simulation
-open_wave_config /home/raesangur/github/ppu/testbench/tb_sprite_handler_behav.wcfg
-source tb_sprite_handler.tcl
-restart
-run 100 ns
-relaunch_sim
-restart
-run 100 ns
-restart
-run 100 ns
-relaunch_sim
-run 100 ns
-relaunch_sim
-relaunch_sim
-relaunch_sim
-restart
-run 100 ns
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-save_wave_config {/home/raesangur/github/ppu/testbench/tb_sprite_handler_behav.wcfg}
-close_sim
+close_project
+open_project /home/raesangur/github/ppu/vivado/vivado.xpr
+update_compile_order -fileset sources_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+close_project

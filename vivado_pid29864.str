@@ -1,0 +1,291 @@
+/*
+
+Xilinx Vivado v2020.2 (64-bit) [Major: 2020, Minor: 2]
+SW Build: 3064766 on Wed Nov 18 09:12:47 MST 2020
+IP Build: 3064653 on Wed Nov 18 14:17:31 MST 2020
+
+Process ID (PID): 29864
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Mon Aug 01 15:46:23 EDT 2022
+Time zone: 	Eastern Standard Time (America/Toronto)
+
+OS: Ubuntu
+OS Version: 5.15.0-43-generic
+OS Architecture: amd64
+Available processors (cores): 8
+
+Display: 0
+Screen size: 2256x1504
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=18
+Scale size: 27
+
+Java version: 	11.0.2 64-bit
+Java home: 	/usr/share/Xilinx/Vivado/2020.2/tps/lnx64/jre11.0.2
+Java executable location: 	/usr/share/Xilinx/Vivado/2020.2/tps/lnx64/jre11.0.2/bin/java
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	raesangur
+User home directory: /home/raesangur
+User working directory: /home/raesangur/github/ppu
+User country: 	CA
+User language: 	en
+User locale: 	en_CA
+
+RDI_BASEROOT: /usr/share/Xilinx/Vivado
+HDI_APPROOT: /usr/share/Xilinx/Vivado/2020.2
+RDI_DATADIR: /usr/share/Xilinx/Vivado/2020.2/data
+RDI_BINDIR: /usr/share/Xilinx/Vivado/2020.2/bin
+
+Vivado preferences file location: /home/raesangur/.Xilinx/Vivado/2020.2/vivado.xml
+Vivado preferences directory: /home/raesangur/.Xilinx/Vivado/2020.2/
+Vivado layouts directory: /home/raesangur/.Xilinx/Vivado/2020.2/data/layouts
+PlanAhead jar file location: 	/usr/share/Xilinx/Vivado/2020.2/lib/classes/planAhead.jar
+Vivado log file location: 	/home/raesangur/github/ppu/vivado.log
+Vivado journal file location: 	/home/raesangur/github/ppu/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-29864-mini-pascal
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /usr/share/Xilinx/Vivado/2020.2/ids_lite/ISE
+XILINX_DSP: /usr/share/Xilinx/Vivado/2020.2/ids_lite/ISE
+XILINX_HLS: /usr/share/Xilinx/Vitis_HLS/2020.2
+XILINX_PLANAHEAD: /usr/share/Xilinx/Vivado/2020.2
+XILINX_VITIS: 
+XILINX_VIVADO: /usr/share/Xilinx/Vivado/2020.2
+XILINX_VIVADO_HLS: /usr/share/Xilinx/Vivado/2020.2
+
+
+GUI allocated memory:	222 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,530 MB
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// HMemoryUtils.trashcanNow. Engine heap size: 1,530 MB. GUI used memory: 76 MB. Current time: 8/1/22, 3:46:24 PM EDT
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+selectList(PAResourceQtoS.SyntheticaGettingStartedView_RECENT_PROJECTS, "/home/raesangur/github/ppu/testbench/testbench.xpr", 0); // r
+// [GUI Memory]: 124 MB (+127695kb) [00:00:15]
+// [Engine Memory]: 1,533 MB (+1455954kb) [00:00:15]
+// bz (cr):  Open Project : addNotify
+// Opening Vivado Project: /home/raesangur/github/ppu/testbench/testbench.xpr. Version: Vivado v2020.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project /home/raesangur/github/ppu/testbench/testbench.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project /home/raesangur/github/ppu/testbench/testbench.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 134 MB (+3309kb) [00:00:19]
+// WARNING: HEventQueue.dispatchEvent() is taking  3111 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/usr/share/Xilinx/Vivado/2020.2/data/ip'. 
+// Tcl Message: INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'. 
+// Project name: testbench; location: /home/raesangur/github/ppu/testbench; part: xc7z010clg400-1
+dismissDialog("Open Project"); // bz
+// [Engine Memory]: 1,623 MB (+14207kb) [00:00:24]
+// [GUI Memory]: 143 MB (+3297kb) [00:00:25]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,624 MB. GUI used memory: 84 MB. Current time: 8/1/22, 3:46:39 PM EDT
+// a (cr): Critical Messages: addNotify
+// Elapsed time: 16 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f
+dismissDialog("Critical Messages"); // a
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, tb_sprite_handler(behavioral) (tb_sprite_handler.vhd)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, tb_sprite_handler(behavioral) (tb_sprite_handler.vhd)]", 1, true, false, false, false, false, true); // D - Double Click - Node
+selectCodeEditor("tb_sprite_handler.vhd", 414, 549); // bP
+selectCodeEditor("tb_sprite_handler.vhd", 206, 525); // bP
+// Elapsed time: 137 seconds
+selectButton(RDIResourceCommand.RDICommands_REDO, (String) null); // E
+selectCodeEditor("tb_sprite_handler.vhd", 186, 530); // bP
+// Elapsed time: 14 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ac
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // ah
+selectMenuItem(PAResourceCommand.PACommandNames_CLOSE_PROJECT, "Close Project"); // ak
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ac
+// Run Command: PAResourceCommand.PACommandNames_CLOSE_PROJECT
+// bz (cr):  Close Project : addNotify
+// TclEventType: PROJECT_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,640 MB. GUI used memory: 86 MB. Current time: 8/1/22, 3:49:40 PM EDT
+// Tcl Message: close_project 
+dismissDialog("Close Project"); // bz
+selectList(PAResourceQtoS.SyntheticaGettingStartedView_RECENT_PROJECTS, "/home/raesangur/github/ppu/vivado/vivado.xpr", 1); // r
+// Opening Vivado Project: /home/raesangur/github/ppu/vivado/vivado.xpr. Version: Vivado v2020.2 
+// bz (cr):  Open Project : addNotify
+// Tcl Message: open_project /home/raesangur/github/ppu/vivado/vivado.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// WARNING: HEventQueue.dispatchEvent() is taking  1518 ms.
+// Tcl Message: open_project /home/raesangur/github/ppu/vivado/vivado.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/usr/share/Xilinx/Vivado/2020.2/data/ip'. 
+// Project name: vivado; location: /home/raesangur/github/ppu/vivado; part: xc7z010clg400-1
+dismissDialog("Open Project"); // bz
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, ppu(behavioral) (ppu.vhd)]", 3); // D
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, ppu(behavioral) (ppu.vhd), inst_pixelator : pixelator(behavioral) (pixelator.vhd)]", 5, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, ppu(behavioral) (ppu.vhd), inst_pixelator : pixelator(behavioral) (pixelator.vhd)]", 5, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("pixelator.vhd", 470, 370); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 13 seconds
+selectCodeEditor("pixelator.vhd", 579, 253); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, ppu(behavioral) (ppu.vhd)]", 4, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, ppu(behavioral) (ppu.vhd)]", 4, true, false, false, false, false, true); // D - Double Click - Node
+// HMemoryUtils.trashcanNow. Engine heap size: 1,708 MB. GUI used memory: 90 MB. Current time: 8/1/22, 3:50:19 PM EDT
+// [Engine Memory]: 1,708 MB (+4218kb) [00:04:08]
+selectCodeEditor("ppu.vhd", 579, 199); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("ppu.vhd", 396, 384); // bP
+// HMemoryUtils.trashcanNow. Engine heap size: 1,725 MB. GUI used memory: 90 MB. Current time: 8/1/22, 3:50:34 PM EDT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // m
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Libraries", 1); // i
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL 2008, xil_defaultlib, ppu_package.vhd]", 3, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL 2008, xil_defaultlib, ppu_package.vhd]", 3, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("ppu_package.vhd", 740, 440); // bP
+selectCodeEditor("ppu_package.vhd", 704, 482); // bP
+selectCodeEditor("ppu_package.vhd", 178, 464); // bP
+selectCodeEditor("ppu_package.vhd", 156, 479); // bP
+selectCodeEditor("ppu_package.vhd", 156, 479, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "ppu_package.vhd", 'c'); // bP
+// Elapsed time: 13 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "pixelator.vhd", 0); // m
+selectCodeEditor("pixelator.vhd", 468, 509); // bP
+selectCodeEditor("pixelator.vhd", 386, 410); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ppu_package.vhd", 2); // m
+selectCodeEditor("ppu_package.vhd", 718, 473); // bP
+// Elapsed time: 21 seconds
+selectCodeEditor("ppu_package.vhd", 447, 478); // bP
+selectCodeEditor("ppu_package.vhd", 447, 478, false, true, true, false, false); // bP - Control Key - Alt Key
+selectCodeEditor("ppu_package.vhd", 450, 590); // bP
+selectCodeEditor("ppu_package.vhd", 450, 590, false, true, true, false, true); // bP - Control Key - Alt Key - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("ppu_package.vhd", 852, 520); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "pixelator.vhd", 0); // m
+selectCodeEditor("pixelator.vhd", 533, 436); // bP
+// HMemoryUtils.trashcanNow. Engine heap size: 1,760 MB. GUI used memory: 91 MB. Current time: 8/1/22, 3:51:54 PM EDT
+selectCodeEditor("pixelator.vhd", 513, 224); // bP
+// Elapsed time: 13 seconds
+selectCodeEditor("pixelator.vhd", 445, 318); // bP
+selectCodeEditor("pixelator.vhd", 324, 486); // bP
+selectCodeEditor("pixelator.vhd", 293, 431); // bP
+selectCodeEditor("pixelator.vhd", 293, 431); // bP
+selectCodeEditor("pixelator.vhd", 428, 232); // bP
+selectCodeEditor("pixelator.vhd", 482, 195); // bP
+selectCodeEditor("pixelator.vhd", 313, 222); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("pixelator.vhd", 306, 556); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,793 MB. GUI used memory: 91 MB. Current time: 8/1/22, 3:52:54 PM EDT
+// Elapsed time: 24 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12, true); // u - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_RTL_DESIGN
+// bz (cr):  Open Elaborated Design : addNotify
+// Tcl Message: synth_design -rtl -rtl_skip_mlo -name rtl_1 
+// Tcl Message: Command: synth_design -rtl -rtl_skip_mlo -name rtl_1 Starting synth_design Using part: xc7z010clg400-1 Top: ppu 
+// TclEventType: ELABORATE_START
+// HMemoryUtils.trashcanNow. Engine heap size: 1,899 MB. GUI used memory: 92 MB. Current time: 8/1/22, 3:53:14 PM EDT
+// TclEventType: ELABORATE_FINISH
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 2,601 MB. GUI used memory: 92 MB. Current time: 8/1/22, 3:53:43 PM EDT
+// [Engine Memory]: 2,601 MB (+845873kb) [00:07:30]
+// TclEventType: DESIGN_NEW
+// Xgd.load filename: /usr/share/Xilinx/Vivado/2020.2/data/parts/xilinx/zynq/devint/zynq/xc7z010/xc7z010.xgd; ZipEntry: xc7z010_detail.xgd elapsed time: 0.5s
+// DeviceModel: Load Xgds SwingWorker Join Forever elapsed time: 0.6s
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// [GUI Memory]: 161 MB (+11014kb) [00:07:32]
+// Schematic: addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  1801 ms.
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: INFO: [Device 21-403] Loading part xc7z010clg400-1 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 7463.973 ; gain = 0.000 ; free physical = 11114 ; free virtual = 23723 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 8161.676 ; gain = 697.703 ; free physical = 10410 ; free virtual = 23056 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: --------------------------------------------------------------------------------- Start Handling Custom Attributes --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 8167.613 ; gain = 703.641 ; free physical = 10437 ; free virtual = 23062 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 8167.613 ; gain = 703.641 ; free physical = 10437 ; free virtual = 23062 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 8167.613 ; gain = 0.000 ; free physical = 10332 ; free virtual = 22959 
+// Tcl Message: INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Completed Processing XDC Constraints  
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 8270.457 ; gain = 0.000 ; free physical = 10203 ; free virtual = 22842 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// Tcl Message: RTL Elaboration Complete:  : Time (s): cpu = 00:00:50 ; elapsed = 00:00:44 . Memory (MB): peak = 8356.156 ; gain = 892.184 ; free physical = 10298 ; free virtual = 22957 
+// Tcl Message: 124 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered. synth_design completed successfully 
+// Tcl Message: synth_design: Time (s): cpu = 00:00:53 ; elapsed = 00:00:48 . Memory (MB): peak = 8356.156 ; gain = 892.270 ; free physical = 10298 ; free virtual = 22957 
+// 'dV' command handler elapsed time: 48 seconds
+// Elapsed time: 48 seconds
+dismissDialog("Open Elaborated Design"); // bz
+// [GUI Memory]: 174 MB (+5002kb) [00:10:37]
+// Elapsed time: 185 seconds
+closeView(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic"); // f
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ac
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // ah
+selectMenuItem(PAResourceCommand.PACommandNames_CLOSE_PROJECT, "Close Project"); // ak
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ac
+// Run Command: PAResourceCommand.PACommandNames_CLOSE_PROJECT
+// bz (cr):  Close Project : addNotify
+// TclEventType: PROJECT_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,644 MB. GUI used memory: 115 MB. Current time: 8/1/22, 3:56:55 PM EDT
+// Engine heap size: 2,644 MB. GUI used memory: 136 MB. Current time: 8/1/22, 3:56:55 PM EDT
+// TclEventType: DESIGN_CLOSE
+// Tcl Message: close_project 
+dismissDialog("Close Project"); // bz

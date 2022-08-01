@@ -20,6 +20,7 @@ port (
     i_opcode : in  std_logic_vector(4 downto 0);
     i_reg_x  : in  std_logic_vector(8 downto 0);
     i_reg_y  : in  std_logic_vector(8 downto 0);
+    i_reg_en : in  std_logic;
 
     o_x      : out std_logic_vector(7 downto 0);
     o_y      : out std_logic_vector(7 downto 0);
@@ -30,6 +31,7 @@ port (
 
 
 architecture behavioral of pixelator is
+    signal s_en    : std_logic := '0';
 
     signal r_x     : std_logic_vector(7 downto 0) := (others => '0');
     signal r_y     : std_logic_vector(7 downto 0) := (others => '0');
@@ -53,17 +55,22 @@ begin
             r_y_off <= (others => '0');
         else
             if (rising_edge(i_clk)) then
-                r_x <= r_x + 1;         -- will wrap around automatically with overflow
-                if (r_x = 255) then
-                    if (r_y < 239) then     -- might want to use 240
-                        r_y <= r_y + 1;
-                    else
-                        r_y <= (others => '0');
+                if (s_en = '1') then
+                    r_x <= r_x + 1;         -- will wrap around automatically with overflow
+                    if (r_x = 255) then
+                        if (r_y < 239) then     -- might want to use 240
+                            r_y <= r_y + 1;
+                        else
+                            r_y <= (others => '0');
+                        end if;
                     end if;
                 end if;
                 if (i_opcode = OP_PIX_OFF) then
                     r_x_off <= i_reg_x;
                     r_y_off <= i_reg_y;
+                end if;
+                if (i_opcode = OP_PIX_EN) then
+                    s_en <= i_reg_en;
                 end if;
             end if;
         end if;
