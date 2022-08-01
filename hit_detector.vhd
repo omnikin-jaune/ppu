@@ -26,8 +26,8 @@ port (
 architecture behavioral of hit_detector is
 begin
 
-    o_hit <= '1' when ((i_sprite_x < (i_x + 16) and i_sprite_x > (i_x - 1)) and
-                       (i_sprite_y < (i_y + 16) and i_sprite_y > (i_y - 1)) and
+    o_hit <= '1' when (((i_sprite_x = 0 and i_x = 0) or (i_sprite_x < (i_x + 16) and i_sprite_x > (i_x - 1))) and
+                       ((i_sprite_y = 0 and i_y = 0) or (i_sprite_y < (i_y + 16) and i_sprite_y > (i_y - 1))) and
                         i_en = '1')
                         else '0';
               

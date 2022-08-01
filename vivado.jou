@@ -2,8 +2,8 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Thu Jul 28 13:04:16 2022
-# Process ID: 3827
+# Start of session at: Sun Jul 31 18:00:58 2022
+# Process ID: 38430
 # Current directory: /home/raesangur/github/ppu
 # Command line: vivado
 # Log file: /home/raesangur/github/ppu/vivado.log
@@ -11,59 +11,39 @@
 #-----------------------------------------------------------
 start_gui
 open_project /home/raesangur/github/ppu/testbench/testbench.xpr
-update_compile_order -fileset sources_1
-export_ip_user_files -of_objects  [get_files /home/raesangur/github/ppu/testbench/testbench.srcs/sources_1/new/tb_hit_handler.vhd] -no_script -reset -force -quiet
-remove_files  /home/raesangur/github/ppu/testbench/testbench.srcs/sources_1/new/tb_hit_handler.vhd
-export_ip_user_files -of_objects  [get_files /home/raesangur/github/ppu/hit_handler.vhd] -no_script -reset -force -quiet
-remove_files  /home/raesangur/github/ppu/hit_handler.vhd
-update_compile_order -fileset sources_1
-set_property source_mgmt_mode DisplayOnly [current_project]
-add_files -norecurse /home/raesangur/github/ppu/color_converter.vhd
-close [ open /home/raesangur/github/ppu/testbench/testbench.srcs/sources_1/new/tb_color_converter.vhd w ]
-add_files /home/raesangur/github/ppu/testbench/testbench.srcs/sources_1/new/tb_color_converter.vhd
-# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
-set_property source_mgmt_mode None [current_project]
-set_property top tb_color_converter [current_fileset]
-# Re-enabling previously disabled source management mode.
-set_property source_mgmt_mode DisplayOnly [current_project]
-export_ip_user_files -of_objects  [get_files /home/raesangur/github/ppu/hit_detector.vhd] -no_script -reset -force -quiet
-remove_files  /home/raesangur/github/ppu/hit_detector.vhd
 launch_simulation
-source tb_hit_handler.tcl
+open_wave_config /home/raesangur/github/ppu/testbench/tb_sprite_handler_behav.wcfg
+source tb_sprite_handler.tcl
+set_property top tb_sprite_handler [current_fileset]
+add_files -norecurse {/home/raesangur/github/ppu/hit_handler.vhd /home/raesangur/github/ppu/hit_detector.vhd}
+set_property file_type {VHDL 2008} [get_files  /home/raesangur/github/ppu/hit_handler.vhd]
+set_property file_type {VHDL 2008} [get_files  /home/raesangur/github/ppu/hit_detector.vhd]
 close_sim
-export_ip_user_files -of_objects  [get_files /home/raesangur/github/ppu/sprite_package.vhd] -no_script -reset -force -quiet
-remove_files  /home/raesangur/github/ppu/sprite_package.vhd
-set_property top tb_color_converter [get_filesets sim_1]
-set_property top_lib xil_defaultlib [get_filesets sim_1]
 launch_simulation
-launch_simulation
-launch_simulation
-source tb_color_converter.tcl
+open_wave_config /home/raesangur/github/ppu/testbench/tb_sprite_handler_behav.wcfg
+source tb_sprite_handler.tcl
+restart
+run 100 ns
+relaunch_sim
+restart
+run 100 ns
+restart
+run 100 ns
+relaunch_sim
+run 100 ns
+relaunch_sim
+relaunch_sim
+relaunch_sim
+restart
+run 100 ns
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+save_wave_config {/home/raesangur/github/ppu/testbench/tb_sprite_handler_behav.wcfg}
 close_sim
-export_ip_user_files -of_objects  [get_files /home/raesangur/github/ppu/testbench/testbench.srcs/sources_1/new/tb_color_converter.vhd] -no_script -reset -force -quiet
-remove_files  /home/raesangur/github/ppu/testbench/testbench.srcs/sources_1/new/tb_color_converter.vhd
-export_ip_user_files -of_objects  [get_files /home/raesangur/github/ppu/color_converter.vhd] -no_script -reset -force -quiet
-remove_files  /home/raesangur/github/ppu/color_converter.vhd
-add_files -norecurse {/home/raesangur/github/ppu/frame_printer.vhd /home/raesangur/github/ppu/pixelator.vhd}
-close [ open /home/raesangur/github/ppu/testbench/testbench.srcs/sources_1/new/tb_pixelator.vhd w ]
-add_files /home/raesangur/github/ppu/testbench/testbench.srcs/sources_1/new/tb_pixelator.vhd
-# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
-set_property source_mgmt_mode None [current_project]
-set_property top tb_pixelator [current_fileset]
-# Re-enabling previously disabled source management mode.
-set_property source_mgmt_mode DisplayOnly [current_project]
-set_property top tb_pixelator [get_filesets sim_1]
-set_property top_lib xil_defaultlib [get_filesets sim_1]
-set_property file_type {VHDL 2008} [get_files  /home/raesangur/github/ppu/testbench/testbench.srcs/sources_1/new/tb_pixelator.vhd]
-set_property file_type {VHDL 2008} [get_files  /home/raesangur/github/ppu/frame_printer.vhd]
-launch_simulation
-source tb_pixelator.tcl
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-run 1000 ns
-run 10000 ns
-run 10000 ns
-run 100000 ns
-run 10000 ns

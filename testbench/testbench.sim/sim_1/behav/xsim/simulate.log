@@ -1,22 +1,8 @@
 Vivado Simulator 2020.2
 Time resolution is 1 ps
-Error: didn't report 0 texture
-Time: 11 ns  Iteration: 0  Process: /tb_sprite/tb_sprite  File: /home/raesangur/github/ppu/testbench/testbench.srcs/sources_1/new/tb_sprite.vhd
-Error: didn't report texture
-Time: 22 ns  Iteration: 0  Process: /tb_sprite/tb_sprite  File: /home/raesangur/github/ppu/testbench/testbench.srcs/sources_1/new/tb_sprite.vhd
-Error: sprite should be enabled
-Time: 28 ns  Iteration: 0  Process: /tb_sprite/tb_sprite  File: /home/raesangur/github/ppu/testbench/testbench.srcs/sources_1/new/tb_sprite.vhd
-Error: sprite at wrong x position
-Time: 30 ns  Iteration: 0  Process: /tb_sprite/tb_sprite  File: /home/raesangur/github/ppu/testbench/testbench.srcs/sources_1/new/tb_sprite.vhd
-Error: sprite at wrong y position
-Time: 30 ns  Iteration: 0  Process: /tb_sprite/tb_sprite  File: /home/raesangur/github/ppu/testbench/testbench.srcs/sources_1/new/tb_sprite.vhd
-Error: didn't report 0 texture
-Time: 11 ns  Iteration: 0  Process: /tb_sprite/tb_sprite  File: /home/raesangur/github/ppu/testbench/testbench.srcs/sources_1/new/tb_sprite.vhd
-Error: didn't report texture
-Time: 22 ns  Iteration: 0  Process: /tb_sprite/tb_sprite  File: /home/raesangur/github/ppu/testbench/testbench.srcs/sources_1/new/tb_sprite.vhd
-Error: sprite should be enabled
-Time: 28 ns  Iteration: 0  Process: /tb_sprite/tb_sprite  File: /home/raesangur/github/ppu/testbench/testbench.srcs/sources_1/new/tb_sprite.vhd
-Error: sprite at wrong x position
-Time: 30 ns  Iteration: 0  Process: /tb_sprite/tb_sprite  File: /home/raesangur/github/ppu/testbench/testbench.srcs/sources_1/new/tb_sprite.vhd
-Error: sprite at wrong y position
-Time: 30 ns  Iteration: 0  Process: /tb_sprite/tb_sprite  File: /home/raesangur/github/ppu/testbench/testbench.srcs/sources_1/new/tb_sprite.vhd
+Error: No sprite should be detected - none enabled
+Time: 12 ns  Iteration: 0  Process: /tb_sprite_handler/tb_sprite_handler  File: /home/raesangur/github/ppu/tb_sprite_handler.vhd
+Error: No sprite should be detected - sprite 0 with cc 0
+Time: 14 ns  Iteration: 0  Process: /tb_sprite_handler/tb_sprite_handler  File: /home/raesangur/github/ppu/tb_sprite_handler.vhd
+Error: Sprite 0 should no longer be detected (after range)
+Time: 20 ns  Iteration: 0  Process: /tb_sprite_handler/tb_sprite_handler  File: /home/raesangur/github/ppu/tb_sprite_handler.vhd

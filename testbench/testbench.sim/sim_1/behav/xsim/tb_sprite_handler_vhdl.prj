@@ -1,0 +1,12 @@
+# compile vhdl design source files
+vhdl2008 xil_defaultlib  \
+"../../../../../ppu_package.vhd" \
+"../../../../../sprite_package.vhd" \
+"../../../../../sprite.vhd" \
+"../../../../../tb_sprite_handler.vhd" \
+"../../../../../sprite_handler.vhd" \
+"../../../../../hit_handler.vhd" \
+"../../../../../hit_detector.vhd" \
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,51 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun Jul 31 15:51:11 2022
+# Process ID: 8922
+# Current directory: /home/raesangur/github/ppu/testbench
+# Command line: vivado
+# Log file: /home/raesangur/github/ppu/testbench/vivado.log
+# Journal file: /home/raesangur/github/ppu/testbench/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/raesangur/github/ppu/testbench/testbench.xpr
+launch_simulation
+launch_simulation
+open_wave_config /home/raesangur/github/ppu/testbench/tb_sprite_behav.wcfg
+source tb_sprite_handler.tcl
+run 100 ns
+close_sim
+launch_simulation
+open_wave_config /home/raesangur/github/ppu/testbench/tb_sprite_behav.wcfg
+source tb_sprite_handler.tcl
+close_sim
+launch_simulation
+source tb_sprite_handler.tcl
+relaunch_sim
+restart
+run 100 ns
+restart
+run 100 ns
+restart
+run 100 ns
+relaunch_sim
+relaunch_sim
+restart
+run 100 ns
+restart
+run 100 ns
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+save_wave_config {/home/raesangur/github/ppu/testbench/tb_sprite_handler_behav.wcfg}
+add_files -fileset sim_1 -norecurse /home/raesangur/github/ppu/testbench/tb_sprite_handler_behav.wcfg
+set_property xsim.view {/home/raesangur/github/ppu/testbench/tb_sprite_behav.wcfg /home/raesangur/github/ppu/testbench/tb_sprite_handler_behav.wcfg} [get_filesets sim_1]
+close_sim
+launch_simulation
+open_wave_config /home/raesangur/github/ppu/testbench/tb_sprite_handler_behav.wcfg
+source tb_sprite_handler.tcl
+close_sim
