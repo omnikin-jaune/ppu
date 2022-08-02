@@ -1,0 +1,30 @@
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /usr/share/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 0f52afdc69ad4634ab812817db43238d --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_ppu_behav xil_defaultlib.tb_ppu -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xil_defaultlib.ppu_package
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package xil_defaultlib.tile_package
+Compiling package xil_defaultlib.sprite_package
+Compiling architecture behavioral of entity xil_defaultlib.pixelator [pixelator_default]
+Compiling architecture behavioral of entity xil_defaultlib.frame_printer [frame_printer_default]
+Compiling architecture behavioral of entity xil_defaultlib.tile [tile_default]
+Compiling architecture behavioral of entity xil_defaultlib.tile_handler [tile_handler_default]
+Compiling architecture behavioral of entity xil_defaultlib.sprite [sprite_default]
+Compiling architecture behavioral of entity xil_defaultlib.hit_detector [hit_detector_default]
+Compiling architecture behavioral of entity xil_defaultlib.hit_handler [hit_handler_default]
+Compiling architecture behavioral of entity xil_defaultlib.sprite_handler [sprite_handler_default]
+Compiling architecture behavioral of entity xil_defaultlib.color_converter [color_converter_default]
+Compiling architecture behavioral of entity xil_defaultlib.ppu [ppu_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_ppu
+Built simulation snapshot tb_ppu_behav

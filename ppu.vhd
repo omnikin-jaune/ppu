@@ -190,5 +190,6 @@ begin
         o_color => o_color
     );
     
+    s_cc <= s_sprite_cc when s_has_sprite = '1' else s_tile_cc;
 
 end behavioral;

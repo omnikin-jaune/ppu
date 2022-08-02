@@ -2,17 +2,43 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Mon Aug  1 15:46:03 2022
-# Process ID: 29864
+# Start of session at: Mon Aug  1 20:36:46 2022
+# Process ID: 78850
 # Current directory: /home/raesangur/github/ppu
 # Command line: vivado
 # Log file: /home/raesangur/github/ppu/vivado.log
 # Journal file: /home/raesangur/github/ppu/vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project /home/raesangur/github/ppu/testbench/testbench.xpr
-close_project
-open_project /home/raesangur/github/ppu/vivado/vivado.xpr
-update_compile_order -fileset sources_1
-synth_design -rtl -rtl_skip_mlo -name rtl_1
-close_project
+open_project /home/raesangur/github/ppu/testbench_ppu/testbench_ppu.xpr
+launch_simulation
+launch_simulation
+open_wave_config /home/raesangur/github/ppu/testbench_ppu/tb_ppu_behav.wcfg
+source tb_ppu.tcl
+relaunch_sim
+relaunch_sim
+relaunch_sim
+restart
+run 100 ns
+restart
+run 100 ns
+save_wave_config {/home/raesangur/github/ppu/testbench_ppu/tb_ppu_behav.wcfg}
+relaunch_sim
+relaunch_sim
+restart
+run 25 ns
+relaunch_sim
+restart
+run 25 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 16 ns
+run 16 ns
+relaunch_sim
+relaunch_sim
+restart
+run 100 ns
+save_wave_config {/home/raesangur/github/ppu/testbench_ppu/tb_ppu_behav.wcfg}
+close_sim

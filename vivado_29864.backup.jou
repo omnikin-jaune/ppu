@@ -1,0 +1,83 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Aug  1 15:46:03 2022
+# Process ID: 29864
+# Current directory: /home/raesangur/github/ppu
+# Command line: vivado
+# Log file: /home/raesangur/github/ppu/vivado.log
+# Journal file: /home/raesangur/github/ppu/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/raesangur/github/ppu/testbench/testbench.xpr
+close_project
+open_project /home/raesangur/github/ppu/vivado/vivado.xpr
+update_compile_order -fileset sources_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+close_project
+create_project testbench_ppu /home/raesangur/github/ppu/testbench_ppu -part xc7z010clg400-1
+set_property board_part digilentinc.com:zybo-z7-10:part0:1.0 [current_project]
+set_property target_language VHDL [current_project]
+set_property simulator_language VHDL [current_project]
+add_files -norecurse {/home/raesangur/github/ppu/ppu.vhd /home/raesangur/github/ppu/tile.vhd /home/raesangur/github/ppu/frame_printer.vhd /home/raesangur/github/ppu/sprite_handler.vhd /home/raesangur/github/ppu/sprite_package.vhd /home/raesangur/github/ppu/color_converter.vhd /home/raesangur/github/ppu/tile_package.vhd /home/raesangur/github/ppu/tile_handler.vhd /home/raesangur/github/ppu/ppu_package.vhd /home/raesangur/github/ppu/hit_handler.vhd /home/raesangur/github/ppu/pixelator.vhd /home/raesangur/github/ppu/hit_detector.vhd /home/raesangur/github/ppu/sprite.vhd}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+file mkdir /home/raesangur/github/ppu/testbench_ppu/testbench_ppu.srcs/sources_1/new
+close [ open /home/raesangur/github/ppu/testbench_ppu/testbench_ppu.srcs/sources_1/new/tb_ppu.vhd w ]
+add_files /home/raesangur/github/ppu/testbench_ppu/testbench_ppu.srcs/sources_1/new/tb_ppu.vhd
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_ppu [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+set_property source_mgmt_mode DisplayOnly [current_project]
+set_property file_type {VHDL 2008} [get_files  /home/raesangur/github/ppu/ppu_package.vhd]
+set_property file_type {VHDL 2008} [get_files  /home/raesangur/github/ppu/testbench_ppu/testbench_ppu.srcs/sources_1/new/tb_ppu.vhd]
+set_property file_type {VHDL 2008} [get_files  /home/raesangur/github/ppu/ppu.vhd]
+set_property file_type {VHDL 2008} [get_files  /home/raesangur/github/ppu/pixelator.vhd]
+set_property file_type {VHDL 2008} [get_files  /home/raesangur/github/ppu/frame_printer.vhd]
+set_property file_type {VHDL 2008} [get_files  /home/raesangur/github/ppu/tile_handler.vhd]
+set_property file_type {VHDL 2008} [get_files  /home/raesangur/github/ppu/tile.vhd]
+set_property file_type {VHDL 2008} [get_files  /home/raesangur/github/ppu/sprite_handler.vhd]
+set_property file_type {VHDL 2008} [get_files  /home/raesangur/github/ppu/hit_handler.vhd]
+set_property file_type {VHDL 2008} [get_files  /home/raesangur/github/ppu/hit_detector.vhd]
+set_property file_type {VHDL 2008} [get_files  /home/raesangur/github/ppu/sprite.vhd]
+set_property file_type {VHDL 2008} [get_files  /home/raesangur/github/ppu/color_converter.vhd]
+set_property file_type {VHDL 2008} [get_files  /home/raesangur/github/ppu/sprite_package.vhd]
+set_property file_type {VHDL 2008} [get_files  /home/raesangur/github/ppu/tile_package.vhd]
+launch_simulation
+source ppu.tcl
+set_property top tb_ppu [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+close_sim
+launch_simulation
+source tb_ppu.tcl
+restart
+run 100 ns
+restart
+run 100 ns
+save_wave_config {/home/raesangur/github/ppu/testbench_ppu/tb_ppu_behav.wcfg}
+add_files -fileset sim_1 -norecurse /home/raesangur/github/ppu/testbench_ppu/tb_ppu_behav.wcfg
+set_property xsim.view /home/raesangur/github/ppu/testbench_ppu/tb_ppu_behav.wcfg [get_filesets sim_1]
+close_sim
+launch_simulation
+open_wave_config /home/raesangur/github/ppu/testbench_ppu/tb_ppu_behav.wcfg
+source tb_ppu.tcl
+restart
+run 100 ns
+restart
+run 100 ns
+restart
+run 100 ns
+relaunch_sim
+save_wave_config {/home/raesangur/github/ppu/testbench_ppu/tb_ppu_behav.wcfg}
+save_wave_config {/home/raesangur/github/ppu/testbench_ppu/tb_ppu_behav.wcfg}
+relaunch_sim
+relaunch_sim
+close_sim
+launch_simulation

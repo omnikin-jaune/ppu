@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_ppu_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="ppu_package" />
+            <top_module name="sprite_package" />
+            <top_module name="tb_ppu" />
+            <top_module name="tile_package" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="27422fs"></ZoomStartTime>
+      <ZoomEndTime time="33788fs"></ZoomEndTime>
+      <Cursor1Time time="51000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="229"></NameColumnWidth>
+      <ValueColumnWidth column_width="91"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="10" />
+   <wvobject type="logic" fp_name="/tb_ppu/s_clk">
+      <obj_property name="ElementShortName">s_clk</obj_property>
+      <obj_property name="ObjectShortName">s_clk</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ppu/s_opcode">
+      <obj_property name="ElementShortName">s_opcode[4:0]</obj_property>
+      <obj_property name="ObjectShortName">s_opcode[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ppu/s_color">
+      <obj_property name="ElementShortName">s_color[23:0]</obj_property>
+      <obj_property name="ObjectShortName">s_color[23:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ppu/inst_ppu/s_x_offset">
+      <obj_property name="ElementShortName">s_x_offset[8:0]</obj_property>
+      <obj_property name="ObjectShortName">s_x_offset[8:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ppu/inst_ppu/s_y_offset">
+      <obj_property name="ElementShortName">s_y_offset[8:0]</obj_property>
+      <obj_property name="ObjectShortName">s_y_offset[8:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ppu/inst_ppu/s_tile_cc">
+      <obj_property name="ElementShortName">s_tile_cc[5:0]</obj_property>
+      <obj_property name="ObjectShortName">s_tile_cc[5:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ppu/inst_ppu/s_sprite_cc">
+      <obj_property name="ElementShortName">s_sprite_cc[5:0]</obj_property>
+      <obj_property name="ObjectShortName">s_sprite_cc[5:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_ppu/inst_ppu/s_has_sprite">
+      <obj_property name="ElementShortName">s_has_sprite</obj_property>
+      <obj_property name="ObjectShortName">s_has_sprite</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ppu/inst_ppu/inst_tile_handler/s_tiles_cc">
+      <obj_property name="ElementShortName">s_tiles_cc[0:1023][5:0]</obj_property>
+      <obj_property name="ObjectShortName">s_tiles_cc[0:1023][5:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ppu/inst_ppu/inst_tile_handler/s_tile_id">
+      <obj_property name="ElementShortName">s_tile_id[9:0]</obj_property>
+      <obj_property name="ObjectShortName">s_tile_id[9:0]</obj_property>
+   </wvobject>
+</wave_config>
