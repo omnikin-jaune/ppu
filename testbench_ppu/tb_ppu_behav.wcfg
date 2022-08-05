@@ -13,15 +13,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="27422fs"></ZoomStartTime>
-      <ZoomEndTime time="33788fs"></ZoomEndTime>
+      <ZoomStartTime time="40951fs"></ZoomStartTime>
+      <ZoomEndTime time="65112fs"></ZoomEndTime>
       <Cursor1Time time="51000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="229"></NameColumnWidth>
+      <NameColumnWidth column_width="223"></NameColumnWidth>
       <ValueColumnWidth column_width="91"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="10" />
+   <WVObjectSize size="14" />
    <wvobject type="logic" fp_name="/tb_ppu/s_clk">
       <obj_property name="ElementShortName">s_clk</obj_property>
       <obj_property name="ObjectShortName">s_clk</obj_property>
@@ -47,6 +47,11 @@
       <obj_property name="ElementShortName">s_tile_cc[5:0]</obj_property>
       <obj_property name="ObjectShortName">s_tile_cc[5:0]</obj_property>
    </wvobject>
+   <wvobject type="array" fp_name="/tb_ppu/s_reg_x">
+      <obj_property name="ElementShortName">s_reg_x[8:0]</obj_property>
+      <obj_property name="ObjectShortName">s_reg_x[8:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
    <wvobject type="array" fp_name="/tb_ppu/inst_ppu/s_sprite_cc">
       <obj_property name="ElementShortName">s_sprite_cc[5:0]</obj_property>
       <obj_property name="ObjectShortName">s_sprite_cc[5:0]</obj_property>
@@ -62,5 +67,18 @@
    <wvobject type="array" fp_name="/tb_ppu/inst_ppu/inst_tile_handler/s_tile_id">
       <obj_property name="ElementShortName">s_tile_id[9:0]</obj_property>
       <obj_property name="ObjectShortName">s_tile_id[9:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ppu/inst_ppu/inst_sprite_handler/s_sprites_en">
+      <obj_property name="ElementShortName">s_sprites_en[63:0]</obj_property>
+      <obj_property name="ObjectShortName">s_sprites_en[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ppu/inst_ppu/inst_sprite_handler/\sprite_gen(2)\/sprites/s_x">
+      <obj_property name="ElementShortName">s_x[8:0]</obj_property>
+      <obj_property name="ObjectShortName">s_x[8:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ppu/inst_ppu/inst_sprite_handler/s_sprite_id">
+      <obj_property name="ElementShortName">s_sprite_id[5:0]</obj_property>
+      <obj_property name="ObjectShortName">s_sprite_id[5:0]</obj_property>
    </wvobject>
 </wave_config>

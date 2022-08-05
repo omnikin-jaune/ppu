@@ -111,21 +111,21 @@ begin
         
         -- Move sprite 2 in the middle of tile 2,0 and 3,0
         s_opcode   <= OP_SPRT_POS;
-        s_reg_x    <= coords(48);
+        s_reg_x    <= coords(24);
         s_reg_y    <= coords(0);
         s_reg_sprt <= "000010";
         wait for 1ns;
         
         -- Move sprite 1 right after sprite 2
         s_opcode   <= OP_SPRT_POS;
-        s_reg_x    <= coords(54);
+        s_reg_x    <= coords(27);
         s_reg_y    <= coords(0);
         s_reg_sprt <= "000001";
         wait for 1ns;
         
         -- Move sprite 0 on top of sprite 1
         s_opcode   <= OP_SPRT_POS;
-        s_reg_x    <= coords(54);
+        s_reg_x    <= coords(27);
         s_reg_y    <= coords(0);
         s_reg_sprt <= "000000";
         wait for 1ns;
@@ -156,7 +156,7 @@ begin
         -- Change sprite 2 texture
         s_opcode   <= OP_SPRT_TEX;
         s_reg_en   <= '0';
-        s_reg_sprt <= "000001";
+        s_reg_sprt <= "000010";
         s_reg_tex  <= "00000010";
         wait for 1ns;
         
@@ -190,11 +190,11 @@ begin
         
         -- We should now be in tile 1
         assert s_color /= X"000015" report "2: Wrong texture" severity error;
-        wait for 16ns;
+        wait for 7ns;
         
         -- We should now be in tile 2
         assert s_color /= X"000015" report "3: Wrong texture" severity error;
-        wait for 7ns;
+        wait for 1ns;
         
         -- We should now be in sprite 2
         assert s_color /= X"00002A" report "4: Wrong texture" severity error;
@@ -202,9 +202,9 @@ begin
         
         -- We should still be in sprite 2
         assert s_color /= X"00002A" report "5: Wrong texture" severity error;
-        wait for 1ns;
+        wait for 2ns;
         
-        -- We should not be in sprite 1 (not sprite 0);
+        -- We should now be in sprite 1 (not sprite 0);
         assert s_color /= X"00003F" report "6: Wrong texture" severity error;
         wait for 1ns;
         

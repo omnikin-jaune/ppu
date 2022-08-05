@@ -27,12 +27,12 @@ type ram_colors is array (natural range <>) of std_logic_vector(COL_SIZE downto 
 type texture    is array (0 to (CC_IN_ROW * CC_IN_COL) - 1) of std_logic_vector(CC_SIZE downto 0);
 
 constant OP_NOP      : std_logic_vector(OP_SIZE downto 0) := "00000";
-constant OP_TILE_TEX : std_logic_vector(OP_SIZE downto 0) := "01001";
-constant OP_PIX_OFF  : std_logic_vector(OP_SIZE downto 0) := "01100";
-constant OP_PIX_EN   : std_logic_vector(OP_SIZE downto 0) := "01101";
 constant OP_SPRT_TEX : std_logic_vector(OP_SIZE downto 0) := "00001";
 constant OP_SPRT_EN  : std_logic_vector(OP_SIZE downto 0) := "00010";
 constant OP_SPRT_POS : std_logic_vector(OP_SIZE downto 0) := "00011";
+constant OP_TILE_TEX : std_logic_vector(OP_SIZE downto 0) := "01001";
+constant OP_PIX_OFF  : std_logic_vector(OP_SIZE downto 0) := "01100";
+constant OP_PIX_EN   : std_logic_vector(OP_SIZE downto 0) := "01101";
 
 function coords     (a : integer) return std_logic_vector;
 function tile_coords(a : integer) return std_logic_vector;

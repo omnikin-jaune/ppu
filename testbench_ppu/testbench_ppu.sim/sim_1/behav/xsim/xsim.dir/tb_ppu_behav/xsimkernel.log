@@ -1,7 +1,4 @@
-Running: xsim.dir/tb_ppu_behav/xsimk -simmode gui -wdb tb_ppu_behav.wdb -simrunnum 0 -socket 52531
+Running: xsim.dir/tb_ppu_behav/xsimk -simmode gui -wdb tb_ppu_behav.wdb -simrunnum 0 -socket 51857
 Design successfully loaded
 Design Loading Memory Usage: 39408 KB (Peak: 39408 KB)
-Design Loading CPU Usage: 60 ms
-Simulation completed
-Simulation Memory Usage: 116920 KB (Peak: 178676 KB)
-Simulation CPU Usage: 1030 ms
+Design Loading CPU Usage: 20 ms
