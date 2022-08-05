@@ -13,18 +13,39 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="40951fs"></ZoomStartTime>
-      <ZoomEndTime time="65112fs"></ZoomEndTime>
-      <Cursor1Time time="51000fs"></Cursor1Time>
+      <ZoomStartTime time="25829fs"></ZoomStartTime>
+      <ZoomEndTime time="46010fs"></ZoomEndTime>
+      <Cursor1Time time="26029fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="223"></NameColumnWidth>
+      <NameColumnWidth column_width="217"></NameColumnWidth>
       <ValueColumnWidth column_width="91"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="14" />
+   <WVObjectSize size="12" />
    <wvobject type="logic" fp_name="/tb_ppu/s_clk">
       <obj_property name="ElementShortName">s_clk</obj_property>
       <obj_property name="ObjectShortName">s_clk</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ppu/inst_ppu/s_x_offset">
+      <obj_property name="ElementShortName">s_x_offset[8:0]</obj_property>
+      <obj_property name="ObjectShortName">s_x_offset[8:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ppu/inst_ppu/s_y_offset">
+      <obj_property name="ElementShortName">s_y_offset[8:0]</obj_property>
+      <obj_property name="ObjectShortName">s_y_offset[8:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ppu/inst_ppu/o_color">
+      <obj_property name="ElementShortName">o_color[23:0]</obj_property>
+      <obj_property name="ObjectShortName">o_color[23:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF0000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/tb_ppu/s_opcode">
       <obj_property name="ElementShortName">s_opcode[4:0]</obj_property>
@@ -34,51 +55,33 @@
       <obj_property name="ElementShortName">s_color[23:0]</obj_property>
       <obj_property name="ObjectShortName">s_color[23:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/tb_ppu/inst_ppu/s_x_offset">
-      <obj_property name="ElementShortName">s_x_offset[8:0]</obj_property>
-      <obj_property name="ObjectShortName">s_x_offset[8:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_ppu/inst_ppu/s_y_offset">
-      <obj_property name="ElementShortName">s_y_offset[8:0]</obj_property>
-      <obj_property name="ObjectShortName">s_y_offset[8:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_ppu/inst_ppu/s_tile_cc">
-      <obj_property name="ElementShortName">s_tile_cc[5:0]</obj_property>
-      <obj_property name="ObjectShortName">s_tile_cc[5:0]</obj_property>
-   </wvobject>
    <wvobject type="array" fp_name="/tb_ppu/s_reg_x">
       <obj_property name="ElementShortName">s_reg_x[8:0]</obj_property>
       <obj_property name="ObjectShortName">s_reg_x[8:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/tb_ppu/inst_ppu/s_sprite_cc">
-      <obj_property name="ElementShortName">s_sprite_cc[5:0]</obj_property>
-      <obj_property name="ObjectShortName">s_sprite_cc[5:0]</obj_property>
+   <wvobject type="array" fp_name="/tb_ppu/s_reg_y">
+      <obj_property name="ElementShortName">s_reg_y[8:0]</obj_property>
+      <obj_property name="ObjectShortName">s_reg_y[8:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ppu/s_reg_sprt">
+      <obj_property name="ElementShortName">s_reg_sprt[5:0]</obj_property>
+      <obj_property name="ObjectShortName">s_reg_sprt[5:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ppu/s_reg_tex">
+      <obj_property name="ElementShortName">s_reg_tex[7:0]</obj_property>
+      <obj_property name="ObjectShortName">s_reg_tex[7:0]</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/tb_ppu/inst_ppu/s_has_sprite">
       <obj_property name="ElementShortName">s_has_sprite</obj_property>
       <obj_property name="ObjectShortName">s_has_sprite</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_ppu/inst_ppu/inst_tile_handler/s_tiles_cc">
-      <obj_property name="ElementShortName">s_tiles_cc[0:1023][5:0]</obj_property>
-      <obj_property name="ObjectShortName">s_tiles_cc[0:1023][5:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_ppu/inst_ppu/inst_tile_handler/s_tile_id">
-      <obj_property name="ElementShortName">s_tile_id[9:0]</obj_property>
-      <obj_property name="ObjectShortName">s_tile_id[9:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_ppu/inst_ppu/inst_sprite_handler/s_sprites_en">
-      <obj_property name="ElementShortName">s_sprites_en[63:0]</obj_property>
-      <obj_property name="ObjectShortName">s_sprites_en[63:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_ppu/inst_ppu/inst_sprite_handler/\sprite_gen(2)\/sprites/s_x">
-      <obj_property name="ElementShortName">s_x[8:0]</obj_property>
-      <obj_property name="ObjectShortName">s_x[8:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FFA500</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/tb_ppu/inst_ppu/inst_sprite_handler/s_sprite_id">
       <obj_property name="ElementShortName">s_sprite_id[5:0]</obj_property>
       <obj_property name="ObjectShortName">s_sprite_id[5:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFA500</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
 </wave_config>
